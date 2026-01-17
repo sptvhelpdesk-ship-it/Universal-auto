@@ -69,17 +69,12 @@ async function fetchFromApi(page, dateStr) {
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
-    console.log("⏰ Starting Sync (Pages 1 & 2)...");
+    console.log("⏰ Starting Sync with DEBUG MODE...");
     
-    // --- FORCE IST DATE FIX (DDMMYYYY) ---
+    // --- FORCE YEAR 2026 ---
     const d = new Date();
-    
-    // 👇👇 UPDATE: FORCE YEAR TO 2026 👇👇
     d.setFullYear(2026); 
-    // 👆👆 THIS LINE FIXES THE DATE TO 2026
-
     const options = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
-    // en-GB format is DD/MM/YYYY. Replace slashes to get DDMMYYYY
     const dateStr = d.toLocaleDateString('en-GB', options).replace(/\//g, '');
 
     console.log(`📅 Scanning Date (IST): ${dateStr}`);
@@ -92,15 +87,18 @@ async function runSync() {
             allApiMatches = [...allApiMatches, ...m];
         }
         
-        console.log(`📊 Total Matches Found on Page 1 & 2: ${allApiMatches.length}`);
+        console.log(`📊 API Matches Found: ${allApiMatches.length}`);
 
         if (allApiMatches.length === 0) { 
-            console.log("No matches found in API for today."); 
+            console.log("No matches found in API."); 
             process.exit(0); 
         }
 
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
+        const dbKeys = Object.keys(dbMatches);
+        console.log(`📂 DB Matches Found: ${dbKeys.length}`);
+
         let updateCount = 0;
 
         // C. PROCESS EACH MATCH
@@ -109,32 +107,51 @@ async function runSync() {
 
             const uiTeam1 = normalizeName(apiMatch.home_team_name);
             const uiTeam2 = normalizeName(apiMatch.away_team_name);
+            
+            // --- DEBUG LOG START ---
+            console.log(`\n🔍 Checking API Match: "${uiTeam1}" vs "${uiTeam2}"`);
+            // --- DEBUG LOG END ---
+
             let matchId = null;
             let currentStreams = [];
 
             // 1. FIND MATCH
             for (const [key, val] of Object.entries(dbMatches)) {
-                const dbCat = (val.sportType || "").toLowerCase();
-                const apiCat = (apiMatch.sport_category || "Football").toLowerCase();
-                if (dbCat !== apiCat) continue;
-
                 const dbTeam1 = normalizeName(val.team1Name || "");
                 const dbTeam2 = normalizeName(val.team2Name || "");
+                
+                // Compare logic
+                const nameMatch = (dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
+                                  (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2));
+                
+                if (nameMatch) {
+                    // Check Time
+                    const apiTime = apiMatch.match_time * 1000;
+                    const dbTime = new Date(val.matchTime).getTime();
+                    const diff = Math.abs(apiTime - dbTime);
+                    const isTimeOk = diff < 86400000; // 24 hours
 
-                if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
-                    (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
-                    
-                    // Time Check: Match time must be within 24 hours
-                    if (Math.abs((apiMatch.match_time * 1000) - new Date(val.matchTime).getTime()) < 86400000) {
+                    console.log(`   👉 Found Name Match in DB: "${dbTeam1}" vs "${dbTeam2}"`);
+                    console.log(`      Time Diff: ${diff / 3600000} hours. Allowed: 24 hours.`);
+
+                    if (isTimeOk) {
+                        console.log("      ✅ MATCH CONFIRMED!");
                         matchId = key;
                         currentStreams = val.streamLinks || [];
                         break;
+                    } else {
+                        console.log("      ❌ Time Mismatch! Skipping.");
                     }
                 }
             }
 
-            if (!matchId) continue; 
+            if (!matchId) {
+                console.log("   ❌ No matching game found in DB for this API match.");
+                continue; 
+            }
 
+            // ... (Rest of the update logic remains same) ...
+            
             // 2. COLLECT & SORT VALID LINKS
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
@@ -143,29 +160,25 @@ async function runSync() {
                 const referer = headers.referer || "";
                 const url = s.url || "";
                 
-                if (referer.includes("fmp.live")) {
-                    fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
-                }
-                else if (url.includes("pull.niues.live")) {
-                    socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
-                }
-                else if (url.includes("cdnok9.com")) {
-                    ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
-                }
+                if (referer.includes("fmp.live")) fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
+                else if (url.includes("pull.niues.live")) socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
+                else if (url.includes("cdnok9.com")) ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
             });
 
             const sortedNewLinks = [...fmpLinks, ...socoLinks, ...ok9Links];
-            if (sortedNewLinks.length === 0) continue;
+            
+            if (sortedNewLinks.length === 0) {
+                 console.log("      ⚠️ Match found, but no valid (FMP/Soco/OK9) links in API.");
+                 continue;
+            }
 
             // 3. PREPARE DB UPDATE
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             finalLinks = finalLinks.filter(l => l);
 
-            // Find targets (SPORTIFy TV & TV+ HD) typically at end
             let idxTv = -1;
             let idxHd = -1;
             
-            // Search backwards to find the intended placeholders
             for (let i = finalLinks.length - 1; i >= 0; i--) {
                 if (finalLinks[i].name === "SPORTIFy TV" && idxTv === -1) idxTv = i;
                 if (finalLinks[i].name === "SPORTIFy TV+ HD" && idxHd === -1) idxHd = i;
@@ -173,65 +186,43 @@ async function runSync() {
 
             let usedLinkIndices = new Set(); 
 
-            // UPDATE 1st Link
             if (idxTv !== -1 && sortedNewLinks.length > 0) {
                 const linkObj = sortedNewLinks[0];
                 if (finalLinks[idxTv].link !== linkObj.url) {
-                    finalLinks[idxTv] = {
-                        name: "SPORTIFy TV",
-                        link: linkObj.url,
-                        type: "Direct",
-                        logo: linkObj.logo
-                    };
+                    finalLinks[idxTv] = { name: "SPORTIFy TV", link: linkObj.url, type: "Direct", logo: linkObj.logo };
                     usedLinkIndices.add(0);
-                } else {
-                    usedLinkIndices.add(0);
-                }
+                } else usedLinkIndices.add(0);
             }
 
-            // UPDATE 2nd Link
             if (idxHd !== -1 && sortedNewLinks.length > 1) {
                 const linkObj = sortedNewLinks[1];
                 if (finalLinks[idxHd].link !== linkObj.url) {
-                    finalLinks[idxHd] = {
-                        name: "SPORTIFy TV+ HD",
-                        link: linkObj.url,
-                        type: "Direct",
-                        logo: linkObj.logo
-                    };
+                    finalLinks[idxHd] = { name: "SPORTIFy TV+ HD", link: linkObj.url, type: "Direct", logo: linkObj.logo };
                     usedLinkIndices.add(1);
-                } else {
-                    usedLinkIndices.add(1);
-                }
+                } else usedLinkIndices.add(1);
             }
 
-            // APPEND REST
             let changesMade = (usedLinkIndices.size > 0);
             
             sortedNewLinks.forEach((item, idx) => {
                 if (usedLinkIndices.has(idx)) return;
-                
                 const currentUrls = new Set(finalLinks.map(l => l.link));
                 if (currentUrls.has(item.url)) return;
-
                 const newName = getBrandedName(apiMatch.sport_category);
-                finalLinks.push({
-                    name: newName,
-                    link: item.url,
-                    type: "Direct",
-                    logo: item.logo
-                });
+                finalLinks.push({ name: newName, link: item.url, type: "Direct", logo: item.logo });
                 changesMade = true;
             });
 
             if (changesMade) {
                 await db.ref(`matches/${matchId}/streamLinks`).set(finalLinks);
-                console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
+                console.log(`   🎉 SUCCESS: DB Updated for ${uiTeam1} vs ${uiTeam2}`);
                 updateCount++;
+            } else {
+                console.log(`   ℹ️ Links already up to date.`);
             }
         }
         
-        console.log(`🏁 Sync Done. Updated: ${updateCount} matches.`);
+        console.log(`\n🏁 Sync Done. Updated: ${updateCount} matches.`);
         process.exit(0);
 
     } catch (e) {
