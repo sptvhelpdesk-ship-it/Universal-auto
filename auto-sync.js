@@ -144,17 +144,22 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // 2. COLLECT VALID LINKS (Priority Sorted)
+            // 2. COLLECT VALID LINKS (Priority Sorted: FMP > SOCO > OK9)
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
             apiMatch.servers.forEach(s => {
-                const headers = s.headers || {};
-                const referer = headers.referer || "";
                 const url = s.url || "";
                 
-                if (referer.includes("fmp.live")) fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
-                else if (url.includes("pull.niues.live")) socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
-                else if (url.includes("cdnok9.com")) ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
+                // 👇 UPDATED: Check for 'fpm.sla.homes' directly in URL
+                if (url.includes("fpm.sla.homes")) {
+                    fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
+                }
+                else if (url.includes("pull.niues.live")) {
+                    socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
+                }
+                else if (url.includes("cdnok9.com")) {
+                    ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
+                }
             });
 
             const sortedNewLinks = [...fmpLinks, ...socoLinks, ...ok9Links];
