@@ -69,32 +69,41 @@ async function fetchFromApi(page, dateStr) {
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
-    console.log("⏰ Starting Sync (Page 1 Only - TEST MODE 17th Jan)...");
+    console.log("⏰ Starting Sync (Pages 1 & 2)...");
     
-    // --- FORCE DATE MANIPULATION ---
+    // --- INTELLIGENT DATE LOGIC (MIDNIGHT FIX) ---
     const d = new Date();
     
-    // 1. Force Year 2026
-    d.setFullYear(2026); 
+    // Get current hour in India (IST)
+    const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
+    const istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
-    // 2. 👇 GO BACK 1 DAY (To get 17th Jan) 👇
-    d.setDate(d.getDate() - 1);
+    // LOGIC: If time is between 00:00 (12 AM) and 04:00 (4 AM), assume it belongs to PREVIOUS DATE
+    if (istHour >= 0 && istHour < 4) {
+        console.log(`🌙 Late Night Detected (${istHour}:00 IST). Switching to Previous Day's Schedule.`);
+        d.setDate(d.getDate() - 1);
+    } else {
+        console.log(`☀️ Normal Time (${istHour}:00 IST). Scanning Today's Schedule.`);
+    }
 
-    const options = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
-    const dateStr = d.toLocaleDateString('en-GB', options).replace(/\//g, '');
+    // Convert final date to DDMMYYYY format
+    const dateOptions = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
+    const dateStr = d.toLocaleDateString('en-GB', dateOptions).replace(/\//g, '');
 
-    console.log(`📅 Scanning Date (IST): ${dateStr}`); // Should show 17012026
+    console.log(`📅 Final Scanning Date (IST): ${dateStr}`);
 
     try {
-        // A. GET API DATA (Only Page 1 for testing)
+        // A. GET API DATA
         let allApiMatches = [];
-        const m = await fetchFromApi(1, dateStr);
-        allApiMatches = [...m];
+        for (let page = 1; page <= 2; page++) {
+            const m = await fetchFromApi(page, dateStr);
+            allApiMatches = [...allApiMatches, ...m];
+        }
         
-        console.log(`📊 Total Matches Found on Page 1: ${allApiMatches.length}`);
+        console.log(`📊 Total Matches Found on Page 1 & 2: ${allApiMatches.length}`);
 
         if (allApiMatches.length === 0) { 
-            console.log("No matches found in API for this date."); 
+            console.log("No matches found in API."); 
             process.exit(0); 
         }
 
@@ -123,7 +132,7 @@ async function runSync() {
                 if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
                     (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
                     
-                    // Time Check (Assuming timestamp is correct now)
+                    // Time Check: Match must be within 24 hours
                     if (Math.abs((apiMatch.match_time * 1000) - new Date(val.matchTime).getTime()) < 86400000) {
                         matchId = key;
                         currentStreams = val.streamLinks || [];
@@ -160,6 +169,7 @@ async function runSync() {
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             finalLinks = finalLinks.filter(l => l);
 
+            // Find targets (SPORTIFy TV & TV+ HD) typically at end
             let idxTv = -1;
             let idxHd = -1;
             
@@ -170,30 +180,54 @@ async function runSync() {
 
             let usedLinkIndices = new Set(); 
 
+            // UPDATE 1st Link
             if (idxTv !== -1 && sortedNewLinks.length > 0) {
                 const linkObj = sortedNewLinks[0];
                 if (finalLinks[idxTv].link !== linkObj.url) {
-                    finalLinks[idxTv] = { name: "SPORTIFy TV", link: linkObj.url, type: "Direct", logo: linkObj.logo };
+                    finalLinks[idxTv] = {
+                        name: "SPORTIFy TV",
+                        link: linkObj.url,
+                        type: "Direct",
+                        logo: linkObj.logo
+                    };
                     usedLinkIndices.add(0);
-                } else usedLinkIndices.add(0);
+                } else {
+                    usedLinkIndices.add(0);
+                }
             }
 
+            // UPDATE 2nd Link
             if (idxHd !== -1 && sortedNewLinks.length > 1) {
                 const linkObj = sortedNewLinks[1];
                 if (finalLinks[idxHd].link !== linkObj.url) {
-                    finalLinks[idxHd] = { name: "SPORTIFy TV+ HD", link: linkObj.url, type: "Direct", logo: linkObj.logo };
+                    finalLinks[idxHd] = {
+                        name: "SPORTIFy TV+ HD",
+                        link: linkObj.url,
+                        type: "Direct",
+                        logo: linkObj.logo
+                    };
                     usedLinkIndices.add(1);
-                } else usedLinkIndices.add(1);
+                } else {
+                    usedLinkIndices.add(1);
+                }
             }
 
+            // APPEND REST
             let changesMade = (usedLinkIndices.size > 0);
             
             sortedNewLinks.forEach((item, idx) => {
                 if (usedLinkIndices.has(idx)) return;
+                
                 const currentUrls = new Set(finalLinks.map(l => l.link));
                 if (currentUrls.has(item.url)) return;
+
                 const newName = getBrandedName(apiMatch.sport_category);
-                finalLinks.push({ name: newName, link: item.url, type: "Direct", logo: item.logo });
+                finalLinks.push({
+                    name: newName,
+                    link: item.url,
+                    type: "Direct",
+                    logo: item.logo
+                });
                 changesMade = true;
             });
 
