@@ -21,7 +21,6 @@ const LOGOS = {
 
 // --- 3. HELPER FUNCTIONS ---
 
-// Name Normalizer
 function normalizeName(str) {
     if (!str) return "";
     return str.toLowerCase()
@@ -31,26 +30,21 @@ function normalizeName(str) {
         .trim();
 }
 
-// Random Name Generator
 function getBrandedName(sportCategory) {
     const sport = (sportCategory || "Football").toLowerCase();
     const base = "SPORTIFy";
     const adjectives = ["FAST", "PRO", "MAX", "ULTRA", "PLUS", "GOLD", "LIVE", "PRIME", "TURBO", "STAR"];
     const sportAdjs = sport.includes("cricket") ? ["CRICKET", "T20", "MATCH"] : ["FOOTBALL", "SOCCER", "GOAL"];
     const resolutions = ["HD", "FHD", "SD"];
-    
     const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
-    
     let selectedAdj = rand(adjectives);
     if (Math.random() < 0.3) selectedAdj = rand(sportAdjs);
-    
     const style = Math.floor(Math.random() * 3);
     if (style === 0) return `${base} ${rand(resolutions)}`;
     if (style === 1) return `${base} ${selectedAdj}`;
     return `${base} ${selectedAdj} ${rand(resolutions)}`;
 }
 
-// API Fetch with Rotation
 async function fetchFromApi(page, dateStr) {
     if (currentKeyIndex >= ALL_KEYS.length) throw new Error("❌ ALL KEYS EXHAUSTED");
     
@@ -77,11 +71,11 @@ async function fetchFromApi(page, dateStr) {
 async function runSync() {
     console.log("⏰ Starting Sync (Pages 1 & 2)...");
     
-    // --- FORCE IST DATE FIX ---
-    // This ensures we always get India Date (YYYYMMDD) regardless of Server Time
-    const dateStr = new Date().toLocaleDateString('en-CA', {
-        timeZone: 'Asia/Kolkata'
-    }).replace(/-/g, '');
+    // --- FORCE IST DATE FIX (DDMMYYYY) ---
+    const d = new Date();
+    const options = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
+    // en-GB format is DD/MM/YYYY. Replace slashes to get DDMMYYYY
+    const dateStr = d.toLocaleDateString('en-GB', options).replace(/\//g, '');
 
     console.log(`📅 Scanning Date (IST): ${dateStr}`);
 
@@ -125,7 +119,6 @@ async function runSync() {
                 if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
                     (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
                     
-                    // Time Check (24h)
                     if (Math.abs((apiMatch.match_time * 1000) - new Date(val.matchTime).getTime()) < 86400000) {
                         matchId = key;
                         currentStreams = val.streamLinks || [];
@@ -134,7 +127,7 @@ async function runSync() {
                 }
             }
 
-            if (!matchId) continue; // Skip if not found
+            if (!matchId) continue; 
 
             // 2. COLLECT & SORT VALID LINKS
             let fmpLinks = [], socoLinks = [], ok9Links = [];
@@ -144,21 +137,17 @@ async function runSync() {
                 const referer = headers.referer || "";
                 const url = s.url || "";
                 
-                // PRIORITY 1: FMP
                 if (referer.includes("fmp.live")) {
                     fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
                 }
-                // PRIORITY 2: SOCO
                 else if (url.includes("pull.niues.live")) {
                     socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
                 }
-                // PRIORITY 3: OK9
                 else if (url.includes("cdnok9.com")) {
                     ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
                 }
             });
 
-            // Master List (Order: FMP -> SOCO -> OK9)
             const sortedNewLinks = [...fmpLinks, ...socoLinks, ...ok9Links];
             if (sortedNewLinks.length === 0) continue;
 
@@ -166,13 +155,11 @@ async function runSync() {
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             finalLinks = finalLinks.filter(l => l);
 
-            // TRACK EXISTING URLS
-            const existingUrls = new Set(finalLinks.map(l => l.link));
-            
-            // FIND TARGET INDICES (Last occurrences of specific names)
+            // Find targets (SPORTIFy TV & TV+ HD) typically at end
             let idxTv = -1;
             let idxHd = -1;
             
+            // Search backwards to find the intended placeholders
             for (let i = finalLinks.length - 1; i >= 0; i--) {
                 if (finalLinks[i].name === "SPORTIFy TV" && idxTv === -1) idxTv = i;
                 if (finalLinks[i].name === "SPORTIFy TV+ HD" && idxHd === -1) idxHd = i;
@@ -180,8 +167,7 @@ async function runSync() {
 
             let usedLinkIndices = new Set(); 
 
-            // --- STEP A: UPDATE TARGETS ---
-            // Update SPORTIFy TV (with 1st new link)
+            // UPDATE 1st Link
             if (idxTv !== -1 && sortedNewLinks.length > 0) {
                 const linkObj = sortedNewLinks[0];
                 if (finalLinks[idxTv].link !== linkObj.url) {
@@ -193,11 +179,11 @@ async function runSync() {
                     };
                     usedLinkIndices.add(0);
                 } else {
-                    usedLinkIndices.add(0); 
+                    usedLinkIndices.add(0);
                 }
             }
 
-            // Update SPORTIFy TV+ HD (with 2nd new link)
+            // UPDATE 2nd Link
             if (idxHd !== -1 && sortedNewLinks.length > 1) {
                 const linkObj = sortedNewLinks[1];
                 if (finalLinks[idxHd].link !== linkObj.url) {
@@ -213,7 +199,7 @@ async function runSync() {
                 }
             }
 
-            // --- STEP B: APPEND REST ---
+            // APPEND REST
             let changesMade = (usedLinkIndices.size > 0);
             
             sortedNewLinks.forEach((item, idx) => {
@@ -232,7 +218,6 @@ async function runSync() {
                 changesMade = true;
             });
 
-            // 4. WRITE TO DB
             if (changesMade) {
                 await db.ref(`matches/${matchId}/streamLinks`).set(finalLinks);
                 console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
