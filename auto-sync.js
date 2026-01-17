@@ -21,7 +21,7 @@ const LOGOS = {
 
 // --- 3. HELPER FUNCTIONS ---
 
-// Name Normalizer (Matches your HTML Tool)
+// Name Normalizer
 function normalizeName(str) {
     if (!str) return "";
     return str.toLowerCase()
@@ -31,7 +31,7 @@ function normalizeName(str) {
         .trim();
 }
 
-// Random Name Generator for Extra Links
+// Random Name Generator
 function getBrandedName(sportCategory) {
     const sport = (sportCategory || "Football").toLowerCase();
     const base = "SPORTIFy";
@@ -73,21 +73,17 @@ async function fetchFromApi(page, dateStr) {
     }
 }
 
-// Link Classifier
-function getLinkType(url) {
-    if (!url) return null;
-    if (url.includes("fmp.live")) return "FMP"; // Logic: Referer usually needed, but here we just check availability
-    // Note: API returns 'referer' header for FMP, but URL itself might not say fmp. 
-    // We check headers from API object in main loop, here we just categorize for sorting if needed.
-    // Better logic applied in main loop.
-    return "UNKNOWN";
-}
-
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
     console.log("⏰ Starting Sync (Pages 1 & 2)...");
-    const now = new Date();
-    const dateStr = now.toISOString().split('T')[0].replace(/-/g, '');
+    
+    // --- FORCE IST DATE FIX ---
+    // This ensures we always get India Date (YYYYMMDD) regardless of Server Time
+    const dateStr = new Date().toLocaleDateString('en-CA', {
+        timeZone: 'Asia/Kolkata'
+    }).replace(/-/g, '');
+
+    console.log(`📅 Scanning Date (IST): ${dateStr}`);
 
     try {
         // A. GET API DATA
@@ -96,7 +92,13 @@ async function runSync() {
             const m = await fetchFromApi(page, dateStr);
             allApiMatches = [...allApiMatches, ...m];
         }
-        if (allApiMatches.length === 0) { console.log("No API matches."); process.exit(0); }
+        
+        console.log(`📊 Total Matches Found on Page 1 & 2: ${allApiMatches.length}`);
+
+        if (allApiMatches.length === 0) { 
+            console.log("No matches found in API for today."); 
+            process.exit(0); 
+        }
 
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
@@ -161,32 +163,27 @@ async function runSync() {
             if (sortedNewLinks.length === 0) continue;
 
             // 3. PREPARE DB UPDATE
-            // Convert DB streams to array if object
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
-            // Filter nulls
             finalLinks = finalLinks.filter(l => l);
 
-            // TRACK EXISTING URLS (To avoid duplicates)
+            // TRACK EXISTING URLS
             const existingUrls = new Set(finalLinks.map(l => l.link));
             
             // FIND TARGET INDICES (Last occurrences of specific names)
             let idxTv = -1;
             let idxHd = -1;
             
-            // Search from end to start to find the last ones (as they are usually at bottom)
             for (let i = finalLinks.length - 1; i >= 0; i--) {
                 if (finalLinks[i].name === "SPORTIFy TV" && idxTv === -1) idxTv = i;
                 if (finalLinks[i].name === "SPORTIFy TV+ HD" && idxHd === -1) idxHd = i;
             }
 
-            let usedLinkIndices = new Set(); // To track which new links are used for updates
+            let usedLinkIndices = new Set(); 
 
-            // --- STEP A: UPDATE TARGETS (First 2 Sorted Links) ---
-            
+            // --- STEP A: UPDATE TARGETS ---
             // Update SPORTIFy TV (with 1st new link)
             if (idxTv !== -1 && sortedNewLinks.length > 0) {
                 const linkObj = sortedNewLinks[0];
-                // Only update if URL is different
                 if (finalLinks[idxTv].link !== linkObj.url) {
                     finalLinks[idxTv] = {
                         name: "SPORTIFy TV",
@@ -194,9 +191,9 @@ async function runSync() {
                         type: "Direct",
                         logo: linkObj.logo
                     };
-                    usedLinkIndices.add(0); // Mark 1st link as used
+                    usedLinkIndices.add(0);
                 } else {
-                    usedLinkIndices.add(0); // Even if same, mark used so we don't add again
+                    usedLinkIndices.add(0); 
                 }
             }
 
@@ -216,19 +213,15 @@ async function runSync() {
                 }
             }
 
-            // --- STEP B: APPEND REST (As New Links at End) ---
-            let changesMade = (usedLinkIndices.size > 0); // Flag to check if we need to write DB
+            // --- STEP B: APPEND REST ---
+            let changesMade = (usedLinkIndices.size > 0);
             
             sortedNewLinks.forEach((item, idx) => {
-                // If this link was already used for update, skip
                 if (usedLinkIndices.has(idx)) return;
                 
-                // DUPLICATE CHECK (Check if this URL exists anywhere else in DB list)
-                // Note: We re-check existingUrls because we might have updated some above
                 const currentUrls = new Set(finalLinks.map(l => l.link));
                 if (currentUrls.has(item.url)) return;
 
-                // ADD NEW
                 const newName = getBrandedName(apiMatch.sport_category);
                 finalLinks.push({
                     name: newName,
@@ -247,7 +240,7 @@ async function runSync() {
             }
         }
         
-        console.log(`🏁 Sync Done. Updated: ${updateCount}`);
+        console.log(`🏁 Sync Done. Updated: ${updateCount} matches.`);
         process.exit(0);
 
     } catch (e) {
