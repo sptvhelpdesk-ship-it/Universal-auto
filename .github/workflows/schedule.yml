@@ -1,0 +1,29 @@
+name: Auto Match Sync
+
+on:
+  schedule:
+    # Runs every 15 minutes from 12:00 UTC (5:30 PM IST) to 20:45 UTC (2:15 AM IST)
+    # Cron: '*/15' means every 15th minute (0, 15, 30, 45)
+    - cron: '*/15 12-20 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Libs
+        run: npm install
+
+      - name: Run Script
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          RAPIDAPI_KEYS_LIST: ${{ secrets.RAPIDAPI_KEYS_LIST }}
+        run: node auto-sync.js
