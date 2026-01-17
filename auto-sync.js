@@ -32,30 +32,28 @@ async function fetchFromApi(page, dateStr) {
 }
 
 async function runSync() {
-    console.log("🕵️‍♂️ STARTING DEEP INSPECTION...");
+    console.log("🕵️‍♂️ STARTING INSPECTION (Page 1 Only)...");
     
     // --- FORCE 2026 FOR TESTING ---
     const d = new Date();
     d.setFullYear(2026); 
     const options = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
     const dateStr = d.toLocaleDateString('en-GB', options).replace(/\//g, '');
-    console.log(`📅 Date: ${dateStr}`);
+    console.log(`📅 Scanning Date (IST): ${dateStr}`);
 
-    // GET API DATA
+    // GET API DATA (PAGE 1 ONLY)
     let allApiMatches = [];
-    for (let page = 1; page <= 2; page++) {
-        const m = await fetchFromApi(page, dateStr);
-        allApiMatches = [...allApiMatches, ...m];
-    }
+    const m = await fetchFromApi(1, dateStr);
+    allApiMatches = [...m];
     
-    console.log(`📊 Total Matches from API: ${allApiMatches.length}`);
+    console.log(`📊 Total Matches Found on Page 1: ${allApiMatches.length}`);
 
     if (allApiMatches.length === 0) {
         console.log("❌ No matches found.");
         process.exit(0);
     }
 
-    console.log("\n👇 CHECKING FIRST 5 MATCHES FOR LINKS 👇");
+    console.log("\n👇 MATCH DETAILS & LEAGUE NAMES 👇");
     
     // Check first 5 matches only
     const limit = Math.min(allApiMatches.length, 5);
@@ -64,14 +62,14 @@ async function runSync() {
         const serverCount = m.servers ? m.servers.length : 0;
         
         console.log(`------------------------------------------------`);
-        console.log(`⚽ Match: ${m.home_team_name} vs ${m.away_team_name}`);
-        console.log(`⏰ Time: ${m.match_time}`);
+        console.log(`⚽ Match:  ${m.home_team_name} vs ${m.away_team_name}`);
+        console.log(`🏆 League: ${m.league_name}`); // 👈 এই লাইনটি অ্যাড করা হয়েছে
+        console.log(`⏰ Time:   ${m.match_time}`);
         
         if (serverCount > 0) {
             console.log(`✅ Links Found: ${serverCount}`);
-            console.log(`🔗 Sample Link: ${m.servers[0].url}`);
         } else {
-            console.log(`❌ Links Found: 0 (This is why update is 0)`);
+            console.log(`❌ Links Found: 0`);
         }
     }
     
