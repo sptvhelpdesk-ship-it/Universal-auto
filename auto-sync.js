@@ -74,11 +74,11 @@ async function runSync() {
     // --- DATE LOGIC (2026 + MIDNIGHT FIX) ---
     const d = new Date();
     
-    // 1. Check Hour (IST)
+    // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     const istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
-    // 2. Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
+    // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
     if (istHour >= 0 && istHour < 4) {
         console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
         d.setDate(d.getDate() - 1);
@@ -86,10 +86,9 @@ async function runSync() {
         console.log(`☀️ Normal Mode (${istHour}:00 IST). Checking Today.`);
     }
 
-    // 3. FORCE YEAR 2026
+    // FORCE YEAR 2026
     d.setFullYear(2026);
 
-    // 4. Generate Date String
     const dateOptions = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
     const dateStr = d.toLocaleDateString('en-GB', dateOptions).replace(/\//g, '');
 
@@ -161,80 +160,59 @@ async function runSync() {
             const sortedNewLinks = [...fmpLinks, ...socoLinks, ...ok9Links];
             if (sortedNewLinks.length === 0) continue;
 
-            // 3. SMART UPDATE (Prevent Duplicates)
+            // 3. DELETE OLD API LINKS & KEEP MANUAL LINKS
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             finalLinks = finalLinks.filter(l => l);
 
-            // Identify Target Slots
-            let idxTv = -1;
-            let idxHd = -1;
-            
-            for (let i = finalLinks.length - 1; i >= 0; i--) {
-                if (finalLinks[i].name === "SPORTIFy TV" && idxTv === -1) idxTv = i;
-                if (finalLinks[i].name === "SPORTIFy TV+ HD" && idxHd === -1) idxHd = i;
-            }
+            // 🔥 KEEP ONLY MANUAL LINKS (Where source != 'api')
+            const manualLinks = finalLinks.filter(link => link.source !== 'api');
 
-            let usedNewLinkIndices = new Set();
-            let changesMade = false;
+            // 4. ADD NEW API LINKS (Marked with source: 'api')
+            const apiLinksToAdd = [];
 
-            // --- CHECK SLOT 1: SPORTIFy TV ---
-            if (idxTv !== -1 && sortedNewLinks.length > 0) {
-                const linkObj = sortedNewLinks[0];
-                // Only update if URL is DIFFERENT
-                if (finalLinks[idxTv].link !== linkObj.url) {
-                    finalLinks[idxTv] = {
-                        name: "SPORTIFy TV",
-                        link: linkObj.url,
-                        type: "Direct",
-                        logo: linkObj.logo
-                    };
-                    changesMade = true;
-                }
-                usedNewLinkIndices.add(0);
-            }
-
-            // --- CHECK SLOT 2: SPORTIFy TV+ HD ---
-            if (idxHd !== -1 && sortedNewLinks.length > 1) {
-                const linkObj = sortedNewLinks[1];
-                // Only update if URL is DIFFERENT
-                if (finalLinks[idxHd].link !== linkObj.url) {
-                    finalLinks[idxHd] = {
-                        name: "SPORTIFy TV+ HD",
-                        link: linkObj.url,
-                        type: "Direct",
-                        logo: linkObj.logo
-                    };
-                    changesMade = true;
-                }
-                usedNewLinkIndices.add(1);
-            }
-
-            // --- APPEND EXTRA LINKS (DUPLICATE CHECK) ---
-            const existingUrls = new Set(finalLinks.map(l => l.link));
-            
-            sortedNewLinks.forEach((item, idx) => {
-                if (usedNewLinkIndices.has(idx)) return; // Already used in slot 1 or 2
-                
-                // If URL already exists in DB list -> SKIP IT
-                if (existingUrls.has(item.url)) return;
-
-                // New Link found -> Add it
-                const newName = getBrandedName(apiMatch.sport_category);
-                finalLinks.push({
-                    name: newName,
-                    link: item.url,
+            // Add Priority 1 (SPORTIFy TV)
+            if (sortedNewLinks.length > 0) {
+                apiLinksToAdd.push({
+                    name: "SPORTIFy TV",
+                    link: sortedNewLinks[0].url,
                     type: "Direct",
-                    logo: item.logo
+                    logo: sortedNewLinks[0].logo,
+                    source: "api" // 👈 MARK AS API LINK
                 });
-                changesMade = true;
-            });
-
-            // 4. WRITE TO DB ONLY IF CHANGES DETECTED
-            if (changesMade) {
-                await db.ref(`matches/${matchId}/streamLinks`).set(finalLinks);
-                console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
-                updateCount++;
             }
+
+            // Add Priority 2 (SPORTIFy TV+ HD)
+            if (sortedNewLinks.length > 1) {
+                apiLinksToAdd.push({
+                    name: "SPORTIFy TV+ HD",
+                    link: sortedNewLinks[1].url,
+                    type: "Direct",
+                    logo: sortedNewLinks[1].logo,
+                    source: "api" // 👈 MARK AS API LINK
+                });
+            }
+
+            // Add Remaining Links (With random branded names)
+            if (sortedNewLinks.length > 2) {
+                for (let i = 2; i < sortedNewLinks.length; i++) {
+                    const item = sortedNewLinks[i];
+                    const newName = getBrandedName(apiMatch.sport_category);
+                    apiLinksToAdd.push({
+                        name: newName,
+                        link: item.url,
+                        type: "Direct",
+                        logo: item.logo,
+                        source: "api" // 👈 MARK AS API LINK
+                    });
+                }
+            }
+
+            // 5. MERGE & UPDATE DB (Manual Links + New API Links)
+            const updatedLinkList = [...manualLinks, ...apiLinksToAdd];
+
+            await db.ref(`matches/${matchId}/streamLinks`).set(updatedLinkList);
+            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
+            updateCount++;
         }
         
         console.log(`🏁 Sync Done. Updated: ${updateCount} matches.`);
