@@ -73,6 +73,11 @@ async function runSync() {
     
     // --- FORCE IST DATE FIX (DDMMYYYY) ---
     const d = new Date();
+    
+    // 👇👇 UPDATE: FORCE YEAR TO 2026 👇👇
+    d.setFullYear(2026); 
+    // 👆👆 THIS LINE FIXES THE DATE TO 2026
+
     const options = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
     // en-GB format is DD/MM/YYYY. Replace slashes to get DDMMYYYY
     const dateStr = d.toLocaleDateString('en-GB', options).replace(/\//g, '');
@@ -119,6 +124,7 @@ async function runSync() {
                 if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
                     (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
                     
+                    // Time Check: Match time must be within 24 hours
                     if (Math.abs((apiMatch.match_time * 1000) - new Date(val.matchTime).getTime()) < 86400000) {
                         matchId = key;
                         currentStreams = val.streamLinks || [];
