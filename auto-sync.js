@@ -144,13 +144,13 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // 2. COLLECT VALID LINKS (Priority Sorted: FMP > SOCO > OK9)
+            // 2. COLLECT VALID LINKS (Updated Priority: SOCO > OK9 > FMP)
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
             apiMatch.servers.forEach(s => {
                 const url = s.url || "";
                 
-                // 👇 UPDATED: Check for 'fpm.sla.homes' directly in URL
+                // Direct URL Checks
                 if (url.includes("fpm.sla.homes")) {
                     fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
                 }
@@ -162,15 +162,24 @@ async function runSync() {
                 }
             });
 
-            const sortedNewLinks = [...fmpLinks, ...socoLinks, ...ok9Links];
+            // 👇 CHANGED ORDER: SOCO > OK9 > FMP
+            const sortedNewLinks = [...socoLinks, ...ok9Links, ...fmpLinks];
+            
             if (sortedNewLinks.length === 0) continue;
 
-            // 3. DELETE OLD API LINKS & KEEP MANUAL LINKS
+            // 3. CLEAN UP & PREPARE LIST
             let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             finalLinks = finalLinks.filter(l => l);
 
-            // 🔥 KEEP ONLY MANUAL LINKS (Where source != 'api')
-            const manualLinks = finalLinks.filter(link => link.source !== 'api');
+            // 🔥 STEP A: Keep ONLY Manual Links (Delete old API links)
+            let safeLinks = finalLinks.filter(link => link.source !== 'api');
+
+            // 🔥 STEP B: DELETE DEFAULT LINKS (Crucial Fix)
+            // Even if they are manual, if they have these names, delete them to avoid duplicates/errors
+            safeLinks = safeLinks.filter(link => 
+                link.name !== "SPORTIFy TV" && 
+                link.name !== "SPORTIFy TV+ HD"
+            );
 
             // 4. ADD NEW API LINKS (Marked with source: 'api')
             const apiLinksToAdd = [];
@@ -213,7 +222,7 @@ async function runSync() {
             }
 
             // 5. MERGE & UPDATE DB (Manual Links + New API Links)
-            const updatedLinkList = [...manualLinks, ...apiLinksToAdd];
+            const updatedLinkList = [...safeLinks, ...apiLinksToAdd];
 
             await db.ref(`matches/${matchId}/streamLinks`).set(updatedLinkList);
             console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
