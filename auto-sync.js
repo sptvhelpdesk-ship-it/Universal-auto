@@ -96,18 +96,45 @@ async function runSync() {
 
     try {
         // A. GET API DATA
-        let allApiMatches = [];
+        let rawApiMatches = [];
         for (let page = 1; page <= 2; page++) {
             const m = await fetchFromApi(page, dateStr);
-            allApiMatches = [...allApiMatches, ...m];
+            rawApiMatches = [...rawApiMatches, ...m];
         }
         
-        console.log(`📊 Total Matches Found on Page 1 & 2: ${allApiMatches.length}`);
+        console.log(`📊 Raw Matches Found (Before Deduping): ${rawApiMatches.length}`);
 
-        if (allApiMatches.length === 0) { 
+        if (rawApiMatches.length === 0) { 
             console.log("No matches found in API."); 
             process.exit(0); 
         }
+
+        // --- 🔥 NEW STEP: DEDUPLICATE MATCHES (KEEP BEST ONE) ---
+        const bestMatchesMap = {};
+
+        rawApiMatches.forEach(match => {
+            // Create a unique ID based on normalized team names
+            const matchId = normalizeName(match.home_team_name) + "_vs_" + normalizeName(match.away_team_name);
+            const serverCount = match.servers ? match.servers.length : 0;
+
+            if (!bestMatchesMap[matchId]) {
+                // First time seeing this match, add it
+                bestMatchesMap[matchId] = match;
+            } else {
+                // Duplicate found! Compare server counts
+                const existingCount = bestMatchesMap[matchId].servers ? bestMatchesMap[matchId].servers.length : 0;
+                
+                if (serverCount > existingCount) {
+                    // New match has MORE links, so replace the old one
+                    bestMatchesMap[matchId] = match;
+                }
+                // If new match has less or equal links, ignore it (do nothing)
+            }
+        });
+
+        // Convert back to array
+        const allApiMatches = Object.values(bestMatchesMap);
+        console.log(`✨ Unique Matches After Filtering: ${allApiMatches.length}`);
 
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
@@ -162,7 +189,7 @@ async function runSync() {
                 }
             });
 
-            // 👇 CHANGED ORDER: SOCO > OK9 > FMP
+            // 👇 SORTED LIST
             const sortedNewLinks = [...socoLinks, ...ok9Links, ...fmpLinks];
             
             if (sortedNewLinks.length === 0) continue;
@@ -175,7 +202,6 @@ async function runSync() {
             let safeLinks = finalLinks.filter(link => link.source !== 'api');
 
             // 🔥 STEP B: DELETE DEFAULT LINKS (Crucial Fix)
-            // Even if they are manual, if they have these names, delete them to avoid duplicates/errors
             safeLinks = safeLinks.filter(link => 
                 link.name !== "SPORTIFy TV" && 
                 link.name !== "SPORTIFy TV+ HD"
@@ -191,7 +217,7 @@ async function runSync() {
                     link: sortedNewLinks[0].url,
                     type: "Direct",
                     logo: sortedNewLinks[0].logo,
-                    source: "api" // 👈 MARK AS API LINK
+                    source: "api" 
                 });
             }
 
@@ -202,7 +228,7 @@ async function runSync() {
                     link: sortedNewLinks[1].url,
                     type: "Direct",
                     logo: sortedNewLinks[1].logo,
-                    source: "api" // 👈 MARK AS API LINK
+                    source: "api" 
                 });
             }
 
@@ -216,16 +242,18 @@ async function runSync() {
                         link: item.url,
                         type: "Direct",
                         logo: item.logo,
-                        source: "api" // 👈 MARK AS API LINK
+                        source: "api"
                     });
                 }
             }
 
-            // 5. MERGE & UPDATE DB (Manual Links + New API Links)
+            // 5. MERGE & UPDATE DB
             const updatedLinkList = [...safeLinks, ...apiLinksToAdd];
 
             await db.ref(`matches/${matchId}/streamLinks`).set(updatedLinkList);
-            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2}`);
+            
+            // 🔥 NEW LOGGING FORMAT
+            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length}, OK9=${ok9Links.length}, FMP=${fmpLinks.length})`);
             updateCount++;
         }
         
