@@ -1,5 +1,6 @@
 const admin = require("firebase-admin");
 const axios = require("axios");
+const fs = require("fs"); // ফাইল সিস্টেম মডিউল অ্যাড করা হলো
 
 // --- 1. CONFIGURATION ---
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
@@ -77,12 +78,9 @@ async function runSync() {
     const istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
     if (istHour >= 0 && istHour < 4) {
-        console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
         d.setDate(d.getDate() - 1);
-    } else {
-        console.log(`☀️ Normal Mode (${istHour}:00 IST). Checking Today.`);
     }
-
+    
     // FORCE YEAR 2026
     d.setFullYear(2026);
 
@@ -99,17 +97,16 @@ async function runSync() {
             rawApiMatches = [...rawApiMatches, ...m];
         }
         
-        console.log(`📊 Total Raw Matches Found (Pages 1-3): ${rawApiMatches.length}`);
+        console.log(`📊 Total Raw Matches Found: ${rawApiMatches.length}`);
 
         if (rawApiMatches.length === 0) { 
             console.log("No matches found in API."); 
             process.exit(0); 
         }
 
-        // 🔥 STEP: SAVE FULL RAW JSON TO DATABASE (Backup)
-        // This saves the exact data from API without any filter
-        await db.ref('api_raw_data').set(rawApiMatches);
-        console.log(`💾 Full Raw Data Saved to 'api_raw_data' in Database.`);
+        // 🔥 STEP: SAVE RAW DATA TO 'data.json' FILE
+        fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
+        console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
 
         // 🔥 STEP: DEDUPLICATE MATCHES (KEEP BEST ONE)
         const bestMatchesMap = {};
@@ -121,7 +118,6 @@ async function runSync() {
             if (!bestMatchesMap[matchId]) {
                 bestMatchesMap[matchId] = match;
             } else {
-                // Keep the one with MORE links
                 const existingCount = bestMatchesMap[matchId].servers ? bestMatchesMap[matchId].servers.length : 0;
                 if (serverCount > existingCount) {
                     bestMatchesMap[matchId] = match;
@@ -130,8 +126,7 @@ async function runSync() {
         });
 
         const allApiMatches = Object.values(bestMatchesMap);
-        console.log(`✨ Unique Matches to Process: ${allApiMatches.length}`);
-
+        
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
         let updateCount = 0;
@@ -145,7 +140,7 @@ async function runSync() {
             let matchId = null;
             let currentStreams = [];
 
-            // 1. FIND MATCH IN DB
+            // FIND MATCH IN DB
             for (const [key, val] of Object.entries(dbMatches)) {
                 const dbCat = (val.sportType || "").toLowerCase();
                 const apiCat = (apiMatch.sport_category || "Football").toLowerCase();
@@ -167,79 +162,47 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // 2. COLLECT NEW LINKS
+            // COLLECT NEW LINKS
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
             apiMatch.servers.forEach(s => {
                 const url = s.url || "";
-                if (url.includes("fpm.sla.homes")) {
-                    fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
-                }
-                else if (url.includes("pull.niues.live")) {
-                    socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
-                }
-                else if (url.includes("cdnok9.com")) {
-                    ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
-                }
+                if (url.includes("fpm.sla.homes")) fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
+                else if (url.includes("pull.niues.live")) socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
+                else if (url.includes("cdnok9.com")) ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
             });
 
-            // Sorted List: SOCO > OK9 > FMP
             const sortedNewLinks = [...socoLinks, ...ok9Links, ...fmpLinks];
             
             if (sortedNewLinks.length === 0) continue;
 
-            // 3. PREPARE EXISTING LINKS (KEEP MANUAL LINKS SAFE)
+            // PREPARE LIST (MANUAL ON TOP, NEW API AT BOTTOM)
             let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             existingList = existingList.filter(l => l);
 
-            // Keep ONLY Manual Links (Remove old API links to avoid duplication)
-            // Manual links stay at the TOP
+            // Keep ONLY Manual Links (Remove old API links)
             const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // 4. PREPARE NEW API LINKS
+            // Add New API Links
             const apiLinksToAdd = [];
-
-            // Priority 1
             if (sortedNewLinks.length > 0) {
-                apiLinksToAdd.push({
-                    name: "SPORTIFy TV",
-                    link: sortedNewLinks[0].url,
-                    type: "Direct",
-                    logo: sortedNewLinks[0].logo,
-                    source: "api" 
-                });
+                apiLinksToAdd.push({ name: "SPORTIFy TV", link: sortedNewLinks[0].url, type: "Direct", logo: sortedNewLinks[0].logo, source: "api" });
             }
-            // Priority 2
             if (sortedNewLinks.length > 1) {
-                apiLinksToAdd.push({
-                    name: "SPORTIFy TV+ HD",
-                    link: sortedNewLinks[1].url,
-                    type: "Direct",
-                    logo: sortedNewLinks[1].logo,
-                    source: "api" 
-                });
+                apiLinksToAdd.push({ name: "SPORTIFy TV+ HD", link: sortedNewLinks[1].url, type: "Direct", logo: sortedNewLinks[1].logo, source: "api" });
             }
-            // Others
             if (sortedNewLinks.length > 2) {
                 for (let i = 2; i < sortedNewLinks.length; i++) {
                     const item = sortedNewLinks[i];
-                    const newName = getBrandedName(apiMatch.sport_category);
-                    apiLinksToAdd.push({
-                        name: newName,
-                        link: item.url,
-                        type: "Direct",
-                        logo: item.logo,
-                        source: "api"
-                    });
+                    apiLinksToAdd.push({ name: getBrandedName(apiMatch.sport_category), link: item.url, type: "Direct", logo: item.logo, source: "api" });
                 }
             }
 
-            // 5. MERGE: MANUAL (TOP) + NEW API (BOTTOM)
+            // MERGE: MANUAL + NEW API
             const finalUpdatedList = [...manualLinks, ...apiLinksToAdd];
 
             await db.ref(`matches/${matchId}/streamLinks`).set(finalUpdatedList);
             
-            // LOG WITH COUNTS
             console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length}, OK9=${ok9Links.length}, FMP=${fmpLinks.length})`);
             updateCount++;
         }
