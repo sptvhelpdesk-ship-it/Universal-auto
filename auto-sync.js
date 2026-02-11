@@ -69,16 +69,13 @@ async function fetchFromApi(page, dateStr) {
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
-    console.log("⏰ Starting Sync (Pages 1 & 2)...");
+    console.log("⏰ Starting Sync (Pages 1 to 3)...");
     
-    // --- DATE LOGIC (2026 + MIDNIGHT FIX) ---
+    // --- DATE LOGIC ---
     const d = new Date();
-    
-    // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     const istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
-    // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
     if (istHour >= 0 && istHour < 4) {
         console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
         d.setDate(d.getDate() - 1);
@@ -95,46 +92,45 @@ async function runSync() {
     console.log(`📅 Final Scanning Date (IST): ${dateStr}`);
 
     try {
-        // A. GET API DATA
+        // A. GET API DATA (PAGES 1, 2, 3)
         let rawApiMatches = [];
-        for (let page = 1; page <= 2; page++) {
+        for (let page = 1; page <= 3; page++) {
             const m = await fetchFromApi(page, dateStr);
             rawApiMatches = [...rawApiMatches, ...m];
         }
         
-        console.log(`📊 Raw Matches Found (Before Deduping): ${rawApiMatches.length}`);
+        console.log(`📊 Total Raw Matches Found (Pages 1-3): ${rawApiMatches.length}`);
 
         if (rawApiMatches.length === 0) { 
             console.log("No matches found in API."); 
             process.exit(0); 
         }
 
-        // --- 🔥 NEW STEP: DEDUPLICATE MATCHES (KEEP BEST ONE) ---
+        // 🔥 STEP: SAVE FULL RAW JSON TO DATABASE (Backup)
+        // This saves the exact data from API without any filter
+        await db.ref('api_raw_data').set(rawApiMatches);
+        console.log(`💾 Full Raw Data Saved to 'api_raw_data' in Database.`);
+
+        // 🔥 STEP: DEDUPLICATE MATCHES (KEEP BEST ONE)
         const bestMatchesMap = {};
 
         rawApiMatches.forEach(match => {
-            // Create a unique ID based on normalized team names
             const matchId = normalizeName(match.home_team_name) + "_vs_" + normalizeName(match.away_team_name);
             const serverCount = match.servers ? match.servers.length : 0;
 
             if (!bestMatchesMap[matchId]) {
-                // First time seeing this match, add it
                 bestMatchesMap[matchId] = match;
             } else {
-                // Duplicate found! Compare server counts
+                // Keep the one with MORE links
                 const existingCount = bestMatchesMap[matchId].servers ? bestMatchesMap[matchId].servers.length : 0;
-                
                 if (serverCount > existingCount) {
-                    // New match has MORE links, so replace the old one
                     bestMatchesMap[matchId] = match;
                 }
-                // If new match has less or equal links, ignore it (do nothing)
             }
         });
 
-        // Convert back to array
         const allApiMatches = Object.values(bestMatchesMap);
-        console.log(`✨ Unique Matches After Filtering: ${allApiMatches.length}`);
+        console.log(`✨ Unique Matches to Process: ${allApiMatches.length}`);
 
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
@@ -149,7 +145,7 @@ async function runSync() {
             let matchId = null;
             let currentStreams = [];
 
-            // 1. FIND MATCH
+            // 1. FIND MATCH IN DB
             for (const [key, val] of Object.entries(dbMatches)) {
                 const dbCat = (val.sportType || "").toLowerCase();
                 const apiCat = (apiMatch.sport_category || "Football").toLowerCase();
@@ -171,13 +167,11 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // 2. COLLECT VALID LINKS (Updated Priority: SOCO > OK9 > FMP)
+            // 2. COLLECT NEW LINKS
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
             apiMatch.servers.forEach(s => {
                 const url = s.url || "";
-                
-                // Direct URL Checks
                 if (url.includes("fpm.sla.homes")) {
                     fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
                 }
@@ -189,28 +183,23 @@ async function runSync() {
                 }
             });
 
-            // 👇 SORTED LIST
+            // Sorted List: SOCO > OK9 > FMP
             const sortedNewLinks = [...socoLinks, ...ok9Links, ...fmpLinks];
             
             if (sortedNewLinks.length === 0) continue;
 
-            // 3. CLEAN UP & PREPARE LIST
-            let finalLinks = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
-            finalLinks = finalLinks.filter(l => l);
+            // 3. PREPARE EXISTING LINKS (KEEP MANUAL LINKS SAFE)
+            let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
+            existingList = existingList.filter(l => l);
 
-            // 🔥 STEP A: Keep ONLY Manual Links (Delete old API links)
-            let safeLinks = finalLinks.filter(link => link.source !== 'api');
+            // Keep ONLY Manual Links (Remove old API links to avoid duplication)
+            // Manual links stay at the TOP
+            const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // 🔥 STEP B: DELETE DEFAULT LINKS (Crucial Fix)
-            safeLinks = safeLinks.filter(link => 
-                link.name !== "SPORTIFy TV" && 
-                link.name !== "SPORTIFy TV+ HD"
-            );
-
-            // 4. ADD NEW API LINKS (Marked with source: 'api')
+            // 4. PREPARE NEW API LINKS
             const apiLinksToAdd = [];
 
-            // Add Priority 1 (SPORTIFy TV)
+            // Priority 1
             if (sortedNewLinks.length > 0) {
                 apiLinksToAdd.push({
                     name: "SPORTIFy TV",
@@ -220,8 +209,7 @@ async function runSync() {
                     source: "api" 
                 });
             }
-
-            // Add Priority 2 (SPORTIFy TV+ HD)
+            // Priority 2
             if (sortedNewLinks.length > 1) {
                 apiLinksToAdd.push({
                     name: "SPORTIFy TV+ HD",
@@ -231,8 +219,7 @@ async function runSync() {
                     source: "api" 
                 });
             }
-
-            // Add Remaining Links (With random branded names)
+            // Others
             if (sortedNewLinks.length > 2) {
                 for (let i = 2; i < sortedNewLinks.length; i++) {
                     const item = sortedNewLinks[i];
@@ -247,12 +234,12 @@ async function runSync() {
                 }
             }
 
-            // 5. MERGE & UPDATE DB
-            const updatedLinkList = [...safeLinks, ...apiLinksToAdd];
+            // 5. MERGE: MANUAL (TOP) + NEW API (BOTTOM)
+            const finalUpdatedList = [...manualLinks, ...apiLinksToAdd];
 
-            await db.ref(`matches/${matchId}/streamLinks`).set(updatedLinkList);
+            await db.ref(`matches/${matchId}/streamLinks`).set(finalUpdatedList);
             
-            // 🔥 NEW LOGGING FORMAT
+            // LOG WITH COUNTS
             console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length}, OK9=${ok9Links.length}, FMP=${fmpLinks.length})`);
             updateCount++;
         }
