@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
 const axios = require("axios");
-const fs = require("fs"); // ফাইল সিস্টেম মডিউল
+const fs = require("fs");
 
 // --- 1. CONFIGURATION ---
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
@@ -71,13 +71,16 @@ async function fetchFromApi(page, dateStr) {
 async function runSync() {
     console.log("⏰ Starting Sync (Pages 1 to 3)...");
     
-    // --- DATE LOGIC (RESTORED WITH LOGS) ---
+    // --- DATE LOGIC (FIXED FOR 24:00 BUG) ---
     const d = new Date();
     
     // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
-    const istHour = parseInt(d.toLocaleString('en-US', istOptions));
+    let istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
+    // 🔥 FIX: If Server says 24, treat it as 0 (Midnight)
+    if (istHour === 24) istHour = 0;
+
     // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
     if (istHour >= 0 && istHour < 4) {
         console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
