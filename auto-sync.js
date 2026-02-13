@@ -1,6 +1,6 @@
 const admin = require("firebase-admin");
 const axios = require("axios");
-const fs = require("fs"); // ফাইল সিস্টেম মডিউল অ্যাড করা হলো
+const fs = require("fs"); // ফাইল সিস্টেম মডিউল
 
 // --- 1. CONFIGURATION ---
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
@@ -21,7 +21,6 @@ const LOGOS = {
 };
 
 // --- 3. HELPER FUNCTIONS ---
-
 function normalizeName(str) {
     if (!str) return "";
     return str.toLowerCase()
@@ -72,15 +71,21 @@ async function fetchFromApi(page, dateStr) {
 async function runSync() {
     console.log("⏰ Starting Sync (Pages 1 to 3)...");
     
-    // --- DATE LOGIC ---
+    // --- DATE LOGIC (RESTORED WITH LOGS) ---
     const d = new Date();
+    
+    // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     const istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
+    // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
     if (istHour >= 0 && istHour < 4) {
+        console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
         d.setDate(d.getDate() - 1);
+    } else {
+        console.log(`☀️ Normal Mode (${istHour}:00 IST). Checking Today.`);
     }
-    
+
     // FORCE YEAR 2026
     d.setFullYear(2026);
 
@@ -104,7 +109,7 @@ async function runSync() {
             process.exit(0); 
         }
 
-        // 🔥 STEP: SAVE RAW DATA TO 'data.json' FILE
+        // 🔥 STEP: SAVE RAW DATA TO 'data.json'
         fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
         console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
 
@@ -126,6 +131,7 @@ async function runSync() {
         });
 
         const allApiMatches = Object.values(bestMatchesMap);
+        console.log(`✨ Unique Matches after Filter: ${allApiMatches.length}`);
         
         // B. GET DB DATA
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
@@ -140,7 +146,7 @@ async function runSync() {
             let matchId = null;
             let currentStreams = [];
 
-            // FIND MATCH IN DB
+            // FIND MATCH
             for (const [key, val] of Object.entries(dbMatches)) {
                 const dbCat = (val.sportType || "").toLowerCase();
                 const apiCat = (apiMatch.sport_category || "Football").toLowerCase();
@@ -162,7 +168,7 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // COLLECT NEW LINKS
+            // COLLECT LINKS
             let fmpLinks = [], socoLinks = [], ok9Links = [];
             
             apiMatch.servers.forEach(s => {
@@ -176,14 +182,14 @@ async function runSync() {
             
             if (sortedNewLinks.length === 0) continue;
 
-            // PREPARE LIST (MANUAL ON TOP, NEW API AT BOTTOM)
+            // PREPARE LIST
             let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
             existingList = existingList.filter(l => l);
 
-            // Keep ONLY Manual Links (Remove old API links)
+            // Keep Manual Links (Top)
             const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // Add New API Links
+            // Add New API Links (Bottom)
             const apiLinksToAdd = [];
             if (sortedNewLinks.length > 0) {
                 apiLinksToAdd.push({ name: "SPORTIFy TV", link: sortedNewLinks[0].url, type: "Direct", logo: sortedNewLinks[0].logo, source: "api" });
@@ -198,7 +204,7 @@ async function runSync() {
                 }
             }
 
-            // MERGE: MANUAL + NEW API
+            // MERGE
             const finalUpdatedList = [...manualLinks, ...apiLinksToAdd];
 
             await db.ref(`matches/${matchId}/streamLinks`).set(finalUpdatedList);
