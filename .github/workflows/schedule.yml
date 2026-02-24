@@ -2,24 +2,25 @@ name: Auto Match Sync
 
 on:
   schedule:
-    # Runs every 15 minutes from 12:00 UTC (5:30 PM IST) to 20:45 UTC (2:15 AM IST)
+    # Runs every 15 minutes from 12:00 UTC to 20:59 UTC
     - cron: '*/15 12-20 * * *'
+  repository_dispatch:
+    types: [trigger_update]
   workflow_dispatch:
 
 jobs:
   run-sync:
     runs-on: ubuntu-latest
-    
-    # 🔥 এই পারমিশনটা খুব জরুরি ফাইল সেভ করার জন্য
+
     permissions:
       contents: write
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -29,15 +30,14 @@ jobs:
       - name: Run Script
         env:
           FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
           RAPIDAPI_KEYS_LIST: ${{ secrets.RAPIDAPI_KEYS_LIST }}
         run: node auto-sync.js
 
-      # 🔥 এই নতুন স্টেপটি data.json ফাইলটি গিটহাবে সেভ করবে
       - name: Commit and Push JSON Data
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add data.json
-          # যদি ফাইলে কোনো চেঞ্জ না থাকে, তাহলে এরর দেবে না (|| exit 0)
           git commit -m "Auto-update match data.json [skip ci]" || exit 0
           git push
