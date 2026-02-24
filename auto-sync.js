@@ -5,13 +5,13 @@ const fs = require("fs");
 // --- 1. CONFIGURATION ---
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 const ALL_KEYS = process.env.RAPIDAPI_KEYS_LIST.split(',');
-// 🔥 UPDATE: Database URL এখন GitHub Secrets থেকে আসবে
+// Database URL from GitHub Secrets
 const DATABASE_URL = process.env.FIREBASE_DATABASE_URL;
 let currentKeyIndex = 0;
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: DATABASE_URL 
+    databaseURL: DATABASE_URL
 });
 const db = admin.database();
 
@@ -23,13 +23,26 @@ const LOGOS = {
 };
 
 // --- 3. HELPER FUNCTIONS ---
+
+// 🔥 IMPROVED NAME MATCHING LOGIC
 function normalizeName(str) {
     if (!str) return "";
-    return str.toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .replace(/\b(fc|cf|sc|ac|rc|cd)\b/g, "")
-        .replace(/[^a-z0-9]/g, "")
-        .trim();
+    
+    // 1. Lowercase & Remove Accents
+    let name = str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    // 2. Expand Common Abbreviations (Fixes Atl -> Atletico, Utd -> United)
+    name = name.replace(/\batl\.?\b/g, "atletico"); // atl or atl. -> atletico
+    name = name.replace(/\butd\.?\b/g, "united");   // utd or utd. -> united
+    name = name.replace(/\bman\.?\b/g, "manchester"); // man -> manchester
+    name = name.replace(/\bst\.?\b/g, "saint");     // st or st. -> saint
+    name = name.replace(/\bint\.?\b/g, "inter");    // int or int. -> inter
+
+    // 3. Remove Club Prefixes/Suffixes
+    name = name.replace(/\b(fc|cf|sc|ac|rc|cd|as)\b/g, "");
+
+    // 4. Remove ALL non-alphanumeric chars (keep strict comparison)
+    return name.replace(/[^a-z0-9]/g, "").trim();
 }
 
 function getBrandedName(sportCategory) {
@@ -73,14 +86,14 @@ async function fetchFromApi(page, dateStr) {
 async function runSync() {
     console.log("⏰ Starting Sync (Pages 1 to 3)...");
     
-    // --- DATE LOGIC (FIXED FOR 24:00 BUG & MIDNIGHT) ---
+    // --- DATE LOGIC ---
     const d = new Date();
     
     // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     let istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
-    // 🔥 FIX: If Server says 24, treat it as 0 (Midnight)
+    // FIX: If Server says 24, treat it as 0 (Midnight)
     if (istHour === 24) istHour = 0;
 
     // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
@@ -114,11 +127,11 @@ async function runSync() {
             process.exit(0); 
         }
 
-        // 🔥 STEP: SAVE RAW DATA TO 'data.json'
+        // SAVE RAW DATA TO 'data.json'
         fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
         console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
 
-        // 🔥 STEP: DEDUPLICATE MATCHES (KEEP BEST ONE)
+        // DEDUPLICATE MATCHES (KEEP BEST ONE)
         const bestMatchesMap = {};
 
         rawApiMatches.forEach(match => {
@@ -160,6 +173,7 @@ async function runSync() {
                 const dbTeam1 = normalizeName(val.team1Name || "");
                 const dbTeam2 = normalizeName(val.team2Name || "");
 
+                // Relaxed Matching Logic
                 if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
                     (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
                     
