@@ -17,6 +17,7 @@ const db = admin.database();
 
 // --- 2. LOGOS & CONSTANTS ---
 const LOGOS = {
+    // Only SOCO Logo is needed now, but keeping others just in case
     FMP: "https://i.ibb.co/CFsJDtb/1000315330.png",
     SOCO: "https://i.ibb.co/DgvNg0k0/1000315332.png",
     OK9: "https://i.ibb.co/k66hvS7j/1000313353.jpg"
@@ -31,17 +32,17 @@ function normalizeName(str) {
     // 1. Lowercase & Remove Accents
     let name = str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-    // 2. Expand Common Abbreviations (Fixes Atl -> Atletico, Utd -> United)
-    name = name.replace(/\batl\.?\b/g, "atletico"); // atl or atl. -> atletico
-    name = name.replace(/\butd\.?\b/g, "united");   // utd or utd. -> united
-    name = name.replace(/\bman\.?\b/g, "manchester"); // man -> manchester
-    name = name.replace(/\bst\.?\b/g, "saint");     // st or st. -> saint
-    name = name.replace(/\bint\.?\b/g, "inter");    // int or int. -> inter
+    // 2. Expand Common Abbreviations
+    name = name.replace(/\batl\.?\b/g, "atletico");
+    name = name.replace(/\butd\.?\b/g, "united");
+    name = name.replace(/\bman\.?\b/g, "manchester");
+    name = name.replace(/\bst\.?\b/g, "saint");
+    name = name.replace(/\bint\.?\b/g, "inter");
 
     // 3. Remove Club Prefixes/Suffixes
     name = name.replace(/\b(fc|cf|sc|ac|rc|cd|as)\b/g, "");
 
-    // 4. Remove ALL non-alphanumeric chars (keep strict comparison)
+    // 4. Remove ALL non-alphanumeric chars
     return name.replace(/[^a-z0-9]/g, "").trim();
 }
 
@@ -84,19 +85,15 @@ async function fetchFromApi(page, dateStr) {
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
-    console.log("⏰ Starting Sync (Pages 1 to 3)...");
+    console.log("⏰ Starting Sync (Pages 1 to 3) [ONLY SOCO MODE]...");
     
     // --- DATE LOGIC ---
     const d = new Date();
-    
-    // Check Hour (IST)
     const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     let istHour = parseInt(d.toLocaleString('en-US', istOptions));
     
-    // FIX: If Server says 24, treat it as 0 (Midnight)
-    if (istHour === 24) istHour = 0;
+    if (istHour === 24) istHour = 0; // Fix 24:00 bug
 
-    // Midnight Logic: If 00:00 to 04:00 -> Go back 1 day
     if (istHour >= 0 && istHour < 4) {
         console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
         d.setDate(d.getDate() - 1);
@@ -113,7 +110,7 @@ async function runSync() {
     console.log(`📅 Final Scanning Date (IST): ${dateStr}`);
 
     try {
-        // A. GET API DATA (PAGES 1, 2, 3)
+        // A. GET API DATA
         let rawApiMatches = [];
         for (let page = 1; page <= 3; page++) {
             const m = await fetchFromApi(page, dateStr);
@@ -127,13 +124,12 @@ async function runSync() {
             process.exit(0); 
         }
 
-        // SAVE RAW DATA TO 'data.json'
+        // SAVE RAW DATA
         fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
         console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
 
-        // DEDUPLICATE MATCHES (KEEP BEST ONE)
+        // DEDUPLICATE
         const bestMatchesMap = {};
-
         rawApiMatches.forEach(match => {
             const matchId = normalizeName(match.home_team_name) + "_vs_" + normalizeName(match.away_team_name);
             const serverCount = match.servers ? match.servers.length : 0;
@@ -173,7 +169,6 @@ async function runSync() {
                 const dbTeam1 = normalizeName(val.team1Name || "");
                 const dbTeam2 = normalizeName(val.team2Name || "");
 
-                // Relaxed Matching Logic
                 if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
                     (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
                     
@@ -187,19 +182,22 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // COLLECT LINKS
-            let fmpLinks = [], socoLinks = [], ok9Links = [];
+            // 🔥 CHANGED LOGIC: ONLY COLLECT SOCO LINKS
+            let socoLinks = [];
             
             apiMatch.servers.forEach(s => {
                 const url = s.url || "";
-                if (url.includes("fpm.sla.homes")) fmpLinks.push({ url: url, type: "FMP", logo: LOGOS.FMP });
-                else if (url.includes("pull.niues.live")) socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
-                else if (url.includes("cdnok9.com")) ok9Links.push({ url: url, type: "OK9", logo: LOGOS.OK9 });
+                
+                // ONLY Check for SOCO (Ignore FMP/OK9)
+                if (url.includes("pull.niues.live")) {
+                    socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
+                }
             });
 
-            const sortedNewLinks = [...socoLinks, ...ok9Links, ...fmpLinks];
-            
-            if (sortedNewLinks.length === 0) continue;
+            // If no SOCO links found, skip this match update
+            if (socoLinks.length === 0) continue;
+
+            const sortedNewLinks = [...socoLinks]; // Only SOCO links now
 
             // PREPARE LIST
             let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
@@ -208,7 +206,7 @@ async function runSync() {
             // Keep Manual Links (Top)
             const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // Add New API Links (Bottom)
+            // Add New SOCO Links (Bottom)
             const apiLinksToAdd = [];
             if (sortedNewLinks.length > 0) {
                 apiLinksToAdd.push({ name: "SPORTIFy TV", link: sortedNewLinks[0].url, type: "Direct", logo: sortedNewLinks[0].logo, source: "api" });
@@ -228,7 +226,7 @@ async function runSync() {
 
             await db.ref(`matches/${matchId}/streamLinks`).set(finalUpdatedList);
             
-            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length}, OK9=${ok9Links.length}, FMP=${fmpLinks.length})`);
+            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length})`);
             updateCount++;
         }
         
