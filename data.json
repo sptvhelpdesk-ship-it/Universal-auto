@@ -17,48 +17,71 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       },
       {
         "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/TANCA/index.m3u8?expire=1788427256&sign=8ef329a1007f5bbf1c7100b2d7663d68",
-        "type": "direct",
+        "url": "https://pull.niues.live/live/stream-290928_lsd.m3u8?auth_key=1772216796-0-0-b435f714a717d3904ccd01cc1e02008c",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1772215716-0-0-e743d0c2e148083e35501abb1b6ae0a9",
+        "url": "https://pull.niues.live/live/stream-290928_lhd.m3u8?auth_key=1772216796-0-0-1d34e84a3b2a37bcfd90a279426f21cf",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1772215716-0-0-c788bee10aa806c2454b8d79a86d849a",
+        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1772216796-0-0-9d31c6705a63074ce44186b64eaeffc8",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-290928_lsd.m3u8?auth_key=1772215716-0-0-a39a6c38879b949490506ceb8d2272c6",
+        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1772216796-0-0-358500e3ada3b2bb60db8e2ec491ed7c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-290928_lhd.m3u8?auth_key=1772215716-0-0-b7095732adaaee7d31d65dae8a5d2007",
+        "url": "https://hls.cdnok9.com/live/TANCA/index.m3u8?expire=1788427256&sign=8ef329a1007f5bbf1c7100b2d7663d68",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1772208000",
+    "match_status": "live",
+    "home_team_name": "Union Sportive Bougouba",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/bougouba-672780.png",
+    "homeTeamScore": "1",
+    "away_team_name": "AS Korofina",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/as-korofina-290847.png",
+    "awayTeamScore": "0",
+    "league_name": "Mali Premiere Division",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6Mwd5eKRdpkrvizi1d.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
       }
     ]
   },
@@ -80,30 +103,7 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": "1772208000",
-    "match_status": "live",
-    "home_team_name": "Union Sportive Bougouba",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/bougouba-672780.png",
-    "homeTeamScore": "0",
-    "away_team_name": "AS Korofina",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/as-korofina-290847.png",
-    "awayTeamScore": "0",
-    "league_name": "Mali Premiere Division",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6Mwd5eKRdpkrvizi1d.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -126,7 +126,7 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -145,17 +145,17 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-558264_lsd.m3u8?auth_key=1772215716-0-0-661f16bb146156d545d2489271ad084d",
+        "url": "https://pull.niues.live/live/stream-558264_lsd.m3u8?auth_key=1772216796-0-0-46b1dd2594a975633c5e3b074fc07f8c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-558264_lhd.m3u8?auth_key=1772215716-0-0-4db0192bed36284b2178d8503c465a5a",
+        "url": "https://pull.niues.live/live/stream-558264_lhd.m3u8?auth_key=1772216796-0-0-988135a4e2d94f4977aede589d52bc24",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       }
@@ -170,7 +170,7 @@
     "away_team_name": "Baltika Kaliningrad",
     "away_team_logo": "https://cdn.1xapi.com/images/teams/baltika-kaliningrad-a7664b.webp",
     "awayTeamScore": "0",
-    "league_name": "Russia Premier League",
+    "league_name": "Russian Premier League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
@@ -179,392 +179,111 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       },
       {
         "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/URA/index.m3u8?expire=1788427256&sign=b321b6b8b5cd73e24aae2a3a16b7b5d2",
-        "type": "direct",
+        "url": "https://pull.niues.live/live/stream-380460_lsd.m3u8?auth_key=1772216796-0-0-ba6aa9f9e50f3cafd4ddffa21d5fd140",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-380460_lsd.m3u8?auth_key=1772215716-0-0-073b573d92be611569102b6341a49165",
+        "url": "https://pull.niues.live/live/stream-380460_lhd.m3u8?auth_key=1772216796-0-0-560b594d70a3629834f2adb7d9ca0af0",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-380460_lhd.m3u8?auth_key=1772215716-0-0-a6f37906a3c15e80962ab91c9569164d",
+        "url": "https://pull.niur.live/live/stream-462413_lsd.m3u8?txSecret=e04d5522a3c17b99ab65193643fa5b66&txTime=69a2282c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-547345_lsd.m3u8?auth_key=1772215716-0-0-dd5ad3ef31dc1287bf71d941fd1ca30e",
+        "url": "https://pull.niur.live/live/stream-462413_lhd.m3u8?txSecret=80d042d6d0362f316508f77b22b90626&txTime=69a2282c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-547345_lhd.m3u8?auth_key=1772215716-0-0-a87c715e9b2439dae5ee5b5582674c1f",
+        "url": "https://pull.niues.live/live/stream-547345_lsd.m3u8?auth_key=1772216796-0-0-2e76f4269c31af4d532701728d21b5da",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-9912097_lsd.m3u8?auth_key=1772215716-0-0-4df3e8e1ce53b9e9b3636cd7ecdb70e6",
+        "url": "https://pull.niues.live/live/stream-547345_lhd.m3u8?auth_key=1772216796-0-0-7bf07444f9e9269777b73e3ef7961603",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-9912097_lhd.m3u8?auth_key=1772215716-0-0-e7bb9a8e0f7299ac8224209e8a843511",
+        "url": "https://pull.niues.live/live/stream-9912097_lsd.m3u8?auth_key=1772216796-0-0-c1ebc2fc546970fe3e6baa2856de90a9",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 9",
-        "url": "https://pull.niur.live/live/stream-462413_lsd.m3u8?txSecret=fd39aa9fcc482cae375b7e84b011092f&txTime=69a223f4",
+        "url": "https://pull.niues.live/live/stream-9912097_lhd.m3u8?auth_key=1772216796-0-0-f70d91ffc28b0697739906d4158cf360",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 10",
-        "url": "https://pull.niur.live/live/stream-462413_lhd.m3u8?txSecret=8f143ae6acab88d6b9fcd01b7db6695c&txTime=69a223f4",
+        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1772216796-0-0-3f03f8542203628ae98bd628cc49aa7c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 11",
-        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1772215716-0-0-f3b7afa2c31d01de931260af92a3b6e2",
+        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1772216796-0-0-8af40cb42ecf41953d18a38efa7c0550",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 12",
-        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1772215716-0-0-e9bbc05a09d5441b438fa5f6049184ec",
+        "url": "https://pull.niues.live/live/stream-9912008_lsd.m3u8?auth_key=1772216796-0-0-3e8a2860657878b0fe14a889566325a4",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 13",
-        "url": "https://pull.niues.live/live/stream-9912008_lsd.m3u8?auth_key=1772215716-0-0-1974fac680b06884ab2072a735439efe",
+        "url": "https://pull.niues.live/live/stream-9912008_lhd.m3u8?auth_key=1772216796-0-0-f82844ec109da7b8d855d1445505ad30",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 14",
-        "url": "https://pull.niues.live/live/stream-9912008_lhd.m3u8?auth_key=1772215716-0-0-ced4f98be4bc9dde4ebc28971a50c7bd",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      }
-    ]
-  },
-  {
-    "match_time": 1772211600,
-    "match_status": "live",
-    "home_team_name": "Istanbul Basaksehir",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/istanbul-basaksehir-7ef756.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Konyaspor",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/konyaspor-33a561.png",
-    "awayTeamScore": "0",
-    "league_name": "Turkey Super Lig",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://hls.cdnok9.com/live/TRUONGTHANH/index.m3u8?expire=1788427256&sign=e2fd813cd4d5e02d97e74e0417b1d973",
+        "url": "https://hls.cdnok9.com/live/URA/index.m3u8?expire=1788427256&sign=b321b6b8b5cd73e24aae2a3a16b7b5d2",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/KAKA/index.m3u8?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": 1772211600,
-    "match_status": "live",
-    "home_team_name": "Dukla Prague",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/dukla-prague-f99a88.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Slavia Praha",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/slavia-praha-3a417d.png",
-    "awayTeamScore": "0",
-    "league_name": "Czech Republic Gambrinus Liga",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuT7hrPWU576waYto.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 3",
-        "url": " https://hls.cdnok9.com/live/VOTONG/index.m3u8?expire=1891347600&sign=cbb47d2000b9576a7b34114624ff8299",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": 1772211600,
-    "match_status": "live",
-    "home_team_name": "Cracovia Krakow",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/cracovia-krakow-bd0fae.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Piast Gliwice",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/piast-gliwice-144ee7.png",
-    "awayTeamScore": "0",
-    "league_name": "PKO Bank Polski EKSTRAKLASA",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuT7UnwZ228t8eCBR.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": " https://hls.cdnok9.com/live/CHUN1/index.m3u8?expire=1890830700&sign=dbdc8ced2f1b21adf9d5a264bfe72141",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": 1772211600,
-    "match_status": "live",
-    "home_team_name": "Trabzonspor",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/trabzonspor-268f33.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "Karagumruk",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/karagumruk-3fbdec.png",
-    "awayTeamScore": "0",
-    "league_name": "Turkish Super League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuTcMcGydy8ah4MEf.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/DOANDU1/index.m3u8?expire=1923832980&sign=fed2ed3dc2f0dcec98029592cada4e3d",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 3",
-        "url": "https://hls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-579144_lsd.m3u8?auth_key=1772215716-0-0-57f2fabd1a5c14c611334d1ad335c483",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-579144_lhd.m3u8?auth_key=1772215716-0-0-aa3a2631b83e6470f948afad127cac0c",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 6",
-        "url": "https://pull.niur.live/live/stream-491873_lsd.m3u8?txSecret=12b2bca362523c1e275ad8f8f9b9b0d2&txTime=69a223f4",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 7",
-        "url": "https://pull.niur.live/live/stream-491873_lhd.m3u8?txSecret=9770d42d47fe55b883721411eab6d3c3&txTime=69a223f4",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-9912050_lsd.m3u8?auth_key=1772215716-0-0-0852b2e1f0f01727d1468a4780000a2c",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-9912050_lhd.m3u8?auth_key=1772215716-0-0-ff12eed620679cd143e46ac3ae82c12b",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      }
-    ]
-  },
-  {
-    "match_time": 1772211600,
-    "match_status": "live",
-    "home_team_name": "Başakşehir Futbol Kulübü",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/başakşehir-futbol-kulübü-b54a03.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "Konyaspor",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/konyaspor-33a561.png",
-    "awayTeamScore": "0",
-    "league_name": "Turkish Super League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuTcMcGybmeiDES5m.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-291277_lsd.m3u8?auth_key=1772215716-0-0-bdd2161901f578ab3bea6e9e5aea5996",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-291277_lhd.m3u8?auth_key=1772215716-0-0-95e5df1749ca7a8f116966360ee92b7c",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 4",
-        "url": "https://pull.niur.live/live/stream-344370_lsd.m3u8?txSecret=e00c2a98464cf7ba03fcd6814f9104d1&txTime=69a223f4",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 5",
-        "url": "https://pull.niur.live/live/stream-344370_lhd.m3u8?txSecret=9260491273ad844cf8ae802ad84ee752&txTime=69a223f4",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-285067_lsd.m3u8?auth_key=1772215716-0-0-5f4a1ccf8c887d815890821d3292c9c2",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-285067_lhd.m3u8?auth_key=1772215716-0-0-76594883e97baefd9471b91f3f4f5005",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
-        },
-        "type": "direct"
-      }
-    ]
-  },
-  {
-    "match_time": "1772211600",
-    "match_status": "live",
-    "home_team_name": "Pogon Siedlce",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/pogon-siedlce-4c93ca.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Gornik Leczna",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/gornik-leczna-f35ec3.png",
-    "awayTeamScore": "0",
-    "league_name": "Poland Liga 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuSrvjvKeoEdzhLcP.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
         }
       }
     ]
@@ -587,7 +306,7 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -595,22 +314,22 @@
   {
     "match_time": "1772211600",
     "match_status": "live",
-    "home_team_name": "FC Liefering",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-liefering-de72f0.png",
+    "home_team_name": "Pogon Siedlce",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/pogon-siedlce-4c93ca.png",
     "homeTeamScore": "0",
-    "away_team_name": "First Vienna FC 1894",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/first-vienna-fc-1894-289648.png",
+    "away_team_name": "Gornik Leczna",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/gornik-leczna-f35ec3.png",
     "awayTeamScore": "0",
-    "league_name": "Austrian 2.Liga",
+    "league_name": "Poland Liga 1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s5D8p8Q4oDod.m3u8",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuSrvjvKeoEdzhLcP.m3u8",
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -618,22 +337,106 @@
   {
     "match_time": "1772211600",
     "match_status": "live",
-    "home_team_name": "FC HOGO Hertha Wels",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-hogo-hertha-wels-5ca29b.png",
+    "home_team_name": "Schwarz-Weiss Bregenz",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/schwarz-weiss-bregenz-1ee43e.png",
     "homeTeamScore": "1",
-    "away_team_name": "Admira Wacker",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/admira-wacker-18b83c.png",
+    "away_team_name": "SK Austria Klagenfurt",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/sk-austria-klagenfurt-cfac73.png",
     "awayTeamScore": "0",
     "league_name": "Austrian 2.Liga",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s4hjDF1mi4mu.m3u8",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s4hmQitFXyvo.m3u8",
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1772211600",
+    "match_status": "live",
+    "home_team_name": "Hungary",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/hungary-3b4bbc.png",
+    "homeTeamScore": "0",
+    "away_team_name": "France",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/france-e165d4.png",
+    "awayTeamScore": "0",
+    "league_name": "WCPEU",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-356042_lsd.m3u8?auth_key=1772216796-0-0-cf17d745a8444b8f9ad77473c6863930",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-356042_lhd.m3u8?auth_key=1772216796-0-0-b6874d2b43b78761e1db15a4f449140a",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      }
+    ]
+  },
+  {
+    "match_time": "1772211600",
+    "match_status": "live",
+    "home_team_name": "Slaven Belupo",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/slaven-belupo-47b2cb.png",
+    "homeTeamScore": "0",
+    "away_team_name": "NK Istra 1961",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/nk-istra-1961-d32a11.png",
+    "awayTeamScore": "0",
+    "league_name": "Croatian Football League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9p76fFFNujGy5.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772211600,
+    "match_status": "live",
+    "home_team_name": "Cracovia Krakow",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/cracovia-krakow-bd0fae.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Piast Gliwice",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/piast-gliwice-144ee7.png",
+    "awayTeamScore": "0",
+    "league_name": "PKO Bank Polski EKSTRAKLASA",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuT7UnwZ228t8eCBR.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": " https://hls.cdnok9.com/live/CHUN1/index.m3u8?expire=1890830700&sign=dbdc8ced2f1b21adf9d5a264bfe72141",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
         }
       }
     ]
@@ -656,53 +459,7 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": "1772211600",
-    "match_status": "live",
-    "home_team_name": "Hobro",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/hobro-cce6cc.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Herfolge Boldklub Koge",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/herfolge-boldklub-koge-8d0d23.png",
-    "awayTeamScore": "1",
-    "league_name": "Danish 1st Division",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuT7bHTQXVjraYisZ.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": "1772211600",
-    "match_status": "live",
-    "home_team_name": "St Lucia U20",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/st-lucia-u20-d6602b.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Dominica U20",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/dominica-u20-c2b9ee.gif",
-    "awayTeamScore": "0",
-    "league_name": "CONCACAF U20 Championship",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6Mwd5kowqLkBSV77h9.m3u8",
-        "type": "referer",
-        "header": {
-          "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -725,7 +482,7 @@
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -733,22 +490,155 @@
   {
     "match_time": "1772211600",
     "match_status": "live",
-    "home_team_name": "Schwarz-Weiss Bregenz",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/schwarz-weiss-bregenz-1ee43e.png",
+    "home_team_name": "Hobro",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/hobro-cce6cc.png",
     "homeTeamScore": "0",
-    "away_team_name": "SK Austria Klagenfurt",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/sk-austria-klagenfurt-cfac73.png",
+    "away_team_name": "Herfolge Boldklub Koge",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/herfolge-boldklub-koge-8d0d23.png",
+    "awayTeamScore": "1",
+    "league_name": "Danish 1st Division",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuT7bHTQXVjraYisZ.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772211600,
+    "match_status": "live",
+    "home_team_name": "Başakşehir Futbol Kulübü",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/başakşehir-futbol-kulübü-b54a03.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "Konyaspor",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/konyaspor-33a561.png",
+    "awayTeamScore": "0",
+    "league_name": "Turkish Super League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuTcMcGybmeiDES5m.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-285067_lsd.m3u8?auth_key=1772216796-0-0-51eb29967379b8a1276b84cf08d1b74c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-285067_lhd.m3u8?auth_key=1772216796-0-0-960580d69d1055c2f793de4ad89b76de",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niur.live/live/stream-344370_lsd.m3u8?txSecret=11e222a526bf31c31f519ce0e6f38fcb&txTime=69a2282c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://pull.niur.live/live/stream-344370_lhd.m3u8?txSecret=4ef981a65e1d568926d7946c073e7c89&txTime=69a2282c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 6",
+        "url": "https://pull.niues.live/live/stream-291277_lsd.m3u8?auth_key=1772216796-0-0-6e25c3d69b8d118092e6f410e2b8e6a3",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 7",
+        "url": "https://pull.niues.live/live/stream-291277_lhd.m3u8?auth_key=1772216796-0-0-b40069a7bca38df6e638b2529ea41be2",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      }
+    ]
+  },
+  {
+    "match_time": 1772211600,
+    "match_status": "live",
+    "home_team_name": "Dukla Prague",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/dukla-prague-f99a88.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Slavia Praha",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/slavia-praha-3a417d.png",
+    "awayTeamScore": "1",
+    "league_name": "Czech Republic Gambrinus Liga",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuT7hrPWU576waYto.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": " https://hls.cdnok9.com/live/VOTONG/index.m3u8?expire=1891347600&sign=cbb47d2000b9576a7b34114624ff8299",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1772211600",
+    "match_status": "live",
+    "home_team_name": "FC Liefering",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-liefering-de72f0.png",
+    "homeTeamScore": "0",
+    "away_team_name": "First Vienna FC 1894",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/first-vienna-fc-1894-289648.png",
     "awayTeamScore": "0",
     "league_name": "Austrian 2.Liga",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s4hmQitFXyvo.m3u8",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s5D8p8Q4oDod.m3u8",
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -756,22 +646,22 @@
   {
     "match_time": "1772211600",
     "match_status": "live",
-    "home_team_name": "Slaven Belupo",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/slaven-belupo-47b2cb.png",
-    "homeTeamScore": "0",
-    "away_team_name": "NK Istra 1961",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/nk-istra-1961-d32a11.png",
+    "home_team_name": "St Lucia U20",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/st-lucia-u20-d6602b.png",
+    "homeTeamScore": "1",
+    "away_team_name": "Dominica U20",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/dominica-u20-c2b9ee.gif",
     "awayTeamScore": "0",
-    "league_name": "Croatian Football League",
+    "league_name": "CONCACAF U20 Championship",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9p76fFFNujGy5.m3u8",
+        "url": "https://liveplay1.camel4.live/live/sd-6Mwd5kowqLkBSV77h9.m3u8",
         "type": "referer",
         "header": {
           "referer": "https://www.camel1.live/",
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/135.0.7049.53 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         }
       }
     ]
@@ -779,114 +669,146 @@
   {
     "match_time": "1772211600",
     "match_status": "live",
-    "home_team_name": "Hungary",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/hungary-3b4bbc.png",
-    "homeTeamScore": "0",
-    "away_team_name": "France",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/france-e165d4.png",
+    "home_team_name": "FC HOGO Hertha Wels",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-hogo-hertha-wels-5ca29b.png",
+    "homeTeamScore": "1",
+    "away_team_name": "Admira Wacker",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/admira-wacker-18b83c.png",
     "awayTeamScore": "0",
-    "league_name": "WCPEU",
+    "league_name": "Austrian 2.Liga",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-356042_lsd.m3u8?auth_key=1772215716-0-0-187725bdb8b75bb42ea3e78047559858",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuSs9s4hjDF1mi4mu.m3u8",
+        "type": "referer",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772211600,
+    "match_status": "live",
+    "home_team_name": "Trabzonspor",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/trabzonspor-268f33.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "Karagumruk",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/karagumruk-3fbdec.png",
+    "awayTeamScore": "0",
+    "league_name": "Turkish Super League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://liveplay1.camel4.live/live/sd-6MuTcMcGydy8ah4MEf.m3u8",
+        "type": "referer",
+        "header": {
+          "referer": "https://www.camel1.live/",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niur.live/live/stream-491873_lsd.m3u8?txSecret=6e386d876b6bf2ddff9cf5ed769fbf97&txTime=69a2282c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
-        "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-356042_lhd.m3u8?auth_key=1772215716-0-0-28457585c604b77eb89b8d1fe1956451",
+        "name": "Server 3",
+        "url": "https://pull.niur.live/live/stream-491873_lhd.m3u8?txSecret=eb7a35566297a270a58f989c61df3b4a&txTime=69a2282c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
         },
         "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-579144_lsd.m3u8?auth_key=1772216796-0-0-2f149e0123e95941224f229fda04f19b",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://pull.niues.live/live/stream-579144_lhd.m3u8?auth_key=1772216796-0-0-d19753d8eefe46e4e0ceaaa28eb417b1",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 6",
+        "url": "https://pull.niues.live/live/stream-9912050_lsd.m3u8?auth_key=1772216796-0-0-2d3d26a75d09b78b40142217fe52695b",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 7",
+        "url": "https://pull.niues.live/live/stream-9912050_lhd.m3u8?auth_key=1772216796-0-0-e826553ee6df95c697b71b3f87161ac6",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 8",
+        "url": "https://hls.cdnok9.com/live/DOANDU1/index.m3u8?expire=1923832980&sign=fed2ed3dc2f0dcec98029592cada4e3d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 9",
+        "url": "https://hls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
   {
-    "match_time": 1772213400,
-    "match_status": "vs",
-    "home_team_name": "Dynamo Dresden",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/dynamo-dresden-2dd453.jpg",
+    "match_time": 1772211600,
+    "match_status": "live",
+    "home_team_name": "Istanbul Basaksehir",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/istanbul-basaksehir-7ef756.png",
     "homeTeamScore": "0",
-    "away_team_name": "Darmstadt",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/darmstadt-b30287.png",
+    "away_team_name": "Konyaspor",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/konyaspor-33a561.png",
     "awayTeamScore": "0",
-    "league_name": "German Bundesliga 2",
+    "league_name": "Turkey Super Lig",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1772213400,
-    "match_status": "vs",
-    "home_team_name": "Dibba Al-Fujairah",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/dibba-al-fujairah-498e6a.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al Nasr Dubai",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-nasr-dubai-cf17a5.webp",
-    "awayTeamScore": "0",
-    "league_name": "UAE Pro-League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1772213400,
-    "match_status": "vs",
-    "home_team_name": "Khor Fakkan",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/khor-fakkan-5b5d72.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al Ain",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-ain-1a39de.png",
-    "awayTeamScore": "0",
-    "league_name": "UAE Pro-League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1772213400,
-    "match_status": "vs",
-    "home_team_name": "Al Bataeh",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-bataeh-dd1283.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Banni Yas",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/banni-yas-2596f7.png",
-    "awayTeamScore": "0",
-    "league_name": "UAE Pro-League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1772213400,
-    "match_status": "vs",
-    "home_team_name": "Fortuna Dusseldorf",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/fortuna-dusseldorf-450b69.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "VfL Bochum",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/vfl-bochum-a54eca.png",
-    "awayTeamScore": "0",
-    "league_name": "German Bundesliga 2",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/KAKA/index.m3u8?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/TRUONGTHANH/index.m3u8?expire=1788427256&sign=e2fd813cd4d5e02d97e74e0417b1d973",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
   },
   {
     "match_time": "1772213400",
-    "match_status": "vs",
-    "home_team_name": "Fortuna Dusseldorf",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/fortuna-dusseldorf-450b69.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "VfL Bochum 1848",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/vfl-bochum-1848-2b7380.png",
-    "awayTeamScore": "0",
-    "league_name": "GER D2",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1772213400",
-    "match_status": "vs",
+    "match_status": "live",
     "home_team_name": "Dynamo Dresden",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/dynamo-dresden-2dd453.jpg",
     "homeTeamScore": "0",
@@ -895,7 +817,308 @@
     "awayTeamScore": "0",
     "league_name": "GER D2",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-534219_lsd.m3u8?auth_key=1772216796-0-0-c505b1dbe16ebea7441da2c0887667a5",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-534219_lhd.m3u8?auth_key=1772216796-0-0-9f4b1299e09142218432b41e410a7c71",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1772216796-0-0-842f9a13f8e6df8492fe9ca07d5cfaa5",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1772216796-0-0-83580f064c6f02790afdcf6aa09f8171",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1772216796-0-0-a2f0e5903b7ccd711ee8038d4d68ad31",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 6",
+        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1772216796-0-0-0766db39a69c19d8a35a50dbe63c7917",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      }
+    ]
+  },
+  {
+    "match_time": "1772213400",
+    "match_status": "live",
+    "home_team_name": "Fortuna Dusseldorf",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/fortuna-dusseldorf-450b69.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "VfL Bochum 1848",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/vfl-bochum-1848-2b7380.png",
+    "awayTeamScore": "0",
+    "league_name": "GER D2",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-586938_lsd.m3u8?auth_key=1772216815-0-0-3c0eab037b4e63e77f808f967ac10369",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-586938_lhd.m3u8?auth_key=1772216815-0-0-25cb36f0248f6fafac74fa2bba686494",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-9912015_lsd.m3u8?auth_key=1772216796-0-0-0856924bba809608f6d779929d08a775",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-9912015_lhd.m3u8?auth_key=1772216796-0-0-c02ddd8414d044c5f40cc2d323fe6017",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://pull.niues.live/live/stream-513394_lsd.m3u8?auth_key=1772216796-0-0-e8c1f2e333bd4570c15ba17db5f1b1ba",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 6",
+        "url": "https://pull.niues.live/live/stream-513394_lhd.m3u8?auth_key=1772216796-0-0-5c89806bbf9907d421f542ebaecf82ee",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+        },
+        "type": "direct"
+      }
+    ]
+  },
+  {
+    "match_time": 1772213400,
+    "match_status": "live",
+    "home_team_name": "Al Bataeh",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-bataeh-dd1283.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Banni Yas",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/banni-yas-2596f7.png",
+    "awayTeamScore": "0",
+    "league_name": "UAE Pro-League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/TRIEUTULONG/index.m3u8?expire=1788427256&sign=45e4fdc4bdb8472f513ccc78f57f6070",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/KHONGMINH/index.m3u8?expire=1788427256&sign=003a6e74f0efdf441ba4b32785a21d31",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/PHONGVAN/index.m3u8?expire=1788427256&sign=229eb7987abea75a3223a0789985834d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772213400,
+    "match_status": "live",
+    "home_team_name": "Fortuna Dusseldorf",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/fortuna-dusseldorf-450b69.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "VfL Bochum",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/vfl-bochum-a54eca.png",
+    "awayTeamScore": "0",
+    "league_name": "German Bundesliga 2",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/KEVILL/index.m3u8?expire=1788427256&sign=189afcf7f800d4c6c8a5aa97649a1107",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/DUONGQUA/index.m3u8?expire=1788427256&sign=be103035dabb5f17a7c94f423a96c981",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772213400,
+    "match_status": "live",
+    "home_team_name": "Khor Fakkan",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/khor-fakkan-5b5d72.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Al Ain",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-ain-1a39de.png",
+    "awayTeamScore": "0",
+    "league_name": "UAE Pro-League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/LUBO/index.m3u8?expire=1788427256&sign=fa2834495401eb5d1dc40ba2f3bd21c1",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/VUONGLUAN/index.m3u8?expire=1788427256&sign=30a15463eec9495979c452130fd9c75f",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/NHIKA1/index.m3u8?expire=1788427256&sign=91d8d858b7cdccb6dd825469190514bd",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772213400,
+    "match_status": "live",
+    "home_team_name": "Dynamo Dresden",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/dynamo-dresden-2dd453.jpg",
+    "homeTeamScore": "0",
+    "away_team_name": "Darmstadt",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/darmstadt-b30287.png",
+    "awayTeamScore": "0",
+    "league_name": "German Bundesliga 2",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/VANCONAN/index.m3u8?expire=1830276060&sign=53991e2e589a2f7031dd37b82a585e33",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/TONLAP/index.m3u8?expire=1788427256&sign=72cc58a29d787d621b0832b54e1a78df",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/LUUBI/index.m3u8?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1772213400,
+    "match_status": "live",
+    "home_team_name": "Dibba Al-Fujairah",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/dibba-al-fujairah-498e6a.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Al Nasr Dubai",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-nasr-dubai-cf17a5.webp",
+    "awayTeamScore": "0",
+    "league_name": "UAE Pro-League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": " https://hls.cdnok9.com/live/QUANVU/index.m3u8?expire=1788427256&sign=056d097a0bbbd810493fd64ccf4831b7",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/NGUCA/index.m3u8?expire=1788427256&sign=abf9c93edd0de1c833f9ffc14381d526",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
   },
   {
     "match_time": 1772215200,
@@ -926,11 +1149,11 @@
   {
     "match_time": "1772218800",
     "match_status": "vs",
-    "home_team_name": "Al Ittihad Club",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-ittihad-club-8d023e.webp",
+    "home_team_name": "Al Shabab FC",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-shabab-fc-bfa757.webp",
     "homeTeamScore": "0",
-    "away_team_name": "Al Khaleej Club",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-khaleej-club-f18d45.webp",
+    "away_team_name": "Al Hilal",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-hilal-79eeb1.png",
     "awayTeamScore": "0",
     "league_name": "KSA PR",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -952,13 +1175,26 @@
   {
     "match_time": "1772218800",
     "match_status": "vs",
-    "home_team_name": "Al Shabab FC",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-shabab-fc-bfa757.webp",
+    "home_team_name": "Al Ittihad Club",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-ittihad-club-8d023e.webp",
     "homeTeamScore": "0",
-    "away_team_name": "Al Hilal",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-hilal-79eeb1.png",
+    "away_team_name": "Al Khaleej Club",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-khaleej-club-f18d45.webp",
     "awayTeamScore": "0",
     "league_name": "KSA PR",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1772218800",
+    "match_status": "vs",
+    "home_team_name": "Al-Ittihad",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-ittihad-109073.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Al-Khaleej",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-khaleej-bbbed6.png",
+    "awayTeamScore": "0",
+    "league_name": "Saudi Professional League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -989,19 +1225,6 @@
     "servers": []
   },
   {
-    "match_time": "1772218800",
-    "match_status": "vs",
-    "home_team_name": "Al-Ittihad",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-ittihad-109073.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al-Khaleej",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-khaleej-bbbed6.png",
-    "awayTeamScore": "0",
-    "league_name": "Saudi Professional League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
     "match_time": 1772220600,
     "match_status": "vs",
     "home_team_name": "FC Augsburg",
@@ -1018,7 +1241,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-956896_lhd.flv?auth_key=1772211649-0-0-dca23dbf1a7f40d61eb540e384ceee0a",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1026,7 +1249,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-956896_lsd.flv?auth_key=1772211649-0-0-dca23dbf1a7f40d61eb540e384ceee0a",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       }
     ]
@@ -1058,53 +1281,15 @@
     "servers": []
   },
   {
-    "match_time": 1772221500,
-    "match_status": "vs",
-    "home_team_name": "Strasbourg",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/strasbourg-bb29bb.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Lens",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/lens-241ad9.png",
-    "awayTeamScore": "0",
-    "league_name": "France Ligue 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://bbb.exoadash.com/TVD2083/index.mpd",
-        "type": "direct",
-        "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://pullsgp.yyzb456.top/live/stream-284564_lhd.flv?auth_key=1772162722-0-0-89a63109a7ec5b8ec4c1e8abe48b768b",
-        "type": "direct",
-        "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
-        }
-      },
-      {
-        "name": "Server 3",
-        "url": "https://pullsgp.yyzb456.top/live/stream-284564_lsd.flv?auth_key=1772162722-0-0-89a63109a7ec5b8ec4c1e8abe48b768b",
-        "type": "direct",
-        "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
-        }
-      }
-    ]
-  },
-  {
     "match_time": "1772221500",
     "match_status": "vs",
-    "home_team_name": "Standard Liege",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/standard-liege-f517fd.png",
+    "home_team_name": "RC Strasbourg Alsace",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/rc-strasbourg-alsace-f70130.webp",
     "homeTeamScore": "0",
-    "away_team_name": "LaLouviere",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/lalouviere-36fc8f.png",
+    "away_team_name": "RC Lens",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/rc-lens-05da56.png",
     "awayTeamScore": "0",
-    "league_name": "Belgian Pro League",
+    "league_name": "FRA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -1133,7 +1318,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-374391_lsd.flv?auth_key=1772170495-0-0-7765d0ebcd1ad4730eca82408e3f5708",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1141,7 +1326,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd|drmScheme=clearkey&drmLicense=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
@@ -1149,13 +1334,64 @@
   {
     "match_time": "1772221500",
     "match_status": "vs",
-    "home_team_name": "RC Strasbourg Alsace",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/rc-strasbourg-alsace-f70130.webp",
+    "home_team_name": "Standard Liege",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/standard-liege-f517fd.png",
     "homeTeamScore": "0",
-    "away_team_name": "RC Lens",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/rc-lens-05da56.png",
+    "away_team_name": "LaLouviere",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/lalouviere-36fc8f.png",
     "awayTeamScore": "0",
-    "league_name": "FRA D1",
+    "league_name": "Belgian Pro League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1772221500,
+    "match_status": "vs",
+    "home_team_name": "Strasbourg",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/strasbourg-bb29bb.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Lens",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/lens-241ad9.png",
+    "awayTeamScore": "0",
+    "league_name": "France Ligue 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://bbb.exoadash.com/TVD2083/index.mpd",
+        "type": "direct",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pullsgp.yyzb456.top/live/stream-284564_lhd.flv?auth_key=1772162722-0-0-89a63109a7ec5b8ec4c1e8abe48b768b",
+        "type": "direct",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pullsgp.yyzb456.top/live/stream-284564_lsd.flv?auth_key=1772162722-0-0-89a63109a7ec5b8ec4c1e8abe48b768b",
+        "type": "direct",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1772222400",
+    "match_status": "vs",
+    "home_team_name": "Levante",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/levante-73e8a9.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Deportivo Alavés",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-alavés-c34456.webp",
+    "awayTeamScore": "0",
+    "league_name": "SPA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -1176,7 +1412,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-705956_lhd.flv?auth_key=1772197207-0-0-b3aeafddba5dcc755c5276b0c2a24579",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1184,7 +1420,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-705956_lsd.flv?auth_key=1772197207-0-0-b3aeafddba5dcc755c5276b0c2a24579",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -1200,7 +1436,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd|drmScheme=clearkey&drmLicense=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
@@ -1215,19 +1451,6 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/alaves-6b4e09.png",
     "awayTeamScore": "0",
     "league_name": "Spanish La Liga",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1772222400",
-    "match_status": "vs",
-    "home_team_name": "Levante",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/levante-73e8a9.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Deportivo Alavés",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-alavés-c34456.webp",
-    "awayTeamScore": "0",
-    "league_name": "SPA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -1261,7 +1484,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-534857_lhd.flv?auth_key=1772210929-0-0-0ca6e63f1c199265ea5d3f65a8cb4756",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1269,7 +1492,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-534857_lsd.flv?auth_key=1772210929-0-0-0ca6e63f1c199265ea5d3f65a8cb4756",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1285,7 +1508,7 @@
         "url": "https://aba5sdmaaaaaaaamooyrewxky2c4j.otte.live.cf.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/ghwcl6hv68/out/v1/83536910d8034e9b9895a20fbe1c1687/cenc.mpd|drmScheme=clearkey&drmLicense=335dad778109954503dcbb21dc92015f:24bfd75d436cbf73168a2a2dccd40281",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
