@@ -17,10 +17,8 @@ const db = admin.database();
 
 // --- 2. LOGOS & CONSTANTS ---
 const LOGOS = {
-    // Only SOCO Logo is needed now, but keeping others just in case
-    FMP: "https://i.ibb.co/CFsJDtb/1000315330.png",
-    SOCO: "https://i.ibb.co/DgvNg0k0/1000315332.png",
-    OK9: "https://i.ibb.co/k66hvS7j/1000313353.jpg"
+    // Only SOCO Logo is needed now
+    SOCO: "https://i.ibb.co/DgvNg0k0/1000315332.png"
 };
 
 // --- 3. HELPER FUNCTIONS ---
@@ -61,6 +59,11 @@ function getBrandedName(sportCategory) {
     return `${base} ${selectedAdj} ${rand(resolutions)}`;
 }
 
+// 🔥 HELPER TO CREATE IFRAME STRING (EXACT FORMAT)
+function createIframe(url) {
+    return `<iframe src="https://sportify-tv.github.io/stream-yy/?play=${url}" style="width: 100%; aspect-ratio: 16/9; border: none;" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+}
+
 async function fetchFromApi(page, dateStr) {
     if (currentKeyIndex >= ALL_KEYS.length) throw new Error("❌ ALL KEYS EXHAUSTED");
     
@@ -85,7 +88,7 @@ async function fetchFromApi(page, dateStr) {
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
-    console.log("⏰ Starting Sync (Pages 1 to 3) [ONLY SOCO MODE]...");
+    console.log("⏰ Starting Sync (Pages 1 to 3) [ONLY SOCO + IFRAME MODE]...");
     
     // --- DATE LOGIC ---
     const d = new Date();
@@ -128,7 +131,7 @@ async function runSync() {
         fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
         console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
 
-        // DEDUPLICATE
+        // DEDUPLICATE MATCHES
         const bestMatchesMap = {};
         rawApiMatches.forEach(match => {
             const matchId = normalizeName(match.home_team_name) + "_vs_" + normalizeName(match.away_team_name);
@@ -194,10 +197,10 @@ async function runSync() {
                 }
             });
 
-            // If no SOCO links found, skip this match update
+            // If no SOCO links found, skip match
             if (socoLinks.length === 0) continue;
 
-            const sortedNewLinks = [...socoLinks]; // Only SOCO links now
+            const sortedNewLinks = [...socoLinks]; 
 
             // PREPARE LIST
             let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
@@ -206,18 +209,37 @@ async function runSync() {
             // Keep Manual Links (Top)
             const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // Add New SOCO Links (Bottom)
+            // Add New SOCO Links (Bottom) -> 🔥 CONVERT TO IFRAME + TYPE: EMBED
             const apiLinksToAdd = [];
+            
             if (sortedNewLinks.length > 0) {
-                apiLinksToAdd.push({ name: "SPORTIFy TV", link: sortedNewLinks[0].url, type: "Direct", logo: sortedNewLinks[0].logo, source: "api" });
+                apiLinksToAdd.push({ 
+                    name: "SPORTIFy TV", 
+                    link: createIframe(sortedNewLinks[0].url), // 👈 IFRAME HERE
+                    type: "Embed", // 👈 TYPE CHANGED
+                    logo: sortedNewLinks[0].logo, 
+                    source: "api" 
+                });
             }
             if (sortedNewLinks.length > 1) {
-                apiLinksToAdd.push({ name: "SPORTIFy TV+ HD", link: sortedNewLinks[1].url, type: "Direct", logo: sortedNewLinks[1].logo, source: "api" });
+                apiLinksToAdd.push({ 
+                    name: "SPORTIFy TV+ HD", 
+                    link: createIframe(sortedNewLinks[1].url), // 👈 IFRAME HERE
+                    type: "Embed", // 👈 TYPE CHANGED
+                    logo: sortedNewLinks[1].logo, 
+                    source: "api" 
+                });
             }
             if (sortedNewLinks.length > 2) {
                 for (let i = 2; i < sortedNewLinks.length; i++) {
                     const item = sortedNewLinks[i];
-                    apiLinksToAdd.push({ name: getBrandedName(apiMatch.sport_category), link: item.url, type: "Direct", logo: item.logo, source: "api" });
+                    apiLinksToAdd.push({ 
+                        name: getBrandedName(apiMatch.sport_category), 
+                        link: createIframe(item.url), // 👈 IFRAME HERE
+                        type: "Embed", // 👈 TYPE CHANGED
+                        logo: item.logo, 
+                        source: "api" 
+                    });
                 }
             }
 
