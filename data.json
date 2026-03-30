@@ -13,17 +13,17 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-9912112_lsd.m3u8?auth_key=1774877200-0-0-d07ddcb47208399605abdf93c8505961",
+        "url": "https://pull.niues.live/live/stream-9912112_lsd.m3u8?auth_key=1774877920-0-0-6e989264c35bdc4c0be688b4d1c2f715",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
         },
         "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1774877200-0-0-558d737fa29dae9ca5b537bf1e4a9450",
+        "url": "https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1774877920-0-0-fad0c621f63e41d45007c7918415dd02",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
         },
         "type": "direct"
       },
@@ -84,44 +84,6 @@
   {
     "match_time": 1774872000,
     "match_status": "live",
-    "home_team_name": "Al Talaba",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-talaba-dd8823.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al-Naft",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-naft-adae1b.png",
-    "awayTeamScore": "0",
-    "league_name": "Iraqi Premier League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://hls.cdnok9.com/live/PHONGVAN/index.m3u8?expire=1788427256&sign=229eb7987abea75a3223a0789985834d",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/TANCA/index.m3u8?expire=1788427256&sign=8ef329a1007f5bbf1c7100b2d7663d68",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 3",
-        "url": "https://hls.cdnok9.com/live/VANCONAN/index.m3u8?expire=1830276060&sign=53991e2e589a2f7031dd37b82a585e33",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": 1774872000,
-    "match_status": "live",
     "home_team_name": "Bournemouth AFC U21",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/bournemouth-afc-u21-87e0e8.png",
     "homeTeamScore": "1",
@@ -142,6 +104,44 @@
       {
         "name": "Server 2",
         "url": "https://hls.cdnok9.com/live/falcon/index.m3u8?expire=3976189140&sign=96837373a6193800a79554011d4ba366",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1774872000,
+    "match_status": "live",
+    "home_team_name": "Al Talaba",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-talaba-dd8823.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Al-Naft",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-naft-adae1b.png",
+    "awayTeamScore": "0",
+    "league_name": "Iraqi Premier League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/TANCA/index.m3u8?expire=1788427256&sign=8ef329a1007f5bbf1c7100b2d7663d68",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/PHONGVAN/index.m3u8?expire=1788427256&sign=229eb7987abea75a3223a0789985834d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnok9.com/live/VANCONAN/index.m3u8?expire=1830276060&sign=53991e2e589a2f7031dd37b82a585e33",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
@@ -213,19 +213,6 @@
   {
     "match_time": 1774879200,
     "match_status": "vs",
-    "home_team_name": "Ivory Coast U20",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/ivory-coast-u20-82b310.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Tunisia U23",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/tunisia-u23-0d0c01.jpg",
-    "awayTeamScore": "0",
-    "league_name": "International Friendly",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1774879200,
-    "match_status": "vs",
     "home_team_name": "Uzbekistan",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/uzbekistan-aa1b4b.png",
     "homeTeamScore": "0",
@@ -233,19 +220,6 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/venezuela-e65a61.png",
     "awayTeamScore": "0",
     "league_name": "World FIFA Series",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1774881000",
-    "match_status": "vs",
-    "home_team_name": "Al Karkh",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-karkh-1c64e8.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al-Mina'a SC",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-minaa-sc-441801.png",
-    "awayTeamScore": "0",
-    "league_name": "IRQ D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -265,26 +239,26 @@
   {
     "match_time": "1774881000",
     "match_status": "vs",
-    "home_team_name": "Duhok SC",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/duhok-sc-2849b5.png",
+    "home_team_name": "Al Karkh",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-karkh-1c64e8.png",
     "homeTeamScore": "0",
-    "away_team_name": "Zakho SC",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/zakho-sc-b0a960.png",
+    "away_team_name": "Al-Mina'a SC",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-minaa-sc-441801.png",
     "awayTeamScore": "0",
     "league_name": "IRQ D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
   {
-    "match_time": 1774882800,
+    "match_time": 1774881000,
     "match_status": "vs",
-    "home_team_name": "Azerbaijan",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/azerbaijan-620a71.png",
+    "home_team_name": "Duhok SC",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/duhok-sc-2849b5.png",
     "homeTeamScore": "0",
-    "away_team_name": "Sierra Leone",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/sierra-leone-b628c9.png",
+    "away_team_name": "Zakho SC",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/zakho-sc-b0a960.png",
     "awayTeamScore": "0",
-    "league_name": "World FIFA Series",
+    "league_name": "Iraqi Premier League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -298,6 +272,19 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/el-gounah-7e5e04.webp",
     "awayTeamScore": "0",
     "league_name": "EGY LC",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1774882800,
+    "match_status": "vs",
+    "home_team_name": "Azerbaijan",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/azerbaijan-620a71.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Sierra Leone",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/sierra-leone-b628c9.png",
+    "awayTeamScore": "0",
+    "league_name": "World FIFA Series",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -382,19 +369,6 @@
   {
     "match_time": 1774888200,
     "match_status": "vs",
-    "home_team_name": "Netherlands U21",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/netherlands-u21-12ff28.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Belgium U21",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/belgium-u21-bef66e.png",
-    "awayTeamScore": "0",
-    "league_name": "International Friendly",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1774888200,
-    "match_status": "vs",
     "home_team_name": "Abacha City",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/abacha-city-1b0dfb.png",
     "homeTeamScore": "0",
@@ -402,6 +376,19 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/ports-authority-fc-8396b9.png",
     "awayTeamScore": "0",
     "league_name": "Sierra Leone Premier League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1774888200,
+    "match_status": "vs",
+    "home_team_name": "Netherlands U21",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/netherlands-u21-12ff28.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Belgium U21",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/belgium-u21-bef66e.png",
+    "awayTeamScore": "0",
+    "league_name": "International Friendly",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -461,7 +448,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-500894_lhd.flv?auth_key=1774821865-0-0-a50f5a2ff3b21e400c8f18b31dd81b25",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -477,7 +464,7 @@
         "url": "https://ottb.live.cf.ww.aiv-cdn.net/lhr-nitro/live/clients/dash/enc/fsu3wl2rwb/out/v1/be61206c04e643349d53fb22301f3b50/cenc.mpd|drmScheme=clearkey&drmLicense=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -532,19 +519,6 @@
   {
     "match_time": 1774897200,
     "match_status": "vs",
-    "home_team_name": "MC Alger",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/mc-alger-e7b86d.png",
-    "homeTeamScore": "0",
-    "away_team_name": "USM Alger",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/usm-alger-ddf5e3.png",
-    "awayTeamScore": "0",
-    "league_name": "Algerian Ligue Professionnelle 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1774897200,
-    "match_status": "vs",
     "home_team_name": "Morocco U23",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/morocco-u23-414f46.png",
     "homeTeamScore": "0",
@@ -552,6 +526,19 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/ivory-coast-u23-1194d3.png",
     "awayTeamScore": "0",
     "league_name": "International Friendly",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1774897200,
+    "match_status": "vs",
+    "home_team_name": "MC Alger",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/mc-alger-e7b86d.png",
+    "homeTeamScore": "0",
+    "away_team_name": "USM Alger",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/usm-alger-ddf5e3.png",
+    "awayTeamScore": "0",
+    "league_name": "Algerian Ligue Professionnelle 1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
