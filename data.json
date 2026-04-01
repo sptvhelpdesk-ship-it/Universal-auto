@@ -13,19 +13,71 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-9912112_lsd.m3u8?auth_key=1775063500-0-0-9a1f87919ff102ac02dfd2c3907f00bb",
+        "url": "https://pull.niues.live/live/stream-9912112_lsd.m3u8?auth_key=1775064400-0-0-1bbdd2938bfe5d3d67a473c7ab7dde0a",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1775063500-0-0-ca1e7c3ed58fa941e4d6d37190ac6d0b",
+        "url": "https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1775064400-0-0-3682b726d456666df97ede2ebd9049de",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
         },
         "type": "direct"
+      }
+    ]
+  },
+  {
+    "match_time": 1775055600,
+    "match_status": "live",
+    "home_team_name": "MC Alger",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/mc-alger-e7b86d.png",
+    "homeTeamScore": "1",
+    "away_team_name": "USM Alger",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/usm-alger-ddf5e3.png",
+    "awayTeamScore": "0",
+    "league_name": "Algerian Ligue Professionnelle 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1775055600",
+    "match_status": "live",
+    "home_team_name": "JS kabylie",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/js-kabylie-680efe.webp",
+    "homeTeamScore": "2",
+    "away_team_name": "ES Ben Aknoun",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/es-ben-aknoun-88b5a6.jpg",
+    "awayTeamScore": "1",
+    "league_name": "Algerian Ligue Professionnelle 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
@@ -68,58 +120,6 @@
     ]
   },
   {
-    "match_time": "1775055600",
-    "match_status": "live",
-    "home_team_name": "JS kabylie",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/js-kabylie-680efe.webp",
-    "homeTeamScore": "2",
-    "away_team_name": "ES Ben Aknoun",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/es-ben-aknoun-88b5a6.jpg",
-    "awayTeamScore": "1",
-    "league_name": "Algerian Ligue Professionnelle 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://hls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
-    "match_time": 1775055600,
-    "match_status": "live",
-    "home_team_name": "MC Alger",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/mc-alger-e7b86d.png",
-    "homeTeamScore": "1",
-    "away_team_name": "USM Alger",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/usm-alger-ddf5e3.png",
-    "awayTeamScore": "0",
-    "league_name": "Algerian Ligue Professionnelle 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://hls.cdnok9.com/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      }
-    ]
-  },
-  {
     "match_time": "1775059200",
     "match_status": "live",
     "home_team_name": "Unics Kazan",
@@ -133,17 +133,17 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-356042_lsd.m3u8?auth_key=1775063500-0-0-0066dd6f976497d69cf08d68c170a336",
+        "url": "https://pull.niues.live/live/stream-356042_lsd.m3u8?auth_key=1775064400-0-0-cca027fbaffc011fae4adbac32333db7",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-356042_lhd.m3u8?auth_key=1775063500-0-0-0b45e5fd7d1a0c9756c04169918fa93c",
+        "url": "https://pull.niues.live/live/stream-356042_lhd.m3u8?auth_key=1775064400-0-0-eae30fd95a9902086a0f97fd624bdd3c",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_3_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
         },
         "type": "direct"
       }
@@ -151,7 +151,7 @@
   },
   {
     "match_time": "1775061000",
-    "match_status": "vs",
+    "match_status": "live",
     "home_team_name": "Neftekhimik Nizhnekamsk",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/neftekhimik-nizhnekamsk-62c48e.webp",
     "homeTeamScore": "0",
@@ -160,11 +160,76 @@
     "awayTeamScore": "0",
     "league_name": "RUS D2",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-472241_lsd.m3u8?auth_key=1775064400-0-0-0ac6c491795aedcf04c65d089382a5c2",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-472241_lhd.m3u8?auth_key=1775064400-0-0-14c26b2c580f987dd29656a356a4465f",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1775064400-0-0-e9a2c7324d3ae398aa88c6783b8b8018",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1775064400-0-0-ec852264d2d6800fe4553c70aa8d55ab",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://pull.niues.live/live/stream-598119_lsd.m3u8?auth_key=1775064400-0-0-793e1232dd021038bfeb9c93ae28bb3c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 6",
+        "url": "https://pull.niues.live/live/stream-598119_lhd.m3u8?auth_key=1775064400-0-0-b267923d0b91a16bf99a3c3d69d4d136",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 7",
+        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1775064400-0-0-1ab755ce74c72661d42d167c722dbbea",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 8",
+        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1775064400-0-0-2d4be863a963dbdeeac782af35a3ab50",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.4102.1129 Mobile Safari/537.36"
+        },
+        "type": "direct"
+      }
+    ]
   },
   {
     "match_time": 1775061000,
-    "match_status": "vs",
+    "match_status": "live",
     "home_team_name": "Neftekhimik Nizhnekamsk",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/neftekhimik-nizhnekamsk-62c48e.webp",
     "homeTeamScore": "0",
@@ -173,7 +238,24 @@
     "awayTeamScore": "0",
     "league_name": "Russian National Football League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.cdnok9.com/live/FERNANDO/index.m3u8?expire=1924930980&sign=bab24fb93b0be5c98af9138659989bcb",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://hls.cdnok9.com/live/ATUA/index.m3u8?expire=1830276060&sign=070cf2d17a1720d3e42600ba2dfaed74",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      }
+    ]
   },
   {
     "match_time": "1775061900",
@@ -399,11 +481,11 @@
   {
     "match_time": "1775084400",
     "match_status": "vs",
-    "home_team_name": "Cruzeiro Esporte Clube",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/cruzeiro-esporte-clube-bb9c09.png",
+    "home_team_name": "Bahia",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/bahia-d8c24e.webp",
     "homeTeamScore": "0",
-    "away_team_name": "Vitoria BA",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/vitoria-ba-95eb86.webp",
+    "away_team_name": "Athletico Paranaense",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/athletico-paranaense-561310.webp",
     "awayTeamScore": "0",
     "league_name": "BRA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -412,13 +494,13 @@
   {
     "match_time": "1775084400",
     "match_status": "vs",
-    "home_team_name": "Club Atlético Lanús",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/club-atlético-lanús-286e88.png",
+    "home_team_name": "Cruzeiro Esporte Clube",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/cruzeiro-esporte-clube-bb9c09.png",
     "homeTeamScore": "0",
-    "away_team_name": "CA Platense",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/ca-platense-32c4f7.webp",
+    "away_team_name": "Vitoria BA",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/vitoria-ba-95eb86.webp",
     "awayTeamScore": "0",
-    "league_name": "ARG D1",
+    "league_name": "BRA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -438,6 +520,19 @@
   {
     "match_time": "1775084400",
     "match_status": "vs",
+    "home_team_name": "Club Atlético Lanús",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/club-atlético-lanús-286e88.png",
+    "homeTeamScore": "0",
+    "away_team_name": "CA Platense",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/ca-platense-32c4f7.webp",
+    "awayTeamScore": "0",
+    "league_name": "ARG D1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1775084400",
+    "match_status": "vs",
     "home_team_name": "Washington Wizards",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/washington-wizards-c55b3a.webp",
     "homeTeamScore": "0",
@@ -445,19 +540,6 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/philadelphia-76ers-7cd599.webp",
     "awayTeamScore": "0",
     "league_name": "NBA",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1775084400",
-    "match_status": "vs",
-    "home_team_name": "Bahia",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/bahia-d8c24e.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "Athletico Paranaense",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/athletico-paranaense-561310.webp",
-    "awayTeamScore": "0",
-    "league_name": "BRA D1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
