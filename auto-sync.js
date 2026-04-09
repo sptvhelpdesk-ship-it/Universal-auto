@@ -61,7 +61,7 @@ function getBrandedName(sportCategory) {
 
 // 🔥 HELPER TO CREATE IFRAME STRING (EXACT FORMAT)
 function createIframe(url) {
-    return `<iframe src="https://xhdujshsn.github.io/Hls/?play=${url}" style="width: 100%; aspect-ratio: 16/9; border: none;" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    return `<iframe src="https://trent-alexander-arnol.github.io/HLS-PLAYER/?play=${url}" style="width: 100%; aspect-ratio: 16/9; border: none;" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
 }
 
 async function fetchFromApi(page, dateStr) {
