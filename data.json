@@ -13,6 +13,38 @@
     "servers": [
       {
         "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-598119_lsd.m3u8?auth_key=1776720384-0-0-1d0de3018b2afb11886bd705db851522",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-598119_lhd.m3u8?auth_key=1776720384-0-0-bb6fe81438cb7c9c6d086e66f496723a",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=bd2b0541f1061589e360f05287f5365d&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=b7e573090b7af49744f4a4f0cecafada&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
         "url": "https://hls-ls.cdnok9.com/live/MOTCHAN1/index.m3u8?expire=1891347600&sign=cbb47d2000b9576a7b34114624ff8299",
         "type": "direct",
         "header": {
@@ -20,15 +52,7 @@
         }
       },
       {
-        "name": "Server 2",
-        "url": "https://hls-ls.cdnok9.com/live/NGUCA/index.m3u8?expire=1788427256&sign=abf9c93edd0de1c833f9ffc14381d526",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 3",
+        "name": "Server 6",
         "url": "https://hls-ls.cdnok9.com/live/FERNANDO/index.m3u8?expire=1924930980&sign=bab24fb93b0be5c98af9138659989bcb",
         "type": "direct",
         "header": {
@@ -36,36 +60,12 @@
         }
       },
       {
-        "name": "Server 4",
-        "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=7876477608ed77feff64454aa4fb3e1b&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 5",
-        "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=62485c9facbb9d6e01387b6b9ed80c4f&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-598119_lsd.m3u8?auth_key=1776719304-0-0-e17bc180b61a44c21ad13b352765b5a6",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
         "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-598119_lhd.m3u8?auth_key=1776719304-0-0-30517db517de922b228a061389607bbe",
+        "url": "https://hls-ls.cdnok9.com/live/NGUCA/index.m3u8?expire=1788427256&sign=abf9c93edd0de1c833f9ffc14381d526",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
@@ -86,7 +86,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-374391_lhd.flv?auth_key=1776650889-0-0-a1716ee67c1d75ff50a3b9ffc7ff0631",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -102,7 +102,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/syd-nitro/live/clients/dash/enc/q4u5nwaogz/out/v1/18de6d3e65934f3a8de4358e69eab86c/cenc.mpd|drmScheme=clearkey&drmLicense=7995c724a13748ed970840a8ab5bb9b3:67bdaf1e2175b9ff682fcdf0e2354b1e",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -110,35 +110,107 @@
         "url": "https://dash2.antik.sk/stream/nvidia_sport_1/playlist_cenc.mpd|drmScheme=clearkey&drmLicense=11223344556677889900112233445566:4b80724d0ef86bcb2c21f7999d67739d",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
         "name": "Server 5",
-        "url": "https://hls-ls.cdnok9.com/live/VANCONAN/index.m3u8?expire=1830276060&sign=53991e2e589a2f7031dd37b82a585e33",
-        "type": "direct",
+        "url": "https://pull.niur.live/live/stream-534055_lsd.m3u8?txSecret=a3a8bb6417adb52c7b25b898bfce494c&txTime=69e6e050",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://hls-ls.cdnok9.com/live/VUONGLUAN/index.m3u8?expire=1788427256&sign=30a15463eec9495979c452130fd9c75f",
-        "type": "direct",
+        "url": "https://pull.niur.live/live/stream-534055_lhd.m3u8?txSecret=59891d82aa4b812e21c9d9cb8bc9803b&txTime=69e6e050",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 7",
-        "url": "https://hls-ls.cdnok9.com/live/URA/index.m3u8?expire=1788427256&sign=b321b6b8b5cd73e24aae2a3a16b7b5d2",
-        "type": "direct",
+        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1776720384-0-0-4765a66efc096b19269bb938e3fab316",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 8",
+        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1776720384-0-0-34adea0f0df5853858f597c491bd6817",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 9",
+        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1776720384-0-0-cee9c74a64d91b4c0152f1ab56b8c795",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 10",
+        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1776720384-0-0-ced6175330e521f15572f4b23ffbcc9c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 11",
+        "url": "https://pull.niues.live/live/stream-291277_lsd.m3u8?auth_key=1776720384-0-0-7f0d6702e4958a0481cd73ed80337f73",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 12",
+        "url": "https://pull.niues.live/live/stream-291277_lhd.m3u8?auth_key=1776720384-0-0-5e5647a60994a87c2d9df3b98be9f337",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 13",
+        "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=023bed87b43a3712cdb2bc4db5ac018b&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 14",
+        "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=ff7c38872baf4b75a767d28a12b5bc7a&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 15",
+        "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1776720384-0-0-3c146ef9d7410f289ac86e4ecd6840e3",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 16",
+        "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1776720384-0-0-7833d8cb6d91d127f6888026a242155c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 17",
         "url": "https://hls-ls.cdnok9.com/live/NHIKA1/index.m3u8?expire=1788427256&sign=91d8d858b7cdccb6dd825469190514bd",
         "type": "direct",
         "header": {
@@ -146,100 +218,28 @@
         }
       },
       {
-        "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1776719304-0-0-0a446687db9b8a69b74aaf5021406a4f",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 10",
-        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1776719304-0-0-257a74a8db0ec95e4220da94f13fa4fb",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 11",
-        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1776719304-0-0-fab7ad977c24a56d520f061c314b83c6",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 12",
-        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1776719304-0-0-522a8a08540672785a88976abf6f3616",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 13",
-        "url": "https://pull.niur.live/live/stream-534055_lsd.m3u8?txSecret=c62c0b4e0cdb3703fb59b92e00a6c4fb&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 14",
-        "url": "https://pull.niur.live/live/stream-534055_lhd.m3u8?txSecret=05803c27d1d7fcfff8f69f7637519259&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 15",
-        "url": "https://pull.niues.live/live/stream-291277_lsd.m3u8?auth_key=1776719304-0-0-961f502f3ba2fe5e5b56ff99d39bdfc2",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 16",
-        "url": "https://pull.niues.live/live/stream-291277_lhd.m3u8?auth_key=1776719304-0-0-07094e9433f717f34ac98c1d6cfb8396",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 17",
-        "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=3a43d85fd46ef732878cd689cfd45a91&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
         "name": "Server 18",
-        "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=a5298a43fd46f6da934869dc491b4203&txTime=69e6dc18",
+        "url": "https://hls-ls.cdnok9.com/live/URA/index.m3u8?expire=1788427256&sign=b321b6b8b5cd73e24aae2a3a16b7b5d2",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
       },
       {
         "name": "Server 19",
-        "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1776719304-0-0-f5b1c2c8cbdb39cdcdac2b8541f1fbbe",
+        "url": "https://hls-ls.cdnok9.com/live/VANCONAN/index.m3u8?expire=1830276060&sign=53991e2e589a2f7031dd37b82a585e33",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
       },
       {
         "name": "Server 20",
-        "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1776719304-0-0-1be56c881382bc480f6e29c70337f5f4",
+        "url": "https://hls-ls.cdnok9.com/live/VUONGLUAN/index.m3u8?expire=1788427256&sign=30a15463eec9495979c452130fd9c75f",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
@@ -257,33 +257,33 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1776719304-0-0-74422ef7c69df116ec11ff0dc70a16fe",
+        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1776720384-0-0-e800cd5ca788c549c271114f79a399e3",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1776719304-0-0-4ca5833f657c6ecf560849c361a0e5cc",
+        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1776720384-0-0-aa88affd85c605b9cc15e68032b4f6a9",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-564362_lsd.m3u8?auth_key=1776719304-0-0-63f2071ce8c8001c455bbee65082db56",
+        "url": "https://pull.niues.live/live/stream-564362_lsd.m3u8?auth_key=1776720384-0-0-5ee1cca4d0b6b9500cf71665e0b250c5",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-564362_lhd.m3u8?auth_key=1776719304-0-0-f373d80da7361e8b26c7e5c844c9f97f",
+        "url": "https://pull.niues.live/live/stream-564362_lhd.m3u8?auth_key=1776720384-0-0-f3f2b3f6616dd46867163bbee0e1e072",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       }
@@ -306,7 +306,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-525132_lhd.flv?auth_key=1776704394-0-0-d3207eae2e69e262e50a1e9130fdee56",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -322,7 +322,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/pdx-nitro/live/clients/dash/enc/3b7qwiqzk3/out/v1/9f14895badca43e6a716db021dcd0c31/cenc.mpd|drmScheme=clearkey&drmLicense=dc69b6159a0f9f0a4e03b3ff91cbacd5:d0dcbcd7723bc40df0bf34c9c092d51f",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -330,19 +330,107 @@
         "url": "https://v4-kun-v13-cdn-02.live.cdn.cgates.lt/live/dash/561002/index.mpd|drmScheme=clearkey&drmLicense=8ab2332442854e62b0018eec3ee58484:37fdee8b6eef5c96001e8c6fc47bfc08",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
         "name": "Server 5",
-        "url": "https://hls-ls.cdnok9.com/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
-        "type": "direct",
+        "url": "https://pull.niur.live/live/stream-9912101_lsd.m3u8?txSecret=5a81b93528e0b3c58ee659afff601730&txTime=69e6e050",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 6",
+        "url": "https://pull.niur.live/live/stream-9912101_lhd.m3u8?txSecret=c094f6b2c18c877cc77f5d4fc3ce56c9&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 7",
+        "url": "https://pull.niur.live/live/stream-344370_lsd.m3u8?txSecret=efe3dc2b4011b3cdeca607317df160a1&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 8",
+        "url": "https://pull.niur.live/live/stream-344370_lhd.m3u8?txSecret=b2a0f997e83fd34617c060280b8402e7&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 9",
+        "url": "https://pull.niues.live/live/stream-9912015_lsd.m3u8?auth_key=1776720384-0-0-3ecdbf17858864347426f5a73db98194",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 10",
+        "url": "https://pull.niues.live/live/stream-9912015_lhd.m3u8?auth_key=1776720384-0-0-8e2b23199933f2cf28a350592ee27520",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 11",
+        "url": "https://pull.niues.live/live/stream-494201_lsd.m3u8?auth_key=1776720384-0-0-67ce9516f1bd3381efac5f60af76b44b",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 12",
+        "url": "https://pull.niues.live/live/stream-494201_lhd.m3u8?auth_key=1776720384-0-0-a31c8f902255b6a33ea412bdb730e25c",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 13",
+        "url": "https://pull.niues.live/live/stream-9912008_lsd.m3u8?auth_key=1776720384-0-0-2475a2b6c5108692d621917d41c23343",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 14",
+        "url": "https://pull.niues.live/live/stream-9912008_lhd.m3u8?auth_key=1776720384-0-0-72e2972da81a27eaccffb2b70dc209a9",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 15",
+        "url": "https://pull.niur.live/live/stream-548860_lsd.m3u8?txSecret=2811338323940e222047d06f0b1de818&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 16",
+        "url": "https://pull.niur.live/live/stream-548860_lhd.m3u8?txSecret=72f09fe5707996d52e6344f6dc93dcf5&txTime=69e6e050",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 17",
         "url": "https://hls-ls.cdnok9.com/live/TONLAP/index.m3u8?expire=1788427256&sign=72cc58a29d787d621b0832b54e1a78df",
         "type": "direct",
         "header": {
@@ -350,108 +438,20 @@
         }
       },
       {
-        "name": "Server 7",
-        "url": "https://hls-ls.cdnok9.com/live/LUUBI/index.m3u8?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1",
+        "name": "Server 18",
+        "url": "https://hls-ls.cdnok9.com/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
         }
       },
       {
-        "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-494201_lsd.m3u8?auth_key=1776719304-0-0-2d23d9ffa522a09a2aa17ca257015ccc",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-494201_lhd.m3u8?auth_key=1776719304-0-0-dc48fec19be151d3e5f44cd23f83a796",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 10",
-        "url": "https://pull.niur.live/live/stream-9912101_lsd.m3u8?txSecret=1a1082fc0a34ea8089c7b2aa84e10d7a&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 11",
-        "url": "https://pull.niur.live/live/stream-9912101_lhd.m3u8?txSecret=542783fb85171529ef6e1a33a2e3d039&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 12",
-        "url": "https://pull.niur.live/live/stream-344370_lsd.m3u8?txSecret=63e656ce0e36c04bd2079095b0401611&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 13",
-        "url": "https://pull.niur.live/live/stream-344370_lhd.m3u8?txSecret=af1728b0ab0e0c474b1cf6995f4b1d22&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 14",
-        "url": "https://pull.niues.live/live/stream-9912015_lsd.m3u8?auth_key=1776719304-0-0-ab7aa5e5f57791f44e5637cc06d3758c",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 15",
-        "url": "https://pull.niues.live/live/stream-9912015_lhd.m3u8?auth_key=1776719304-0-0-85ceb13d2c918585264d9f869d4b04cd",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 16",
-        "url": "https://pull.niues.live/live/stream-9912008_lsd.m3u8?auth_key=1776719304-0-0-f3bf55e1458076e1957869eca153b8e8",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 17",
-        "url": "https://pull.niues.live/live/stream-9912008_lhd.m3u8?auth_key=1776719304-0-0-5891c8bf3498dd6f2f762d64bc2d1cd4",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 18",
-        "url": "https://pull.niur.live/live/stream-548860_lsd.m3u8?txSecret=59b47d0b6ce50441f734ca7b1e523602&txTime=69e6dc18",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
         "name": "Server 19",
-        "url": "https://pull.niur.live/live/stream-548860_lhd.m3u8?txSecret=13004e82702c82d459c8e6c93c2dddd2&txTime=69e6dc18",
+        "url": "https://hls-ls.cdnok9.com/live/LUUBI/index.m3u8?expire=1788427256&sign=e15f8b184dc9c61cc5dacfd962841ae1",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
@@ -469,6 +469,38 @@
     "servers": [
       {
         "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1776720384-0-0-4a216eba0984254106ef5f4283a84f01",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1776720384-0-0-8fb10c14ee0524a6ccac954f0888ae98",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-581585_lsd.m3u8?auth_key=1776720384-0-0-1d88a8210fe1422cac7ace5c34cf0489",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-581585_lhd.m3u8?auth_key=1776720384-0-0-64b5a7ff405d03251e683b617a0176db",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
         "url": "https://hls-ls.cdnok9.com/live/LUBO/index.m3u8?expire=1788427256&sign=fa2834495401eb5d1dc40ba2f3bd21c1",
         "type": "direct",
         "header": {
@@ -476,7 +508,7 @@
         }
       },
       {
-        "name": "Server 2",
+        "name": "Server 6",
         "url": "https://hls-ls.cdnok9.com/live/QUANVU/index.m3u8?expire=1788427256&sign=056d097a0bbbd810493fd64ccf4831b7",
         "type": "direct",
         "header": {
@@ -484,98 +516,12 @@
         }
       },
       {
-        "name": "Server 3",
+        "name": "Server 7",
         "url": "https://hls-ls.cdnok9.com/live/falcon/index.m3u8?expire=3976189140&sign=96837373a6193800a79554011d4ba366",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
         }
-      },
-      {
-        "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-581585_lsd.m3u8?auth_key=1776719304-0-0-12487959b58bdd6125924c9ab3c29116",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-581585_lhd.m3u8?auth_key=1776719304-0-0-5481a656905045c5391db86c6db88d78",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1776719304-0-0-ec7098bf234fd0f99f7f20c95504609e",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1776719304-0-0-2298198e9c06870fb7854e4961455e55",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      }
-    ]
-  },
-  {
-    "match_time": 1776716100,
-    "match_status": "live",
-    "home_team_name": "Central Cordoba SDE",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/central-cordoba-sde-935566.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "CA Platense",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/ca-platense-32c4f7.webp",
-    "awayTeamScore": "0",
-    "league_name": "Argentine Division 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://hls-ls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1776719304-0-0-d5536a345517a74bfa34d0722a550ce1",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1776719304-0-0-6a0451c7d91492cf97cbe3ccb094acb8",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1776719304-0-0-285bf3f87823c50095672459ccfff986",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
-      },
-      {
-        "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1776719304-0-0-3039eb75735e97e3ac51802a44e51341",
-        "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
-        },
-        "type": "direct"
       }
     ]
   },
@@ -593,43 +539,97 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://hls-ls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
-        "type": "direct",
+        "url": "https://pull.niues.live/live/stream-568233_lsd.m3u8?auth_key=1776720384-0-0-c2e988f9372fcf860ebf5aae18568cfe",
         "header": {
-          "Connection": "keep-alive"
-        }
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
       },
       {
         "name": "Server 2",
-        "url": "https://pull.niues.live/live/stream-568233_lsd.m3u8?auth_key=1776719304-0-0-d24d530bc5c09ef68e6f7965c8c40036",
+        "url": "https://pull.niues.live/live/stream-568233_lhd.m3u8?auth_key=1776720384-0-0-ab9d2e65d05f8f559a7a0b859a4fc8f7",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-568233_lhd.m3u8?auth_key=1776719304-0-0-682f3008882af5ff5dc6f478b96904c9",
+        "url": "https://pull.niues.live/live/stream-598549_lsd.m3u8?auth_key=1776720384-0-0-a240e504d239829a61163b25135d4477",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-598549_lsd.m3u8?auth_key=1776719304-0-0-6c13cc7f3949922d910672ba0ab97766",
+        "url": "https://pull.niues.live/live/stream-598549_lhd.m3u8?auth_key=1776720384-0-0-44eb838ecd2793992f0baefe098264d5",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-598549_lhd.m3u8?auth_key=1776719304-0-0-c686a0fe0d89f5813788352760e10ed9",
+        "url": "https://hls-ls.cdnok9.com/live/MAYBACH/index.m3u8?expire=1923468720&sign=862d9b5fa441bf644b6c2fbcec08487b",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36"
+          "Connection": "keep-alive"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": 1776716100,
+    "match_status": "live",
+    "home_team_name": "Central Cordoba SDE",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/central-cordoba-sde-935566.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "CA Platense",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/ca-platense-32c4f7.webp",
+    "awayTeamScore": "0",
+    "league_name": "Argentine Division 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1776720384-0-0-b52b9514b7d81298da748ddcd7ee9fc2",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
         },
         "type": "direct"
+      },
+      {
+        "name": "Server 2",
+        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1776720384-0-0-095bc85d6863b4d8920266411e2499a7",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1776720384-0-0-42493c41553cf73c33dae62b2c1917cd",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1776720384-0-0-38dff3f4f21358fb8942a01d7b3ffc4b",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15"
+        },
+        "type": "direct"
+      },
+      {
+        "name": "Server 5",
+        "url": "https://hls-ls.cdnok9.com/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
       }
     ]
   },
