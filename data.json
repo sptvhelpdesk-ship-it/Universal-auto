@@ -13,22 +13,6 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://hls.cdnfaster-a.live/live/PHIHO/index.m3u8?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
-        "url": "https://hls.cdnfaster-a.live/live/VUONGLUAN/index.m3u8?expire=1893165900&sign=60fcb5252d4dafeac0cb5da922c56645",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 3",
         "url": "https://hls.cdnfaster-a.live/live/TAYMONKHANH/index.m3u8?expire=1788427256&sign=b79b5be508185d24f76a0b1effca53da",
         "type": "direct",
         "header": {
@@ -36,66 +20,82 @@
         }
       },
       {
-        "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1781788281-0-0-d372b1f7e1604e415f89ccb2da0db502",
+        "name": "Server 2",
+        "url": "https://hls.cdnfaster-a.live/live/PHIHO/index.m3u8?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://hls.cdnfaster-a.live/live/VUONGLUAN/index.m3u8?expire=1893165900&sign=60fcb5252d4dafeac0cb5da922c56645",
+        "type": "direct",
+        "header": {
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1781789181-0-0-ab7b8738176be0568c7b8614a77a4611",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1781788281-0-0-cde1e77e449ead2e3195888797d6ffee",
+        "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1781789181-0-0-69fdbc026d90a3c4d6c4e2d7c2f632d8",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-9912114_lsd.m3u8?auth_key=1781788281-0-0-7ceb57035d64db308dc28d7f682b478f",
+        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1781789181-0-0-d005ff45e6ee427dfbf1045767817c53",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-9912114_lhd.m3u8?auth_key=1781788281-0-0-8ca578fb326c75b068d9cf20063170d4",
+        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1781789181-0-0-a2da0d8dbeda3580d692cc4a4b8fe0c6",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-532081_lsd.m3u8?auth_key=1781788281-0-0-5fce432384e66e72b3a83ff7295df003",
+        "url": "https://pull.niur.live/live/stream-548860_lsd.m3u8?txSecret=70b5c7edc009f7e1e6b6f57a768c8a97&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-532081_lhd.m3u8?auth_key=1781788281-0-0-84814950b51d5dcd55bdf34855943dfa",
+        "url": "https://pull.niur.live/live/stream-548860_lhd.m3u8?txSecret=fc290e7fa3dca20a0431c637eef67849&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 10",
-        "url": "https://pull.niur.live/live/stream-548860_lsd.m3u8?txSecret=35003d74724c45a3d89cdfd0af1e8915&txTime=6a3434c9",
+        "url": "https://pull.niues.live/live/stream-9912114_lsd.m3u8?auth_key=1781789181-0-0-6765952aeba5febb457a7f31c5d92451",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 11",
-        "url": "https://pull.niur.live/live/stream-548860_lhd.m3u8?txSecret=ce83642ad2331e39f29148a663710c26&txTime=6a3434c9",
+        "url": "https://pull.niues.live/live/stream-9912114_lhd.m3u8?auth_key=1781789181-0-0-25967737df0d854f8bb71ef294532814",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       }
@@ -115,14 +115,6 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://hls.cdnfaster-a.live/live/TAOTHAO/index.m3u8?expire=1917964380&sign=6379fc6251248341f0547089859f8ee9",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
         "url": "https://hls.cdnfaster-a.live/live/YENTHANH1/index.m3u8?expire=1788427256&sign=a79cc8d996707223a0011d33d04d4582",
         "type": "direct",
         "header": {
@@ -130,7 +122,7 @@
         }
       },
       {
-        "name": "Server 3",
+        "name": "Server 2",
         "url": "https://hls.cdnfaster-a.live/live/MASIEU/index.m3u8?expire=1788427256&sign=b91fcfc36fe72375e8f8cc813de0220b",
         "type": "direct",
         "header": {
@@ -138,66 +130,74 @@
         }
       },
       {
-        "name": "Server 4",
-        "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=3461bcadeab91052f3200ef7ec566f0e&txTime=6a3434c9",
+        "name": "Server 3",
+        "url": "https://hls.cdnfaster-a.live/live/TAOTHAO/index.m3u8?expire=1917964380&sign=6379fc6251248341f0547089859f8ee9",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 4",
+        "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1781789181-0-0-d3c4857f32f9e14ffe745208daff12a2",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=0a50025cc02e8245ad6bcf92308de2e9&txTime=6a3434c9",
+        "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1781789181-0-0-a04c60d59858d8ef13a0b97dfdb33e95",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://pull.niur.live/live/stream-462413_lsd.m3u8?txSecret=4ed881a48a2be25feead7653a6137493&txTime=6a3434c9",
+        "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=7860dcbb38373454ef46d317374a48ea&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 7",
-        "url": "https://pull.niur.live/live/stream-462413_lhd.m3u8?txSecret=82c47712a46e0739cf1e87b073be3a78&txTime=6a3434c9",
+        "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=630d25e34b3a9796d8a749da9daff121&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-9912117_lsd.m3u8?auth_key=1781788281-0-0-326e9b24f7556162bbaa8977b552cb59",
+        "url": "https://pull.niur.live/live/stream-462413_lsd.m3u8?txSecret=ecf0e283f41412dec38ae90edd2ac07d&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-9912117_lhd.m3u8?auth_key=1781788281-0-0-68e5a7bdc813be80ea333b2f27d7bc4f",
+        "url": "https://pull.niur.live/live/stream-462413_lhd.m3u8?txSecret=da37fd143081ffcb2ea139bf6059da5d&txTime=6a34384d",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 10",
-        "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1781788281-0-0-78ebc0de5389a7d2d24496ca4a4f18c8",
+        "url": "https://pull.niues.live/live/stream-9912117_lsd.m3u8?auth_key=1781789181-0-0-2afccffbd8ce35d2b72e51d09b2d416c",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 11",
-        "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1781788281-0-0-7533f46b406612969b386f1dfe715aff",
+        "url": "https://pull.niues.live/live/stream-9912117_lhd.m3u8?auth_key=1781789181-0-0-69e9bccccf0a3b18e0d40a5b2e599880",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 8.0; Pixel 2 Build/OPD3.170816.012) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.4681.1876 Mobile Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Mobile Safari/537.36"
         },
         "type": "direct"
       }
@@ -208,10 +208,10 @@
     "match_status": "live",
     "home_team_name": "Akademiya Ontustik",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/akademiya-ontustik-a01bdc.png",
-    "homeTeamScore": "0",
+    "homeTeamScore": "1",
     "away_team_name": "Yelimay Semey 2",
     "away_team_logo": "https://cdn.1xapi.com/images/teams/yelimay-semey-2-415de2.png",
-    "awayTeamScore": "0",
+    "awayTeamScore": "1",
     "league_name": "KAZ Division 1 ",
     "league_logo": "https://cdn.1xapi.com/images/teams/league-kaz-division-1-442ae3.png",
     "servers": [
