@@ -13,14 +13,6 @@
     "servers": [
       {
         "name": "Server 1",
-        "url": "https://hls.cdnfaster-a.live/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
-        "type": "direct",
-        "header": {
-          "Connection": "keep-alive"
-        }
-      },
-      {
-        "name": "Server 2",
         "url": "https://hls.cdnfaster-a.live/live/VUONGLUAN/index.m3u8?expire=1893165900&sign=60fcb5252d4dafeac0cb5da922c56645",
         "type": "direct",
         "header": {
@@ -28,98 +20,106 @@
         }
       },
       {
-        "name": "Server 3",
-        "url": "https://pull.niues.live/live/stream-321443_lsd.m3u8?auth_key=1782403702-0-0-7a609be3d62564161b7805d2d7868407",
+        "name": "Server 2",
+        "url": "https://hls.cdnfaster-a.live/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
+        "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "Connection": "keep-alive"
+        }
+      },
+      {
+        "name": "Server 3",
+        "url": "https://pull.niues.live/live/stream-602153_lsd.m3u8?auth_key=1782404782-0-0-5dca708926d447257e619e91d9587089",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 4",
-        "url": "https://pull.niues.live/live/stream-321443_lhd.m3u8?auth_key=1782403702-0-0-d6394a742c94f20f94c2ee1967942518",
+        "url": "https://pull.niues.live/live/stream-602153_lhd.m3u8?auth_key=1782404782-0-0-46e62cda9170bf8c2f70c5eb45c7ca98",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 5",
-        "url": "https://pull.niues.live/live/stream-602153_lsd.m3u8?auth_key=1782403702-0-0-c774ca5b3fbb31a1534cc399f2b1656c",
+        "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1782404782-0-0-c155ef31c3def93bd9caab2c3ccd14c0",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 6",
-        "url": "https://pull.niues.live/live/stream-602153_lhd.m3u8?auth_key=1782403702-0-0-953ce0bf19f52eb18a7b44939677a20a",
+        "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1782404782-0-0-a09972e5449a7c1cbcb6d5af68b5d827",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 7",
-        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1782403702-0-0-dd193feb23192d622c0dcbcaae42eb8b",
+        "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1782404782-0-0-d10e78b693999f310fe91927c40301ba",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1782403702-0-0-8f8f0d455ca7a0fe4ef4f2e3122e5626",
+        "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1782404782-0-0-64d62aa77acedaf86d78f1c570aed2ed",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1782403702-0-0-8ab921f70748e95b9a8a618af9220b12",
+        "url": "https://pull.niues.live/live/stream-321443_lsd.m3u8?auth_key=1782404782-0-0-a5e408919d743ccfbe773d3b44da8889",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 10",
-        "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1782403702-0-0-40e4e1039f1019a6cfb69e8d2341019a",
+        "url": "https://pull.niues.live/live/stream-321443_lhd.m3u8?auth_key=1782404782-0-0-e875347afc42d3713974d080eab0db63",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 11",
-        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1782403702-0-0-724519e601c0323f9828d73f9acdd81f",
+        "url": "https://pull.niues.live/live/stream-557845_lsd.m3u8?auth_key=1782404796-0-0-1126aecf442575117abc06943bc5e866",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 12",
-        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1782403702-0-0-52dc03390dfb9812429cf5523b50b0f0",
+        "url": "https://pull.niues.live/live/stream-557845_lhd.m3u8?auth_key=1782404796-0-0-77dfacc7b3b18f5b83826ec35c8976cb",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 13",
-        "url": "https://pull.niur.live/live/stream-9912102_lsd.m3u8?txSecret=f71b98371bb953f4ae433b0c67c757a2&txTime=6a3d98c6",
+        "url": "https://pull.niur.live/live/stream-9912102_lsd.m3u8?txSecret=1ab56b034cd769fdc518f64585b4950f&txTime=6a3d9cfe",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 14",
-        "url": "https://pull.niur.live/live/stream-9912102_lhd.m3u8?txSecret=d47cb2825d7fc00f6428a547ea5b6269&txTime=6a3d98c6",
+        "url": "https://pull.niur.live/live/stream-9912102_lhd.m3u8?txSecret=808aed6121916ee776d219d5be6c1742&txTime=6a3d9cfe",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       }
@@ -156,6 +156,26 @@
     ]
   },
   {
+    "match_time": "1782399600",
+    "match_status": "live",
+    "home_team_name": "Bjørkelangen",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/bjørkelangen-200712.webp",
+    "homeTeamScore": "2",
+    "away_team_name": "Sarpsborg 08 2",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/sarpsborg-08-2-832277.png",
+    "awayTeamScore": "0",
+    "league_name": "Norwegian 3.Divisjon",
+    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://live.bongtv.com/live/sd-6MwdaTxCEceTHGLXrC.m3u8?txSecret=26ec60211463a064e500ac303a7845eb&txTime=6A3DF189",
+        "type": "direct",
+        "header": {}
+      }
+    ]
+  },
+  {
     "match_time": 1782399600,
     "match_status": "live",
     "home_team_name": "BFC Daugavpils",
@@ -169,6 +189,12 @@
     "servers": [
       {
         "name": "Server 1",
+        "url": "https://live.bongtv.com/live/sd-6MvVNc5Z8iwGMwbhb2.m3u8?txSecret=65bfb1516d4a00af771aa47e8b0be036&txTime=6A3DF189",
+        "type": "direct",
+        "header": {}
+      },
+      {
+        "name": "Server 2",
         "url": "https://hls.lauthaitv.cc/live/bfc-riga-lathighleague/index.m3u8",
         "type": "direct",
         "header": {
@@ -176,18 +202,12 @@
         }
       },
       {
-        "name": "Server 2",
+        "name": "Server 3",
         "url": "https://flv.lauthaitv.cc/live/bfc-riga-lathighleague.flv",
         "type": "direct",
         "header": {
           "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
         }
-      },
-      {
-        "name": "Server 3",
-        "url": "https://live.bongtv.com/live/sd-6MvVNc5Z8iwGMwbhb2.m3u8?txSecret=72d2d4279757ac95e40b669d976dbe0d&txTime=6A3DEE04",
-        "type": "direct",
-        "header": {}
       },
       {
         "name": "Server 4",
@@ -200,7 +220,7 @@
       },
       {
         "name": "Server 5",
-        "url": "https://hls.cdnfaster-a.live/live/KAKA/index.m3u8?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6",
+        "url": "https://hls.cdnfaster-a.live/live/PHIHO/index.m3u8?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
@@ -208,7 +228,7 @@
       },
       {
         "name": "Server 6",
-        "url": "https://hls.cdnfaster-a.live/live/PHIHO/index.m3u8?expire=2556118740&sign=ebc20a588b7a62eb65d12f7372d39a3f",
+        "url": "https://hls.cdnfaster-a.live/live/KAKA/index.m3u8?expire=1788427256&sign=c34e1c9b22c9ced94eca7e7bf7a81ae6",
         "type": "direct",
         "header": {
           "Connection": "keep-alive"
@@ -224,119 +244,99 @@
       },
       {
         "name": "Server 8",
-        "url": "https://pull.niues.live/live/stream-304148_lsd.m3u8?auth_key=1782403702-0-0-f7bd99cd47891786732257c720462f12",
+        "url": "https://pull.niues.live/live/stream-304148_lsd.m3u8?auth_key=1782404782-0-0-954847092bd99fc7732205c530238a58",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 9",
-        "url": "https://pull.niues.live/live/stream-304148_lhd.m3u8?auth_key=1782403702-0-0-dd734bb070de2f2cb8d4ae3d469f84d6",
+        "url": "https://pull.niues.live/live/stream-304148_lhd.m3u8?auth_key=1782404782-0-0-4da72f3870d75ac7f9646a93f5dd97ad",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 10",
-        "url": "https://pull.niues.live/live/stream-9912117_lsd.m3u8?auth_key=1782403702-0-0-84214ad22cafc44100ce59a3133f6328",
+        "url": "https://pull.niues.live/live/stream-9912114_lsd.m3u8?auth_key=1782404782-0-0-f958eff8148238b8cdf15844f9ef1608",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 11",
-        "url": "https://pull.niues.live/live/stream-9912117_lhd.m3u8?auth_key=1782403702-0-0-3cf34078b768bb9614c48e355e405ec0",
+        "url": "https://pull.niues.live/live/stream-9912114_lhd.m3u8?auth_key=1782404782-0-0-7f66b8a01e2dbeb1c0a40bbdbc4095f2",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 12",
-        "url": "https://pull.niues.live/live/stream-9912114_lsd.m3u8?auth_key=1782403702-0-0-c3f08cf9bbba393fe59b78bf4241aece",
+        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1782404782-0-0-bfd09cee4ac4070bf5c1650cf1a3f9f3",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 13",
-        "url": "https://pull.niues.live/live/stream-9912114_lhd.m3u8?auth_key=1782403702-0-0-845ced23073f9798049565f5515429ab",
+        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1782404782-0-0-a554795179b0ea7e6715295f8de155ef",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 14",
-        "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1782403702-0-0-9f5bc5ce6fc5583aeacd8517d6a9d05f",
+        "url": "https://pull.niues.live/live/stream-9912117_lsd.m3u8?auth_key=1782404782-0-0-b32cfc08a855c5c5d713d151b1c24ae7",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 15",
-        "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1782403702-0-0-9c568ac516ddff0eb377802e893d9082",
+        "url": "https://pull.niues.live/live/stream-9912117_lhd.m3u8?auth_key=1782404782-0-0-0fcd013fdeebb4e174fabed53a68d12f",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 16",
-        "url": "https://pull.niues.live/live/stream-611528_lsd.m3u8?auth_key=1782403702-0-0-2bd71c67edcb8790caa1971a3f8ea955",
+        "url": "https://pull.niues.live/live/stream-511367_lsd.m3u8?auth_key=1782404782-0-0-14daa758e2794ce146be5a5fbc03ba11",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 17",
-        "url": "https://pull.niues.live/live/stream-611528_lhd.m3u8?auth_key=1782403702-0-0-0ee584ffa45b5e18a17236b0a3e6872f",
+        "url": "https://pull.niues.live/live/stream-511367_lhd.m3u8?auth_key=1782404782-0-0-e931900a95d0ff0cb122766efe5df086",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 18",
-        "url": "https://pull.niues.live/live/stream-511367_lsd.m3u8?auth_key=1782403702-0-0-0b1b376382bf2437ce1db33ad1d6c696",
+        "url": "https://pull.niues.live/live/stream-611528_lsd.m3u8?auth_key=1782404782-0-0-04d882dfe21a2311144b73c7acbbfc89",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
       },
       {
         "name": "Server 19",
-        "url": "https://pull.niues.live/live/stream-511367_lhd.m3u8?auth_key=1782403702-0-0-cffab2976d70570ad8959377990e4d13",
+        "url": "https://pull.niues.live/live/stream-611528_lhd.m3u8?auth_key=1782404782-0-0-e5b739e189e4bbf4e81ead36a44dcaaa",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.2 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36"
         },
         "type": "direct"
-      }
-    ]
-  },
-  {
-    "match_time": "1782399600",
-    "match_status": "live",
-    "home_team_name": "Bjørkelangen",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/bjørkelangen-200712.webp",
-    "homeTeamScore": "1",
-    "away_team_name": "Sarpsborg 08 2",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/sarpsborg-08-2-832277.png",
-    "awayTeamScore": "0",
-    "league_name": "Norwegian 3.Divisjon",
-    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
-    "servers": [
-      {
-        "name": "Server 1",
-        "url": "https://live.bongtv.com/live/sd-6MwdaTxCEceTHGLXrC.m3u8?txSecret=f585faebf3e59da44db2e583c7483bfe&txTime=6A3DEE04",
-        "type": "direct",
-        "header": {}
       }
     ]
   },
@@ -366,14 +366,14 @@
   {
     "match_time": "1782403200",
     "match_status": "vs",
-    "home_team_name": "Pitea IF Women",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/pitea-if-women-a6a089.png",
+    "home_team_name": "Asane U19",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/asane-u19-d172f5.webp",
     "homeTeamScore": "0",
-    "away_team_name": "Hammarby Women",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/hammarby-women-e1aff2.png",
+    "away_team_name": "OS TF",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/os-tf-9fd205.webp",
     "awayTeamScore": "0",
-    "league_name": "SWE WD1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "league_name": "Norwegian 3.Divisjon",
+    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
     "servers": []
   },
   {
@@ -392,14 +392,14 @@
   {
     "match_time": "1782403200",
     "match_status": "vs",
-    "home_team_name": "Asane U19",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/asane-u19-d172f5.webp",
+    "home_team_name": "Pitea IF Women",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/pitea-if-women-a6a089.png",
     "homeTeamScore": "0",
-    "away_team_name": "OS TF",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/os-tf-9fd205.webp",
+    "away_team_name": "Hammarby Women",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/hammarby-women-e1aff2.png",
     "awayTeamScore": "0",
-    "league_name": "Norwegian 3.Divisjon",
-    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
+    "league_name": "SWE WD1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
   {
@@ -429,19 +429,6 @@
     "servers": []
   },
   {
-    "match_time": "1782403500",
-    "match_status": "vs",
-    "home_team_name": "Al Fahaheel SC",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-fahaheel-sc-f2a01f.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Al-Qadsia SC",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-qadsia-sc-c56056.png",
-    "awayTeamScore": "0",
-    "league_name": "Kuwaiti Premier League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
     "match_time": 1782403500,
     "match_status": "vs",
     "home_team_name": "Al Fahaheel SC",
@@ -451,6 +438,36 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/al-qadisiya-sc-744c3a.webp",
     "awayTeamScore": "0",
     "league_name": "KUW Premier League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": [
+      {
+        "name": "Server 1",
+        "url": "https://hls.lauthaitv.cc/live/faha-qadi-kuwprem/index.m3u8",
+        "type": "direct",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+        }
+      },
+      {
+        "name": "Server 2",
+        "url": "https://flv.lauthaitv.cc/live/faha-qadi-kuwprem.flv",
+        "type": "direct",
+        "header": {
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+        }
+      }
+    ]
+  },
+  {
+    "match_time": "1782403500",
+    "match_status": "vs",
+    "home_team_name": "Al Fahaheel SC",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-fahaheel-sc-f2a01f.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Al-Qadsia SC",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/al-qadsia-sc-c56056.png",
+    "awayTeamScore": "0",
+    "league_name": "Kuwaiti Premier League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
@@ -483,76 +500,11 @@
   {
     "match_time": "1782406800",
     "match_status": "vs",
-    "home_team_name": "Renaissance Sportive de Berkane",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/renaissance-sportive-de-berkane-335a0d.png",
-    "homeTeamScore": "0",
-    "away_team_name": "FAR Forces Armee Royales",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/far-forces-armee-royales-16ca33.png",
-    "awayTeamScore": "0",
-    "league_name": "Botola Pro 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1782406800",
-    "match_status": "vs",
-    "home_team_name": "Kawkab de Marrakech",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/kawkab-de-marrakech-c15aeb.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Union Touarga Sport Rabat",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/union-touarga-sport-rabat-6be9fc.png",
-    "awayTeamScore": "0",
-    "league_name": "Botola Pro 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1782406800",
-    "match_status": "vs",
     "home_team_name": "Olympique Dcheira",
     "home_team_logo": "https://cdn.1xapi.com/images/teams/olympique-dcheira-b960d8.png",
     "homeTeamScore": "0",
     "away_team_name": "IRT Itihad de Tanger",
     "away_team_logo": "https://cdn.1xapi.com/images/teams/irt-itihad-de-tanger-7c3d4c.png",
-    "awayTeamScore": "0",
-    "league_name": "Botola Pro 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1782406800,
-    "match_status": "vs",
-    "home_team_name": "CODM Meknes",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/codm-meknes-475e16.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Hassania Agadir",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/hassania-agadir-5212ff.png",
-    "awayTeamScore": "0",
-    "league_name": "The Botola Pro",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": "1782406800",
-    "match_status": "vs",
-    "home_team_name": "Renaissance Zmamra",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/renaissance-zmamra-acfa0d.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Olympique de Safi",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/olympique-de-safi-02609a.webp",
-    "awayTeamScore": "0",
-    "league_name": "Botola Pro 1",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
-    "match_time": 1782406800,
-    "match_status": "vs",
-    "home_team_name": "Wydad Casablanca",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/wydad-casablanca-7fc2c8.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Maghreb Fez",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/maghreb-fez-b73c50.png",
     "awayTeamScore": "0",
     "league_name": "Botola Pro 1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -598,16 +550,94 @@
     "servers": []
   },
   {
+    "match_time": 1782406800,
+    "match_status": "vs",
+    "home_team_name": "Wydad Casablanca",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/wydad-casablanca-7fc2c8.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Maghreb Fez",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/maghreb-fez-b73c50.png",
+    "awayTeamScore": "0",
+    "league_name": "Botola Pro 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
     "match_time": "1782406800",
     "match_status": "vs",
-    "home_team_name": "Pitea W",
-    "home_team_logo": "",
+    "home_team_name": "Renaissance Sportive de Berkane",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/renaissance-sportive-de-berkane-335a0d.png",
     "homeTeamScore": "0",
-    "away_team_name": "Hammarby W",
-    "away_team_logo": "",
+    "away_team_name": "FAR Forces Armee Royales",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/far-forces-armee-royales-16ca33.png",
     "awayTeamScore": "0",
-    "league_name": "Sweden Women Allsvenskan",
+    "league_name": "Botola Pro 1",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1782406800",
+    "match_status": "vs",
+    "home_team_name": "Renaissance Zmamra",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/renaissance-zmamra-acfa0d.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Olympique de Safi",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/olympique-de-safi-02609a.webp",
+    "awayTeamScore": "0",
+    "league_name": "Botola Pro 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1782406800",
+    "match_status": "vs",
+    "home_team_name": "Kawkab de Marrakech",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/kawkab-de-marrakech-c15aeb.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Union Touarga Sport Rabat",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/union-touarga-sport-rabat-6be9fc.png",
+    "awayTeamScore": "0",
+    "league_name": "Botola Pro 1",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1782406800,
+    "match_status": "vs",
+    "home_team_name": "CODM Meknes",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/codm-meknes-475e16.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Hassania Agadir",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/hassania-agadir-5212ff.png",
+    "awayTeamScore": "0",
+    "league_name": "The Botola Pro",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1782406800",
+    "match_status": "vs",
+    "home_team_name": "Austevoll",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/austevoll-aa801a.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Fyllingsdalen",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/fyllingsdalen-403394.png",
+    "awayTeamScore": "0",
+    "league_name": "Norwegian 3.Divisjon",
+    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
+    "servers": []
+  },
+  {
+    "match_time": "1782406800",
+    "match_status": "vs",
+    "home_team_name": "Strindheim",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/strindheim-cf9cb9.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Melhus",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/melhus-49e59b.png",
+    "awayTeamScore": "0",
+    "league_name": "Norwegian 3.Divisjon",
+    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
     "servers": []
   },
   {
@@ -652,11 +682,11 @@
   {
     "match_time": "1782406800",
     "match_status": "vs",
-    "home_team_name": "Kawkab de Marrakech",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/kawkab-de-marrakech-c15aeb.png",
+    "home_team_name": "Wydad AC",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/wydad-ac-29fc48.webp",
     "homeTeamScore": "0",
-    "away_team_name": "FUS Rabat",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/fus-rabat-fbcf3b.png",
+    "away_team_name": "Maghreb Fez",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/maghreb-fez-b73c50.png",
     "awayTeamScore": "0",
     "league_name": "The Botola Pro",
     "league_logo": "https://cdn.1xapi.com/images/teams/league-the-botola-pro-768823.jpg",
@@ -665,11 +695,11 @@
   {
     "match_time": "1782406800",
     "match_status": "vs",
-    "home_team_name": "Wydad AC",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/wydad-ac-29fc48.webp",
+    "home_team_name": "Kawkab de Marrakech",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/kawkab-de-marrakech-c15aeb.png",
     "homeTeamScore": "0",
-    "away_team_name": "Maghreb Fez",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/maghreb-fez-b73c50.png",
+    "away_team_name": "FUS Rabat",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/fus-rabat-fbcf3b.png",
     "awayTeamScore": "0",
     "league_name": "The Botola Pro",
     "league_logo": "https://cdn.1xapi.com/images/teams/league-the-botola-pro-768823.jpg",
@@ -691,27 +721,14 @@
   {
     "match_time": "1782406800",
     "match_status": "vs",
-    "home_team_name": "Strindheim",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/strindheim-cf9cb9.png",
+    "home_team_name": "Pitea W",
+    "home_team_logo": "",
     "homeTeamScore": "0",
-    "away_team_name": "Melhus",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/melhus-49e59b.png",
+    "away_team_name": "Hammarby W",
+    "away_team_logo": "",
     "awayTeamScore": "0",
-    "league_name": "Norwegian 3.Divisjon",
-    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
-    "servers": []
-  },
-  {
-    "match_time": "1782406800",
-    "match_status": "vs",
-    "home_team_name": "Austevoll",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/austevoll-aa801a.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Fyllingsdalen",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/fyllingsdalen-403394.png",
-    "awayTeamScore": "0",
-    "league_name": "Norwegian 3.Divisjon",
-    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
+    "league_name": "Sweden Women Allsvenskan",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
   {
@@ -725,6 +742,19 @@
     "awayTeamScore": "0",
     "league_name": "FAR Cup",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": "1782408600",
+    "match_status": "vs",
+    "home_team_name": "Konnerud",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/konnerud-4b5edd.png",
+    "homeTeamScore": "0",
+    "away_team_name": "Ready",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/ready-b2fdab.png",
+    "awayTeamScore": "0",
+    "league_name": "Norwegian 3.Divisjon",
+    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
     "servers": []
   },
   {
@@ -754,19 +784,6 @@
     "servers": []
   },
   {
-    "match_time": "1782408600",
-    "match_status": "vs",
-    "home_team_name": "Konnerud",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/konnerud-4b5edd.png",
-    "homeTeamScore": "0",
-    "away_team_name": "Ready",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/ready-b2fdab.png",
-    "awayTeamScore": "0",
-    "league_name": "Norwegian 3.Divisjon",
-    "league_logo": "https://cdn.1xapi.com/images/teams/league-norwegian-3divisjon-eac374.png",
-    "servers": []
-  },
-  {
     "match_time": "1782410400",
     "match_status": "vs",
     "home_team_name": "Fluminense RJ (Youth)",
@@ -780,19 +797,6 @@
     "servers": []
   },
   {
-    "match_time": 1782413100,
-    "match_status": "vs",
-    "home_team_name": "Al Kuwait SC",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-kuwait-sc-d61530.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "Kazma",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/kazma-9b58e5.webp",
-    "awayTeamScore": "0",
-    "league_name": "Kuwaiti Premier League",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
     "match_time": "1782413100",
     "match_status": "vs",
     "home_team_name": "Al-Salmiyah",
@@ -800,6 +804,19 @@
     "homeTeamScore": "0",
     "away_team_name": "Al-Arabi Club (KUW)",
     "away_team_logo": "https://cdn.1xapi.com/images/teams/al-arabi-club-kuw-39b309.webp",
+    "awayTeamScore": "0",
+    "league_name": "Kuwaiti Premier League",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1782413100,
+    "match_status": "vs",
+    "home_team_name": "Al Kuwait SC",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/al-kuwait-sc-d61530.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "Kazma",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/kazma-9b58e5.webp",
     "awayTeamScore": "0",
     "league_name": "Kuwaiti Premier League",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -848,7 +865,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-506605_lhd.flv?auth_key=1782359893-0-0-b58d5d564e1b9bda654e6a0ccfbca568",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
         }
       },
       {
@@ -856,7 +873,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-506605_lsd.flv?auth_key=1782359893-0-0-b58d5d564e1b9bda654e6a0ccfbca568",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -864,7 +881,7 @@
         "url": "https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd|drmScheme=clearkey&drmLicense=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -872,7 +889,7 @@
         "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ajfoeddkbz/out/v1/b78800b9b2304879b15843f455836829/cenc.mpd|drmScheme=clearkey&drmLicense=f6564ec2aee819046328a0e153be574d:ff46a8a1031eb27ef22576a077c98ab7",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -880,7 +897,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd|drmScheme=clearkey&drmLicense=45bbd582f220f438f896450d8306a3f2:582c6ba7f64bbc0f2d91c6b0c265760c",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -923,7 +940,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-525132_lhd.flv?auth_key=1782360019-0-0-0e4fde210c566b3232093ce4fa3e70f0",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -947,7 +964,7 @@
         "url": "https://otte-qw.live.pv-cdn.net/pdx-nitro/live/clients/dash/enc/fsu3wl2rwb/out/v1/be61206c04e643349d53fb22301f3b50/cenc.mpd|drmScheme=clearkey&drmLicense=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -955,7 +972,7 @@
         "url": "https://a121aivottepl-a.akamaihd.net/gru-nitro/live/clients/dash/enc/jo3rmhhp2r/out/v1/50656942ce4e40a1be824c9d83578fe9/cenc.mpd|drmScheme=clearkey&drmLicense=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -963,7 +980,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd|drmScheme=clearkey&drmLicense=45bbd582f220f438f896450d8306a3f2:582c6ba7f64bbc0f2d91c6b0c265760c",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
@@ -985,7 +1002,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-525132_lhd.flv?auth_key=1782360019-0-0-0e4fde210c566b3232093ce4fa3e70f0",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -993,7 +1010,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-525132_lsd.flv?auth_key=1782360019-0-0-0e4fde210c566b3232093ce4fa3e70f0",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1001,7 +1018,7 @@
         "url": "https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/w0rehjjrwe/out/v1/69a2a7041395406b970598f61680e7cf/cenc.mpd|drmScheme=clearkey&drmLicense=14eeabf30c14b7fbf3008c03099ce011:17d2ac8dbc5429bd70af3433aa12158d",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -1025,7 +1042,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd|drmScheme=clearkey&drmLicense=45bbd582f220f438f896450d8306a3f2:582c6ba7f64bbc0f2d91c6b0c265760c",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
@@ -1047,7 +1064,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-506605_lhd.flv?auth_key=1782359893-0-0-b58d5d564e1b9bda654e6a0ccfbca568",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1055,7 +1072,7 @@
         "url": "https://pullsgp.yyzb456.top/live/stream-506605_lsd.flv?auth_key=1782359893-0-0-b58d5d564e1b9bda654e6a0ccfbca568",
         "type": "direct",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1063,7 +1080,7 @@
         "url": "https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/cjglydxghe/out/v1/8977baf175da4b94873194613dd3fe55/cenc.mpd|drmScheme=clearkey&drmLicense=85b277daf5aae05833fe43a68f587968:d52d7e9bc0bcd98787efd547ac91eca0",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
         }
       },
       {
@@ -1071,7 +1088,7 @@
         "url": "https://otte-qw.live.pv-cdn.net/pdx-nitro/live/clients/dash/enc/fsu3wl2rwb/out/v1/be61206c04e643349d53fb22301f3b50/cenc.mpd|drmScheme=clearkey&drmLicense=5466ebd70704bdeb657f0abf3c5ca4ef:bdd79b72d8e48ed483aa623cc38a8a16",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1079,7 +1096,7 @@
         "url": "https://otte.live.fly.ww.aiv-cdn.net/gru-nitro/live/clients/dash-sd/enc/hubonmgf5k/out/v1/10560d92577e4917973aa4624124ecd6/cenc-sd.mpd|drmScheme=clearkey&drmLicense=45bbd582f220f438f896450d8306a3f2:582c6ba7f64bbc0f2d91c6b0c265760c",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       },
       {
@@ -1087,7 +1104,7 @@
         "url": "https://a121aivottepl-a.akamaihd.net/gru-nitro/live/clients/dash/enc/jo3rmhhp2r/out/v1/50656942ce4e40a1be824c9d83578fe9/cenc.mpd|drmScheme=clearkey&drmLicense=34475edab991ad5e92548aebd710410a:501b209cccd323ac00bf5ac15b406cb4",
         "type": "drm",
         "header": {
-          "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36"
+          "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
         }
       }
     ]
@@ -1106,19 +1123,6 @@
     "servers": []
   },
   {
-    "match_time": 1782430200,
-    "match_status": "vs",
-    "home_team_name": "Nublense",
-    "home_team_logo": "https://cdn.1xapi.com/images/teams/nublense-cb8ccb.webp",
-    "homeTeamScore": "0",
-    "away_team_name": "Universidad de Concepcion",
-    "away_team_logo": "https://cdn.1xapi.com/images/teams/universidad-de-concepcion-a0126c.png",
-    "awayTeamScore": "0",
-    "league_name": "CHI Cup",
-    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-    "servers": []
-  },
-  {
     "match_time": "1782430200",
     "match_status": "vs",
     "home_team_name": "Cuiaba",
@@ -1128,6 +1132,19 @@
     "away_team_logo": "https://cdn.1xapi.com/images/teams/londrina-pr-7290e1.png",
     "awayTeamScore": "0",
     "league_name": "BRA D2",
+    "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+    "servers": []
+  },
+  {
+    "match_time": 1782430200,
+    "match_status": "vs",
+    "home_team_name": "Nublense",
+    "home_team_logo": "https://cdn.1xapi.com/images/teams/nublense-cb8ccb.webp",
+    "homeTeamScore": "0",
+    "away_team_name": "Universidad de Concepcion",
+    "away_team_logo": "https://cdn.1xapi.com/images/teams/universidad-de-concepcion-a0126c.png",
+    "awayTeamScore": "0",
+    "league_name": "CHI Cup",
     "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
     "servers": []
   },
