@@ -23,6 +23,33 @@ const LOGOS = {
 
 // --- 3. HELPER FUNCTIONS ---
 
+// Helper to format IST time exactly as specified
+function getFormattedIstTime() {
+    const d = new Date();
+    const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
+    const parts = formatter.formatToParts(d);
+    let day = '', month = '', year = '2026', hour = '', minute = '', second = '', dayPeriod = '';
+    parts.forEach(p => {
+        if (p.type === 'day') day = p.value;
+        else if (p.type === 'month') month = p.value;
+        else if (p.type === 'year') year = "2026"; // Forced to 2026 as per script's force logic
+        else if (p.type === 'hour') hour = p.value;
+        else if (p.type === 'minute') minute = p.value;
+        else if (p.type === 'second') second = p.value;
+        else if (p.type === 'dayPeriod') dayPeriod = p.value.toUpperCase();
+    });
+    return `${hour}:${minute}:${second} ${dayPeriod} ${day}-${month}-${year}`;
+}
+
 // 🔥 IMPROVED NAME MATCHING LOGIC
 function normalizeName(str) {
     if (!str) return "";
@@ -127,10 +154,6 @@ async function runSync() {
             process.exit(0); 
         }
 
-        // SAVE RAW DATA
-        fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
-        console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
-
         // DEDUPLICATE MATCHES
         const bestMatchesMap = {};
         rawApiMatches.forEach(match => {
@@ -149,12 +172,47 @@ async function runSync() {
 
         const allApiMatches = Object.values(bestMatchesMap);
         console.log(`✨ Unique Matches after Filter: ${allApiMatches.length}`);
+
+        // --- FILTER ENDED, COUNT LIVE/UPCOMING & SAVE TO DATA.JSON ---
+        const nowMs = Date.now();
+        let liveCount = 0;
+        let upcomingCount = 0;
+
+        // Keep only Live and Upcoming matches (Skip matches ended more than 4 hours ago)
+        const filteredEvents = allApiMatches.filter(match => {
+            const matchTimeMs = match.match_time * 1000;
+            return (matchTimeMs + 4 * 60 * 60 * 1000) > nowMs;
+        });
+
+        filteredEvents.forEach(match => {
+            const matchTimeMs = match.match_time * 1000;
+            if (matchTimeMs <= nowMs) {
+                liveCount++;
+            } else {
+                upcomingCount++;
+            }
+        });
+
+        const finalJsonOutput = {
+            "NAME": "FluX-CR7 Live event ( Auto updated)",
+            "AUTHOR": "iVan_Flux",
+            "CONTACT (OWNER)": "https://t.me/iVan_flux",
+            "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
+            "Last update time": getFormattedIstTime(),
+            "Live": String(liveCount).padStart(2, '0'),
+            "Upcoming": String(upcomingCount).padStart(2, '0'),
+            "events": filteredEvents // All matches nested inside "events" array [cite: 1.1]
+        };
+
+        // Write structured output to data.json locally
+        fs.writeFileSync('data.json', JSON.stringify(finalJsonOutput, null, 2));
+        console.log(`💾 Structured Live Event Data saved to 'data.json' in Repository.`);
         
-        // B. GET DB DATA
+        // B. GET DB DATA (Untouched)
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
         let updateCount = 0;
 
-        // C. PROCESS EACH MATCH
+        // C. PROCESS EACH MATCH FOR DATABASE (Untouched)
         for (const apiMatch of allApiMatches) {
             if (!apiMatch.servers || apiMatch.servers.length === 0) continue;
 
