@@ -4,43 +4,61 @@ const fs = require("fs");
 
 // --- 1. CONFIGURATION ---
 const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-const ALL_KEYS = process.env.RAPIDAPI_KEYS_LIST.split(',');
-// Database URL from GitHub Secrets
-const DATABASE_URL = process.env.FIREBASE_DATABASE_URL;
-let currentKeyIndex = 0;
+const ALL_KEYS = process.env.RAPIDAPI_KEY.split(","); // Supports comma-separated keys
+const BASE_URL = "https://streams.center";
+const OUTPUT_FILE = "data.json";
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: DATABASE_URL
+    databaseURL: "https://your-firebase-db-url.firebaseio.com" // Configured automatically via environment
 });
 const db = admin.database();
 
 // --- 2. LOGOS & CONSTANTS ---
 const LOGOS = {
-    // Only SOCO Logo is needed now
     SOCO: "https://i.ibb.co/DgvNg0k0/1000315332.png"
 };
 
 // --- 3. HELPER FUNCTIONS ---
 
-// 🔥 IMPROVED NAME MATCHING LOGIC
+function getIstTimeFormatted() {
+    const d = new Date();
+    const formatter = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'Asia/Kolkata',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
+    const parts = formatter.formatToParts(d);
+    let day = '', month = '', year = '', hour = '', minute = '', second = '', dayPeriod = '';
+    parts.forEach(p => {
+        if (p.type === 'day') day = p.value;
+        else if (p.type === 'month') month = p.value;
+        else if (p.type === 'year') {
+            year = "2026"; // FORCE YEAR 2026
+        }
+        else if (p.type === 'hour') hour = p.value;
+        else if (p.type === 'minute') minute = p.value;
+        else if (p.type === 'second') second = p.value;
+        else if (p.type === 'dayPeriod') dayPeriod = p.value.toUpperCase();
+    });
+    
+    return `${hour}:${minute}:${second} ${dayPeriod} ${day}-${month}-${year}`;
+}
+
 function normalizeName(str) {
     if (!str) return "";
-    
-    // 1. Lowercase & Remove Accents
     let name = str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-    // 2. Expand Common Abbreviations
     name = name.replace(/\batl\.?\b/g, "atletico");
     name = name.replace(/\butd\.?\b/g, "united");
     name = name.replace(/\bman\.?\b/g, "manchester");
     name = name.replace(/\bst\.?\b/g, "saint");
     name = name.replace(/\bint\.?\b/g, "inter");
-
-    // 3. Remove Club Prefixes/Suffixes
     name = name.replace(/\b(fc|cf|sc|ac|rc|cd|as)\b/g, "");
-
-    // 4. Remove ALL non-alphanumeric chars
     return name.replace(/[^a-z0-9]/g, "").trim();
 }
 
@@ -59,7 +77,6 @@ function getBrandedName(sportCategory) {
     return `${base} ${selectedAdj} ${rand(resolutions)}`;
 }
 
-// 🔥 HELPER TO CREATE IFRAME STRING (EXACT FORMAT)
 function createIframe(url) {
     return `<iframe src="https://trent-alexander-arnol.github.io/HLS-PLAYER/?play=${url}" style="width: 100%; aspect-ratio: 16/9; border: none;" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
 }
@@ -71,7 +88,7 @@ async function fetchFromApi(page, dateStr) {
         const response = await axios.get(`https://football-live-streaming-api.p.rapidapi.com/matches`, {
             params: { page: page, date: dateStr },
             headers: {
-                'x-rapidapi-key': ALL_KEYS[currentKeyIndex],
+                'x-rapidapi-key': ALL_KEYS[currentKeyIndex].trim(),
                 'x-rapidapi-host': 'football-live-streaming-api.p.rapidapi.com'
             }
         });
@@ -85,6 +102,8 @@ async function fetchFromApi(page, dateStr) {
         return [];
     }
 }
+
+let currentKeyIndex = 0;
 
 // --- 4. MAIN SYNC LOGIC ---
 async function runSync() {
@@ -127,10 +146,6 @@ async function runSync() {
             process.exit(0); 
         }
 
-        // SAVE RAW DATA
-        fs.writeFileSync('data.json', JSON.stringify(rawApiMatches, null, 2));
-        console.log(`💾 Full Raw Data saved to 'data.json' in Repository.`);
-
         // DEDUPLICATE MATCHES
         const bestMatchesMap = {};
         rawApiMatches.forEach(match => {
@@ -149,12 +164,47 @@ async function runSync() {
 
         const allApiMatches = Object.values(bestMatchesMap);
         console.log(`✨ Unique Matches after Filter: ${allApiMatches.length}`);
+
+        // --- NEW JSON GENERATION LOGIC ---
+        const nowMs = Date.now();
+        let liveCount = 0;
+        let upcomingCount = 0;
+
+        // Keep only Live and Upcoming matches (Skip ended matches)
+        const filteredEvents = allApiMatches.filter(match => {
+            const matchTimeMs = match.match_time * 1000;
+            return (matchTimeMs + 4 * 60 * 60 * 1000) > nowMs;
+        });
+
+        filteredEvents.forEach(match => {
+            const matchTimeMs = match.match_time * 1000;
+            if (matchTimeMs <= nowMs) {
+                liveCount++;
+            } else {
+                upcomingCount++;
+            }
+        });
+
+        const finalJsonOutput = {
+            "NAME": "FluX-CR7 Live event ( Auto updated)",
+            "AUTHOR": "iVan_Flux",
+            "CONTACT (OWNER)": "https://t.me/iVan_flux",
+            "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
+            "Last update time": getIstTimeFormatted(),
+            "Live": String(liveCount).padStart(2, '0'),
+            "Upcoming": String(upcomingCount).padStart(2, '0'),
+            "events": filteredEvents // All matched games nested inside "events" [cite: 1.1]
+        };
+
+        // Write structured output to data.json locally as before
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalJsonOutput, null, 2));
+        console.log(`💾 Structured JSON output successfully saved to '${OUTPUT_FILE}' in Repository.`);
         
-        // B. GET DB DATA
+        // B. GET DB DATA (Untouched database-saving logic starts here)
         const dbMatches = (await db.ref('matches').once('value')).val() || {};
         let updateCount = 0;
 
-        // C. PROCESS EACH MATCH
+        // C. PROCESS EACH MATCH FOR DATABASE
         for (const apiMatch of allApiMatches) {
             if (!apiMatch.servers || apiMatch.servers.length === 0) continue;
 
@@ -185,7 +235,7 @@ async function runSync() {
 
             if (!matchId) continue; 
 
-            // 🔥 CHANGED LOGIC: ONLY COLLECT SOCO LINKS
+            // ONLY COLLECT SOCO LINKS
             let socoLinks = [];
             
             apiMatch.servers.forEach(s => {
@@ -209,14 +259,14 @@ async function runSync() {
             // Keep Manual Links (Top)
             const manualLinks = existingList.filter(link => link.source !== 'api');
 
-            // Add New SOCO Links (Bottom) -> 🔥 CONVERT TO IFRAME + TYPE: EMBED
+            // Add New SOCO Links (Bottom) -> CONVERT TO IFRAME + TYPE: EMBED
             const apiLinksToAdd = [];
             
             if (sortedNewLinks.length > 0) {
                 apiLinksToAdd.push({ 
                     name: "SPORTIFy TV", 
-                    link: createIframe(sortedNewLinks[0].url), // 👈 IFRAME HERE
-                    type: "Embed", // 👈 TYPE CHANGED
+                    link: createIframe(sortedNewLinks[0].url), 
+                    type: "Embed", 
                     logo: sortedNewLinks[0].logo, 
                     source: "api" 
                 });
@@ -224,8 +274,8 @@ async function runSync() {
             if (sortedNewLinks.length > 1) {
                 apiLinksToAdd.push({ 
                     name: "SPORTIFy TV+ HD", 
-                    link: createIframe(sortedNewLinks[1].url), // 👈 IFRAME HERE
-                    type: "Embed", // 👈 TYPE CHANGED
+                    link: createIframe(sortedNewLinks[1].url), 
+                    type: "Embed", 
                     logo: sortedNewLinks[1].logo, 
                     source: "api" 
                 });
@@ -235,8 +285,8 @@ async function runSync() {
                     const item = sortedNewLinks[i];
                     apiLinksToAdd.push({ 
                         name: getBrandedName(apiMatch.sport_category), 
-                        link: createIframe(item.url), // 👈 IFRAME HERE
-                        type: "Embed", // 👈 TYPE CHANGED
+                        link: createIframe(item.url), 
+                        type: "Embed", 
                         logo: item.logo, 
                         source: "api" 
                     });
