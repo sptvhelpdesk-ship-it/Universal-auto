@@ -262,9 +262,3 @@ async function runSync() {
 }
 
 runSync();
-
-
-
-Eta valo kore read koro r ki ki function ache seta amake bolo a to z
-
-Amar permission chara kono kichu delete ba change korba na kemon 
