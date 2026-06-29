@@ -1,314 +1,293 @@
-const admin = require("firebase-admin");
-const axios = require("axios");
-const fs = require("fs");
+import os
+import re
+import sys
+import json
+import time
+import random
+import shutil
+from datetime import datetime, timedelta
+import pytz
+from collections import OrderedDict
+import cloudscraper
 
-// --- 1. CONFIGURATION ---
-const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
-const ALL_KEYS = process.env.RAPIDAPI_KEY.split(","); // Supports comma-separated keys
-const BASE_URL = "https://streams.center";
-const OUTPUT_FILE = "data.json";
+# --- সেটিংস ---
+BASE_URL = os.getenv("BASE_URL")
+OUTPUT_FILE = "Stream-Live.json"
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://your-firebase-db-url.firebaseio.com" // Configured automatically via environment
-});
-const db = admin.database();
+def get_ist_time():
+    ist = pytz.timezone('Asia/Kolkata')
+    return datetime.now(ist).strftime('%d/%m/%y %H:%M:%S IST')
 
-// --- 2. LOGOS & CONSTANTS ---
-const LOGOS = {
-    SOCO: "https://i.ibb.co/DgvNg0k0/1000315332.png"
-};
+def log_to_console(message):
+    """Prints logs to sys.stderr so they appear in GitHub Actions but do not pollute the raw JSON output."""
+    print(message, file=sys.stderr)
 
-// --- 3. HELPER FUNCTIONS ---
+def deduplicate(seq):
+    """Helper function to remove duplicates while preserving order."""
+    seen = set()
+    return [x for x in seq if not (x in seen or seen.add(x))]
 
-function getIstTimeFormatted() {
-    const d = new Date();
-    const formatter = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'Asia/Kolkata',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
-        hour12: true,
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    });
-    const parts = formatter.formatToParts(d);
-    let day = '', month = '', year = '', hour = '', minute = '', second = '', dayPeriod = '';
-    parts.forEach(p => {
-        if (p.type === 'day') day = p.value;
-        else if (p.type === 'month') month = p.value;
-        else if (p.type === 'year') {
-            year = "2026"; // FORCE YEAR 2026
-        }
-        else if (p.type === 'hour') hour = p.value;
-        else if (p.type === 'minute') minute = p.value;
-        else if (p.type === 'second') second = p.value;
-        else if (p.type === 'dayPeriod') dayPeriod = p.value.toUpperCase();
-    });
+def push_to_github():
+    log_to_console(f"[-] অন্য GitHub রিপোজিটরিতে {OUTPUT_FILE} আপডেট করা হচ্ছে...")
+    GITHUB_TOKEN = os.getenv("GH_TOKEN")
+    GITHUB_USER = os.getenv("TGITHUB_USER")
+    GITHUB_REPO = os.getenv("TGITHUB_REPO")
+    GITHUB_EMAIL = os.getenv("TGITHUB_EMAIL")
     
-    return `${hour}:${minute}:${second} ${dayPeriod} ${day}-${month}-${year}`;
-}
+    temp_dir = "temp_external_repo"
+    remote_url = f"https://{GITHUB_TOKEN}@github.com/{GITHUB_USER}/{GITHUB_REPO}.git"
 
-function normalizeName(str) {
-    if (!str) return "";
-    let name = str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    name = name.replace(/\batl\.?\b/g, "atletico");
-    name = name.replace(/\butd\.?\b/g, "united");
-    name = name.replace(/\bman\.?\b/g, "manchester");
-    name = name.replace(/\bst\.?\b/g, "saint");
-    name = name.replace(/\bint\.?\b/g, "inter");
-    name = name.replace(/\b(fc|cf|sc|ac|rc|cd|as)\b/g, "");
-    return name.replace(/[^a-z0-9]/g, "").trim();
-}
-
-function getBrandedName(sportCategory) {
-    const sport = (sportCategory || "Football").toLowerCase();
-    const base = "SPORTIFy";
-    const adjectives = ["FAST", "PRO", "MAX", "ULTRA", "PLUS", "GOLD", "LIVE", "PRIME", "TURBO", "STAR"];
-    const sportAdjs = sport.includes("cricket") ? ["CRICKET", "T20", "MATCH"] : ["FOOTBALL", "SOCCER", "GOAL"];
-    const resolutions = ["HD", "FHD", "SD"];
-    const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
-    let selectedAdj = rand(adjectives);
-    if (Math.random() < 0.3) selectedAdj = rand(sportAdjs);
-    const style = Math.floor(Math.random() * 3);
-    if (style === 0) return `${base} ${rand(resolutions)}`;
-    if (style === 1) return `${base} ${selectedAdj}`;
-    return `${base} ${selectedAdj} ${rand(resolutions)}`;
-}
-
-function createIframe(url) {
-    return `<iframe src="https://trent-alexander-arnol.github.io/HLS-PLAYER/?play=${url}" style="width: 100%; aspect-ratio: 16/9; border: none;" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
-}
-
-async function fetchFromApi(page, dateStr) {
-    if (currentKeyIndex >= ALL_KEYS.length) throw new Error("❌ ALL KEYS EXHAUSTED");
-    
-    try {
-        const response = await axios.get(`https://football-live-streaming-api.p.rapidapi.com/matches`, {
-            params: { page: page, date: dateStr },
-            headers: {
-                'x-rapidapi-key': ALL_KEYS[currentKeyIndex].trim(),
-                'x-rapidapi-host': 'football-live-streaming-api.p.rapidapi.com'
-            }
-        });
-        return response.data.matches || [];
-    } catch (error) {
-        if (error.response && (error.response.status === 429 || error.response.status === 401)) {
-            console.log(`⚠️ Key ${currentKeyIndex} Failed. Switching...`);
-            currentKeyIndex++;
-            return fetchFromApi(page, dateStr);
-        }
-        return [];
-    }
-}
-
-let currentKeyIndex = 0;
-
-// --- 4. MAIN SYNC LOGIC ---
-async function runSync() {
-    console.log("⏰ Starting Sync (Pages 1 to 3) [ONLY SOCO + IFRAME MODE]...");
-    
-    // --- DATE LOGIC ---
-    const d = new Date();
-    const istOptions = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
-    let istHour = parseInt(d.toLocaleString('en-US', istOptions));
-    
-    if (istHour === 24) istHour = 0; // Fix 24:00 bug
-
-    if (istHour >= 0 && istHour < 4) {
-        console.log(`🌙 Midnight Mode (${istHour}:00 IST). Checking Previous Day.`);
-        d.setDate(d.getDate() - 1);
-    } else {
-        console.log(`☀️ Normal Mode (${istHour}:00 IST). Checking Today.`);
-    }
-
-    // FORCE YEAR 2026
-    d.setFullYear(2026);
-
-    const dateOptions = { timeZone: 'Asia/Kolkata', day: '2-digit', month: '2-digit', year: 'numeric' };
-    const dateStr = d.toLocaleDateString('en-GB', dateOptions).replace(/\//g, '');
-
-    console.log(`📅 Final Scanning Date (IST): ${dateStr}`);
-
-    try {
-        // A. GET API DATA
-        let rawApiMatches = [];
-        for (let page = 1; page <= 3; page++) {
-            const m = await fetchFromApi(page, dateStr);
-            rawApiMatches = [...rawApiMatches, ...m];
-        }
-        
-        console.log(`📊 Total Raw Matches Found: ${rawApiMatches.length}`);
-
-        if (rawApiMatches.length === 0) { 
-            console.log("No matches found in API."); 
-            process.exit(0); 
-        }
-
-        // DEDUPLICATE MATCHES
-        const bestMatchesMap = {};
-        rawApiMatches.forEach(match => {
-            const matchId = normalizeName(match.home_team_name) + "_vs_" + normalizeName(match.away_team_name);
-            const serverCount = match.servers ? match.servers.length : 0;
-
-            if (!bestMatchesMap[matchId]) {
-                bestMatchesMap[matchId] = match;
-            } else {
-                const existingCount = bestMatchesMap[matchId].servers ? bestMatchesMap[matchId].servers.length : 0;
-                if (serverCount > existingCount) {
-                    bestMatchesMap[matchId] = match;
-                }
-            }
-        });
-
-        const allApiMatches = Object.values(bestMatchesMap);
-        console.log(`✨ Unique Matches after Filter: ${allApiMatches.length}`);
-
-        // --- NEW JSON GENERATION LOGIC ---
-        const nowMs = Date.now();
-        let liveCount = 0;
-        let upcomingCount = 0;
-
-        // Keep only Live and Upcoming matches (Skip ended matches)
-        const filteredEvents = allApiMatches.filter(match => {
-            const matchTimeMs = match.match_time * 1000;
-            return (matchTimeMs + 4 * 60 * 60 * 1000) > nowMs;
-        });
-
-        filteredEvents.forEach(match => {
-            const matchTimeMs = match.match_time * 1000;
-            if (matchTimeMs <= nowMs) {
-                liveCount++;
-            } else {
-                upcomingCount++;
-            }
-        });
-
-        const finalJsonOutput = {
-            "NAME": "FluX-CR7 Live event ( Auto updated)",
-            "AUTHOR": "iVan_Flux",
-            "CONTACT (OWNER)": "https://t.me/iVan_flux",
-            "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
-            "Last update time": getIstTimeFormatted(),
-            "Live": String(liveCount).padStart(2, '0'),
-            "Upcoming": String(upcomingCount).padStart(2, '0'),
-            "events": filteredEvents // All matched games nested inside "events" [cite: 1.1]
-        };
-
-        // Write structured output to data.json locally as before
-        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalJsonOutput, null, 2));
-        console.log(`💾 Structured JSON output successfully saved to '${OUTPUT_FILE}' in Repository.`);
-        
-        // B. GET DB DATA (Untouched database-saving logic starts here)
-        const dbMatches = (await db.ref('matches').once('value')).val() || {};
-        let updateCount = 0;
-
-        // C. PROCESS EACH MATCH FOR DATABASE
-        for (const apiMatch of allApiMatches) {
-            if (!apiMatch.servers || apiMatch.servers.length === 0) continue;
-
-            const uiTeam1 = normalizeName(apiMatch.home_team_name);
-            const uiTeam2 = normalizeName(apiMatch.away_team_name);
-            let matchId = null;
-            let currentStreams = [];
-
-            // FIND MATCH
-            for (const [key, val] of Object.entries(dbMatches)) {
-                const dbCat = (val.sportType || "").toLowerCase();
-                const apiCat = (apiMatch.sport_category || "Football").toLowerCase();
-                if (dbCat !== apiCat) continue;
-
-                const dbTeam1 = normalizeName(val.team1Name || "");
-                const dbTeam2 = normalizeName(val.team2Name || "");
-
-                if ((dbTeam1.includes(uiTeam1) || uiTeam1.includes(dbTeam1)) && 
-                    (dbTeam2.includes(uiTeam2) || uiTeam2.includes(dbTeam2))) {
-                    
-                    if (Math.abs((apiMatch.match_time * 1000) - new Date(val.matchTime).getTime()) < 86400000) {
-                        matchId = key;
-                        currentStreams = val.streamLinks || [];
-                        break;
-                    }
-                }
-            }
-
-            if (!matchId) continue; 
-
-            // ONLY COLLECT SOCO LINKS
-            let socoLinks = [];
+    try:
+        if os.path.exists(temp_dir):
+            shutil.rmtree(temp_dir)
             
-            apiMatch.servers.forEach(s => {
-                const url = s.url || "";
+        clone_status = os.system(f"git clone {remote_url} {temp_dir}")
+        if clone_status != 0:
+            raise Exception("Git Clone ব্যর্থ হয়েছে। দয়া করে টোকেন ও রিপোজিটরি নাম চেক করুন।")
+        
+        shutil.copy(OUTPUT_FILE, os.path.join(temp_dir, OUTPUT_FILE))
+        
+        current_dir = os.getcwd()
+        os.chdir(temp_dir)
+        
+        os.system(f'git config user.email "{GITHUB_EMAIL if GITHUB_EMAIL else "action@github.com"}"')
+        os.system(f'git config user.name "{GITHUB_USER}"')
+        os.system(f"git add {OUTPUT_FILE}")
+        os.system(f'git commit -m "Auto Update: {get_ist_time()}" || echo "No changes"')
+        push_status = os.system("git push origin main")
+        
+        os.chdir(current_dir)
+        shutil.rmtree(temp_dir)
+        
+        if push_status == 0:
+            log_to_console(f"[SUCCESS] অন্য রিপোজিটরিতে {OUTPUT_FILE} সফলভাবে আপডেট সম্পন্ন।")
+        else:
+            log_to_console("[ERROR] পুশ কমান্ড সফল হয়নি।")
+            
+    except Exception as e:
+        log_to_console(f"[ERROR] পুশ ফেইল: {e}")
+
+def extract_stream_token(scraper, player_url):
+    """Fetches player page and extracts the unique stream token from iframe sources."""
+    try:
+        res = scraper.get(player_url, timeout=10)
+        res.encoding = 'utf-8'  # Ensure proper decoding [cite: 2.1]
+        html = res.text
+        
+        # Search for any stream parameter directly in the HTML
+        stream_ids = re.findall(r'stream=([a-zA-Z0-9_.-]+)', html)
+        if stream_ids:
+            return deduplicate(stream_ids)
+            
+        # Fallback to scanning embedded iframe pages
+        iframe_matches = re.findall(r'<iframe[^>]+src=["\']([^"\']+)["\']', html, re.I)
+        for iframe_url in iframe_matches:
+            if not iframe_url.startswith('http'):
+                if iframe_url.startswith('//'):
+                    iframe_url = 'https:' + iframe_url
+                else:
+                    iframe_url = urljoin(player_url, iframe_url)
+            
+            time.sleep(random.uniform(0.3, 0.6))
+            iframe_res = scraper.get(iframe_url, timeout=10)
+            iframe_res.encoding = 'utf-8'  # Enforce UTF-8 [cite: 2.1]
+            iframe_html = iframe_res.text
+            
+            inner_stream_ids = re.findall(r'stream=([a-zA-Z0-9_.-]+)', iframe_html)
+            if inner_stream_ids:
+                return deduplicate(inner_stream_ids)
                 
-                // ONLY Check for SOCO (Ignore FMP/OK9)
-                if (url.includes("pull.niues.live")) {
-                    socoLinks.push({ url: url, type: "SOCO", logo: LOGOS.SOCO });
-                }
-            });
+    except Exception as e:
+        log_to_console(f"    [!] Error during token extraction: {str(e)}")
+    return []
 
-            // If no SOCO links found, skip match
-            if (socoLinks.length === 0) continue;
+def run_scraper():
+    # Verify if BASE_URL secret is provided
+    if not BASE_URL:
+        error_package = OrderedDict([
+            ("NAME", "FluX-CR7 Live event ( Auto updated)"),
+            ("AUTHOR", "iVan_Flux"),
+            ("CONTACT (OWNER)", "https://t.me/iVan_flux"),
+            ("TELEGRAM CHANNEL", "https://t.me/api_hub_by_ivan"),
+            ("Last update time", get_ist_time()),
+            ("Live", "00"),
+            ("Upcoming", "00"),
+            ("events", [])
+        ])
+        print(json.dumps(error_package, indent=4, ensure_ascii=False))
+        return
 
-            const sortedNewLinks = [...socoLinks]; 
+    # Use original configurations and API endpoints
+    api_endpoint = "https://backend.streamcenter.live/api"
+    api_parties_url = "https://backend.streamcenter.live/api/Parties?pageNumber=10&pageSize=500"
 
-            // PREPARE LIST
-            let existingList = Array.isArray(currentStreams) ? [...currentStreams] : Object.values(currentStreams);
-            existingList = existingList.filter(l => l);
+    scraper = cloudscraper.create_scraper(browser={'browser': 'chrome', 'platform': 'android', 'desktop': False})
+    raw_matches = []
+    
+    # Load categories Map from API
+    categories_map = {}
+    log_to_console("[*] Loading categories...")
+    try:
+        cats_res = scraper.get(f"{api_endpoint}/Categories", timeout=10)
+        cats_res.encoding = 'utf-8'
+        if cats_res.status_code == 200:
+            categories = cats_res.json()
+            for cat in categories:
+                categories_map[cat.get("id")] = cat.get("name", "General")
+            log_to_console(f"[+] Loaded {len(categories_map)} categories successfully.")
+    except Exception as e:
+        log_to_console(f"[WARNING] Categories load failed: {e}")
 
-            // Keep Manual Links (Top)
-            const manualLinks = existingList.filter(link => link.source !== 'api');
+    # Fetch active parties from exact target API [1]
+    log_to_console(f"\n[*] Loading matches from API: {api_parties_url}")
+    try:
+        games_res = scraper.get(api_parties_url, timeout=15)
+        games_res.encoding = 'utf-8'
+        if games_res.status_code != 200:
+            log_to_console(f"[ERROR] API failed with status code: {games_res.status_code}")
+            return
+        games = games_res.json()
+    except Exception as e:
+        log_to_console(f"[ERROR] API Connection error: {e}")
+        return
 
-            // Add New SOCO Links (Bottom) -> CONVERT TO IFRAME + TYPE: EMBED
-            const apiLinksToAdd = [];
-            
-            if (sortedNewLinks.length > 0) {
-                apiLinksToAdd.push({ 
-                    name: "SPORTIFy TV", 
-                    link: createIframe(sortedNewLinks[0].url), 
-                    type: "Embed", 
-                    logo: sortedNewLinks[0].logo, 
-                    source: "api" 
-                });
-            }
-            if (sortedNewLinks.length > 1) {
-                apiLinksToAdd.push({ 
-                    name: "SPORTIFy TV+ HD", 
-                    link: createIframe(sortedNewLinks[1].url), 
-                    type: "Embed", 
-                    logo: sortedNewLinks[1].logo, 
-                    source: "api" 
-                });
-            }
-            if (sortedNewLinks.length > 2) {
-                for (let i = 2; i < sortedNewLinks.length; i++) {
-                    const item = sortedNewLinks[i];
-                    apiLinksToAdd.push({ 
-                        name: getBrandedName(apiMatch.sport_category), 
-                        link: createIframe(item.url), 
-                        type: "Embed", 
-                        logo: item.logo, 
-                        source: "api" 
-                    });
-                }
-            }
+    log_to_console(f"[+] Found {len(games)} total scheduled matches.")
+    log_to_console("-" * 50)
 
-            // MERGE
-            const finalUpdatedList = [...manualLinks, ...apiLinksToAdd];
-
-            await db.ref(`matches/${matchId}/streamLinks`).set(finalUpdatedList);
-            
-            console.log(`✅ Updated ${uiTeam1} vs ${uiTeam2} (SOCO=${socoLinks.length})`);
-            updateCount++;
-        }
+    # Filter active and upcoming matches across all categories
+    for game in games:
+        game_name = (game.get("name", "")).replace(" | ", " vs ").strip()
+        cat_id = game.get("categoryId")
+        cat_name = categories_map.get(cat_id, "General")
+        game_id = game.get("id")
         
-        console.log(`🏁 Sync Done. Updated: ${updateCount} matches.`);
-        process.exit(0);
+        # Skip finished/ended matches based on start time (if started more than 4 hours ago)
+        begin_time_str = game.get("beginPartie") or game.get("date")
+        if begin_time_str:
+            try:
+                if begin_time_str.endswith('Z'):
+                    begin_time_str = begin_time_str[:-1] + '+00:00'
+                match_dt = datetime.fromisoformat(begin_time_str)
+                now_utc = datetime.now(pytz.utc)
+                if match_dt + timedelta(hours=4) < now_utc:
+                    continue  # Skip ended matches
+            except Exception:
+                pass
+                
+        player_urls = []
+        
+        # 1. Parse from videoUrl
+        video_url_field = game.get("videoUrl")
+        if video_url_field and isinstance(video_url_field, str):
+            parts = video_url_field.split(";")
+            for part in parts:
+                url = part.split("<")[0].strip() if "<" in part else part.strip()
+                if url:
+                    url = url.replace("streams.center", "streamcenter.xyz")
+                    player_urls.append(url)
+                    
+        # 2. Check stream arrays in object
+        for key in ["streams", "servers"]:
+            if key in game and isinstance(game[key], list):
+                for s in game[key]:
+                    url = s.get("url") or s.get("stream")
+                    if url:
+                        url = url.replace("streams.center", "streamcenter.xyz")
+                        player_urls.append(url)
 
-    } catch (e) {
-        console.error("ERROR:", e.message);
-        process.exit(1);
-    }
-}
+        # 3. Fetch fallback Parties/{id}/Servers endpoint
+        try:
+            srv_res = scraper.get(f"{api_endpoint}/Parties/{game_id}/Servers", timeout=10)
+            srv_res.encoding = 'utf-8'
+            if srv_res.status_code == 200:
+                srv_data = srv_res.json()
+                if isinstance(srv_data, list):
+                    for s in srv_data:
+                        url = s.get("url") or s.get("stream")
+                        if url:
+                            url = url.replace("streams.center", "streamcenter.xyz")
+                            player_urls.append(url)
+        except Exception:
+            pass
 
-runSync();
+        player_urls = deduplicate(player_urls)
+        
+        if player_urls:
+            raw_matches.append({
+                "cat_name": cat_name,
+                "clean_rivals": game_name,
+                "player_urls": player_urls,
+                "raw_game": game
+            })
+
+    # Output generation
+    all_live_matches = []
+    log_to_console(f"\n[*] Extracting stream tokens for {len(raw_matches)} Baseball matches...")
+    
+    for item in raw_matches:
+        log_to_console(f"[*] Processing Match: {item['clean_rivals']}")
+        
+        for s_idx, p_url in enumerate(item["player_urls"], 1):
+            time.sleep(random.uniform(0.5, 1.0))
+            
+            # Extract unique tokens
+            tokens = extract_stream_token(scraper, p_url)
+            
+            if tokens:
+                for token in tokens:
+                    # Construct stream url using mainstreams.pro with Referer header [1]
+                    final_link = f"https://mainstreams.pro/hls/{token}.m3u8|Referer={BASE_URL}/"
+                    log_to_console(f"      >>> [SUCCESS] Captured Token Stream: {final_link}")
+                    
+                    # Store original match fields exactly as returned from API inside events list/array
+                    game_data = item["raw_game"].copy()
+                    game_data["stream_server_id"] = f"S-{s_idx}"
+                    game_data["formatted_stream_link"] = final_link
+                    
+                    all_live_matches.append(game_data)
+            else:
+                log_to_console(f"      >>> [FAILED] Could not find stream token from Server {s_idx}")
+
+    # Process counts for Live and Upcoming dynamically
+    now_utc = datetime.now(pytz.utc)
+    live_count = 0
+    upcoming_count = 0
+    
+    for game in all_live_matches:
+        begin_time_str = game.get("beginPartie") or game.get("date")
+        if begin_time_str:
+            try:
+                if begin_time_str.endswith('Z'):
+                    begin_time_str = begin_time_str[:-1] + '+00:00'
+                match_dt = datetime.fromisoformat(begin_time_str)
+                if match_dt <= now_utc:
+                    live_count += 1
+                else:
+                    upcoming_count += 1
+            except Exception:
+                pass
+
+    # Structure final JSON package as requested [cite: 1.1]
+    final_package = OrderedDict([
+        ("NAME", "FluX-CR7 Live event ( Auto updated)"),
+        ("AUTHOR", "iVan_Flux"),
+        ("CONTACT (OWNER)", "https://t.me/iVan_flux"),
+        ("TELEGRAM CHANNEL", "https://t.me/api_hub_by_ivan"),
+        ("Last update time", datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%I:%M:%S %p %d-%m-%Y')),
+        ("Live", f"{live_count:02d}"),
+        ("Upcoming", f"{upcoming_count:02d}"),
+        ("events", all_live_matches) # Match data stored in events array [cite: 1.1]
+    ])
+    
+    # Save output inside the Action runner using explicit UTF-8 encoding
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(final_package, f, indent=4, ensure_ascii=False)
+    
+    # Push to target repository
+    push_to_github()
+    
+    # Print raw formatted JSON output to standard output only
+    print(json.dumps(final_package, indent=4, ensure_ascii=False))
+
+if __name__ == "__main__":
+    run_scraper()
