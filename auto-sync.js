@@ -193,6 +193,53 @@ async function runSync() {
             }
         });
 
+        // 🔄 NEW LOGIC: FORMAT SERVERS ARRAY FOR DATA.JSON
+        const formattedEvents = filteredEvents.map(match => {
+            // Clone the match object to avoid mutating the original object used by Firebase logic
+            const clonedMatch = JSON.parse(JSON.stringify(match));
+            
+            if (clonedMatch.servers && Array.isArray(clonedMatch.servers)) {
+                clonedMatch.servers = clonedMatch.servers.map(server => {
+                    const typeLower = (server.type || "").toLowerCase();
+
+                    if (typeLower === "direct") {
+                        // Keep only name, url, and type. No headers.
+                        return {
+                            name: server.name,
+                            url: server.url,
+                            type: server.type
+                        };
+                    } else if (typeLower === "drm") {
+                        let cleanUrl = server.url || "";
+                        let key = "";
+
+                        // Parse out the DRM License key and clean the .mpd URL
+                        if (cleanUrl.includes("|")) {
+                            const parts = cleanUrl.split("|");
+                            cleanUrl = parts[0]; // URL ends at .mpd
+                            const queryParams = parts[1] || "";
+                            const licenseMatch = queryParams.match(/drmLicense=([^&]+)/);
+                            if (licenseMatch) {
+                                key = licenseMatch[1];
+                            }
+                        }
+
+                        // Return processed server details with key but no headers
+                        return {
+                            name: server.name,
+                            url: cleanUrl,
+                            key: key,
+                            type: server.type
+                        };
+                    } else {
+                        // If type is "Referer" or anything else, keep it completely untouched
+                        return server;
+                    }
+                });
+            }
+            return clonedMatch;
+        });
+
         const finalJsonOutput = {
             "NAME": "FluX-CR7 Live event ( Auto updated)",
             "AUTHOR": "iVan_Flux",
@@ -201,7 +248,7 @@ async function runSync() {
             "Last update time": getFormattedIstTime(),
             "Live": String(liveCount).padStart(2, '0'),
             "Upcoming": String(upcomingCount).padStart(2, '0'),
-            "events": filteredEvents // All matches nested inside "events" array [cite: 1.1]
+            "events": formattedEvents // Format-adjusted events inside "events" array [cite: 1.1]
         };
 
         // Write structured output to data.json locally
