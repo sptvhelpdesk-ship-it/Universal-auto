@@ -3,8 +3,8 @@
   "AUTHOR": "iVan_Flux",
   "CONTACT (OWNER)": "https://t.me/iVan_flux",
   "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
-  "Last update time": "12:34:51 AM 21-07-2026",
-  "Live": "14",
+  "Last update time": "12:45:42 AM 21-07-2026",
+  "Live": "15",
   "Upcoming": "04",
   "events": [
     {
@@ -65,6 +65,38 @@
     {
       "match_time": "1784570400",
       "match_status": "live",
+      "home_team_name": "Kalmar",
+      "home_team_logo": "",
+      "homeTeamScore": "0",
+      "away_team_name": "Malmo FF",
+      "away_team_logo": "",
+      "awayTeamScore": "0",
+      "league_name": "Sweden Allsvenskan",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "http://193.47.62.49/hls/FAFAFA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 2",
+          "url": "http://193.47.62.49/hls/FAFAFAX.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        }
+      ]
+    },
+    {
+      "match_time": "1784570400",
+      "match_status": "live",
       "home_team_name": "Norrby",
       "home_team_logo": "",
       "homeTeamScore": "0",
@@ -99,12 +131,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1784577775-0-0-9dbffc378de500b79048ff7364a344df",
+          "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1784578135-0-0-9c8d5a792275d0d65c9ede724c5465ac",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1784577775-0-0-a2277ebe3d95cf2cfde4b2f3e5f48db0",
+          "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1784578135-0-0-4dba8ba2bc671256c3883da670313e1d",
           "type": "direct"
         },
         {
@@ -119,32 +151,32 @@
         },
         {
           "name": "Server 5",
-          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=e46c91cb613b81198c488bde07cdf6cb&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-598119_lsd.m3u8?txSecret=00a9577ae12fbe90131061715745141b&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 6",
-          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=f08e3d4f6efae9b19a934cb9056ff645&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-598119_lhd.m3u8?txSecret=5dffdac9fc33fb8ea49e2c33903f1e31&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-598119_lsd.m3u8?txSecret=544a2d90b1096a4304ac6222536bc915&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=a72835527a6d7bf3885c19e156001fd8&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-598119_lhd.m3u8?txSecret=1debbf8001f18aaf245fed427ad2bafb&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=0feaa84702628addf432a37c08b9c6c8&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 9",
-          "url": "https://pull.niues.live/live/stream-617313_lsd.m3u8?auth_key=1784577775-0-0-b5bede23f4c7bc8dbc5d1e75cfb41324",
+          "url": "https://pull.niues.live/live/stream-617313_lsd.m3u8?auth_key=1784578135-0-0-3e7a0805bdfad9c1cef2964fe78cde14",
           "type": "direct"
         },
         {
           "name": "Server 10",
-          "url": "https://pull.niues.live/live/stream-617313_lhd.m3u8?auth_key=1784577775-0-0-983239e4c73f9ae068cf0fef54e4dd89",
+          "url": "https://pull.niues.live/live/stream-617313_lhd.m3u8?auth_key=1784578135-0-0-3b0281a5e7801059145d75c12c82a591",
           "type": "direct"
         }
       ]
@@ -158,31 +190,21 @@
       "away_team_name": "Lokomotiv Sofia",
       "away_team_logo": "https://cdn.1xapi.com/images/teams/lokomotiv-sofia-a4c2ba.png",
       "awayTeamScore": "0",
-      "league_name": "Bulgaria Premier League",
+      "league_name": "Bulgaria efbet League",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1784577775-0-0-b0f7a1b82b54605b0140f9d30f077842",
+          "url": "https://pull.niues.live/live/stream-991140_lsd.m3u8?auth_key=1784578135-0-0-1cc50451c8be8b7c74adccc9136f2b44",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1784577775-0-0-eedd2ae40024419d6e38ff4e8e8643ac",
+          "url": "https://pull.niues.live/live/stream-991140_lhd.m3u8?auth_key=1784578135-0-0-5bec18b3f061cc178ab42fb35ad2a402",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://hls.lauthaitv.cc/live/botev-lokomotiv-bul1stl/index.m3u8",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://flv.lauthaitv.cc/live/botev-lokomotiv-bul1stl.flv",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
           "url": "http://193.47.62.41/hls/TTTT.m3u8",
           "type": "referer",
           "header": {
@@ -191,18 +213,13 @@
           }
         },
         {
-          "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-991140_lsd.m3u8?auth_key=1784577775-0-0-a12de47cfcbf5359a878a914a09e82d9",
+          "name": "Server 4",
+          "url": "https://pull.niues.live/live/stream-589848_lsd.m3u8?auth_key=1784578135-0-0-3acf38cc4b68e874245d65c041cfe14f",
           "type": "direct"
         },
         {
-          "name": "Server 7",
-          "url": "https://pull.niues.live/live/stream-991140_lhd.m3u8?auth_key=1784577775-0-0-00930fc539c7718cb357c2172da2f1d8",
-          "type": "direct"
-        },
-        {
-          "name": "Server 8",
-          "url": "https://hls.cdnfaster-a.live/live/LEO/index.m3u8?expire=1923642660&sign=58990a132e2f8d3f764c947b95b28af6",
+          "name": "Server 5",
+          "url": "https://pull.niues.live/live/stream-589848_lhd.m3u8?auth_key=1784578135-0-0-63d7f811e142be7e68faa7b0437863ab",
           "type": "direct"
         }
       ]
@@ -255,7 +272,7 @@
       "match_status": "live",
       "home_team_name": "Mushuc Runa",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/mushuc-runa-b6ef93.webp",
-      "homeTeamScore": "0",
+      "homeTeamScore": "1",
       "away_team_name": "Orense SC",
       "away_team_logo": "https://cdn.1xapi.com/images/teams/orense-sc-7856bd.png",
       "awayTeamScore": "0",
@@ -274,6 +291,15 @@
         },
         {
           "name": "Server 3",
+          "url": "http://193.47.62.41/hls/UUUUZQQ.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 4",
           "url": "https://hls.cdnfaster-a.live/live/TONLAP/index.m3u8?expire=1788427256&sign=72cc58a29d787d621b0832b54e1a78df",
           "type": "direct"
         }
@@ -306,50 +332,6 @@
     {
       "match_time": 1784574900,
       "match_status": "live",
-      "home_team_name": "Hafnarfjordur",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/hafnarfjordur-df16c0.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Breidablik",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/breidablik-1f0afb.webp",
-      "awayTeamScore": "0",
-      "league_name": "Iceland Premier Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-622602_lsd.m3u8?auth_key=1784577775-0-0-bdca8c49eefa87b1e5ccc8a0e0f65238",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-622602_lhd.m3u8?auth_key=1784577775-0-0-ca8ad20d0569f575d80dbc29de3c9d12",
-          "type": "direct"
-        },
-        {
-          "name": "Server 3",
-          "url": "https://pull.niues.live/live/stream-622093_lsd.m3u8?auth_key=1784577775-0-0-464e00f66facbc0818b93d9d5ad06cc4",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://pull.niues.live/live/stream-622093_lhd.m3u8?auth_key=1784577775-0-0-26697d689e5b3f77e7137998bd1cca77",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1784577775-0-0-02eb1bdfa522ab16c0995dde8fb5ba01",
-          "type": "direct"
-        },
-        {
-          "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1784577775-0-0-2d91c003b0ceda4170ebcee3742c5b4d",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": 1784574900,
-      "match_status": "live",
       "home_team_name": "Sporting CP",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/sporting-cp-f41954.webp",
       "homeTeamScore": "0",
@@ -361,42 +343,110 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-602019_lsd.m3u8?auth_key=1784577775-0-0-e598b96a185f80c5a472eb5f51108e68",
+          "url": "https://pull.niues.live/live/stream-620003_lsd.m3u8?auth_key=1784578135-0-0-2e3ea139b66f4ce305ff7c639ca52fe8",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-602019_lhd.m3u8?auth_key=1784577775-0-0-dfcf744247b1d3b64c28ed01a8664ebc",
+          "url": "https://pull.niues.live/live/stream-620003_lhd.m3u8?auth_key=1784578135-0-0-402a6147c388e67e5f65af447d15ee0b",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=e6d630f28a7f9105386109066ed443c0&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=9e926f32101c9386e6da4d347e1fe047&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 4",
-          "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=7f4b61a4ec8f699e9a8f3c9804f45786&txTime=6a5ec53f",
+          "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=6eb381c45b306649034e43d459fee4f9&txTime=6a5ec6a7",
           "type": "direct"
         },
         {
           "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-620003_lsd.m3u8?auth_key=1784577775-0-0-8629595e159977990e6f763fdcf98847",
+          "url": "https://pull.niues.live/live/stream-602019_lsd.m3u8?auth_key=1784578135-0-0-1d72296b4dc024dae4e8996f9be82859",
           "type": "direct"
         },
         {
           "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-620003_lhd.m3u8?auth_key=1784577775-0-0-0e183ea2f09a008c337c9da3aad37c29",
+          "url": "https://pull.niues.live/live/stream-602019_lhd.m3u8?auth_key=1784578135-0-0-cf47b1fadb5d5b765dde372c2adc1709",
           "type": "direct"
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niues.live/live/stream-598549_lsd.m3u8?auth_key=1784577775-0-0-ef3fea88ac27b0043149bb3e39710558",
+          "url": "https://pull.niues.live/live/stream-598549_lsd.m3u8?auth_key=1784578135-0-0-b62050d7fb53634e804044969a647e3e",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niues.live/live/stream-598549_lhd.m3u8?auth_key=1784577775-0-0-d518f1329f2137e5f3795121ea26b590",
+          "url": "https://pull.niues.live/live/stream-598549_lhd.m3u8?auth_key=1784578135-0-0-4bb9e46e80bbdb10a972046fbbfcbcf7",
+          "type": "direct"
+        },
+        {
+          "name": "Server 9",
+          "url": "https://hls.cdnfaster-a.live/live/LYUNG1/index.m3u8?expire=1788427256&sign=d5c6932fefdcb98268754f4ccd4aa45d",
+          "type": "direct"
+        },
+        {
+          "name": "Server 10",
+          "url": "https://hls.cdnfaster-a.live/live/FERNANDO/index.m3u8?expire=1924930980&sign=bab24fb93b0be5c98af9138659989bcb",
+          "type": "direct"
+        }
+      ]
+    },
+    {
+      "match_time": 1784574900,
+      "match_status": "live",
+      "home_team_name": "Hafnarfjordur",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/hafnarfjordur-df16c0.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Breidablik",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/breidablik-1f0afb.webp",
+      "awayTeamScore": "0",
+      "league_name": "Iceland Premier Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1784578135-0-0-d843f82326478bc11d4519b94657621f",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1784578135-0-0-3e1e61d4288eb10065f7dbf29f8f8a85",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "http://193.47.62.41/hls/UUUUZQQQQ.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 4",
+          "url": "https://pull.niues.live/live/stream-622093_lsd.m3u8?auth_key=1784578135-0-0-e8052ab4502dceef0560ebc5184b51c3",
+          "type": "direct"
+        },
+        {
+          "name": "Server 5",
+          "url": "https://pull.niues.live/live/stream-622093_lhd.m3u8?auth_key=1784578135-0-0-ac68ebbf8058733cc546d43c47fb4e47",
+          "type": "direct"
+        },
+        {
+          "name": "Server 6",
+          "url": "https://pull.niues.live/live/stream-622602_lsd.m3u8?auth_key=1784578135-0-0-c4f5695aface88ba740967f95639ffca",
+          "type": "direct"
+        },
+        {
+          "name": "Server 7",
+          "url": "https://pull.niues.live/live/stream-622602_lhd.m3u8?auth_key=1784578135-0-0-6606c89be8ddf8336e4a008fc436e268",
+          "type": "direct"
+        },
+        {
+          "name": "Server 8",
+          "url": "https://hls.cdnfaster-a.live/live/VUONGLUAN/index.m3u8?expire=1893165900&sign=60fcb5252d4dafeac0cb5da922c56645",
           "type": "direct"
         }
       ]
@@ -415,32 +465,46 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-618546_lsd.m3u8?auth_key=1784577775-0-0-a86b1399b3d487c608d0bb210f4183be",
+          "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1784578135-0-0-5ba0feaac70cc81d9b39a9df9294b919",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-618546_lhd.m3u8?auth_key=1784577775-0-0-c9e6779c9a47c30015a3dcc9f4039813",
+          "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1784578135-0-0-1325236030e9bd2df59cfda8f3a2cee3",
           "type": "direct"
         },
         {
           "name": "Server 3",
+          "url": "http://193.47.62.41/hls/UUUUZQQQQQ.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 4",
           "url": "https://pull.niur.live/live/stream-610518_lsd.m3u8?txSecret=a9d5afe815402ae0d6c30b0d2e961271&txTime=6a5d5c6f",
           "type": "direct"
         },
         {
-          "name": "Server 4",
+          "name": "Server 5",
           "url": "https://pull.niur.live/live/stream-610518_lhd.m3u8?txSecret=94b79ed6e0ff5f0c39482123776dd380&txTime=6a5d5c6f",
           "type": "direct"
         },
         {
-          "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1784577775-0-0-d1013a49af499e4d79cbef6b9905bd83",
+          "name": "Server 6",
+          "url": "https://pull.niues.live/live/stream-618546_lsd.m3u8?auth_key=1784578135-0-0-c3b1beeb41d1413a53a9f7f275a7b23f",
           "type": "direct"
         },
         {
-          "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1784577775-0-0-44bfc8d94d7c9d7175ecbf056a854d8e",
+          "name": "Server 7",
+          "url": "https://pull.niues.live/live/stream-618546_lhd.m3u8?auth_key=1784578135-0-0-a04d06f2cf7fe143e5c5b4b642b12533",
+          "type": "direct"
+        },
+        {
+          "name": "Server 8",
+          "url": "https://hls.cdnfaster-a.live/live/HEINEKEN/index.m3u8?expire=2530639860&sign=03a2e74c3447f79f8c6e80a8fa2ee0b6",
           "type": "direct"
         }
       ]
@@ -520,19 +584,6 @@
     {
       "match_time": 1784588400,
       "match_status": "vs",
-      "home_team_name": "Nacional Potosi",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/nacional-potosi-08ec55.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Real Oruro",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/real-oruro-33535a.png",
-      "awayTeamScore": "0",
-      "league_name": "Bolivia Primera Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-bol-primera-division-810460.png",
-      "servers": []
-    },
-    {
-      "match_time": 1784588400,
-      "match_status": "vs",
       "home_team_name": "Ferroviaria SP (W)",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/ferroviaria-sp-w-72b059.png",
       "homeTeamScore": "0",
@@ -541,6 +592,19 @@
       "awayTeamScore": "0",
       "league_name": "Brasil Cup women",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1784588400,
+      "match_status": "vs",
+      "home_team_name": "Nacional Potosi",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/nacional-potosi-08ec55.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Real Oruro",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/real-oruro-33535a.png",
+      "awayTeamScore": "0",
+      "league_name": "Bolivia Primera Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-bol-primera-division-810460.png",
       "servers": []
     }
   ]
