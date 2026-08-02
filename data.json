@@ -3,68 +3,78 @@
   "AUTHOR": "iVan_Flux",
   "CONTACT (OWNER)": "https://t.me/iVan_flux",
   "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
-  "Last update time": "11:15:53 PM 02-08-2026",
-  "Live": "34",
-  "Upcoming": "26",
+  "Last update time": "11:31:07 PM 02-08-2026",
+  "Live": "31",
+  "Upcoming": "29",
   "events": [
     {
       "match_time": 1785686400,
       "match_status": "live",
-      "home_team_name": "Silkeborg",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/silkeborg-39bcf9.png",
+      "home_team_name": "Wrexham",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/wrexham-e92642.webp",
       "homeTeamScore": "0",
-      "away_team_name": "FC Copenhagen",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/fc-copenhagen-ddbde7.png",
+      "away_team_name": "Sunderland",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/sunderland-254bd9.webp",
       "awayTeamScore": "0",
-      "league_name": "Denmark Superliga",
+      "league_name": "Friendly Match",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1785696119-0-0-98cc151d88c0abd9ef7af9f5d2cd3bc1",
+          "url": "https://pull.niues.live/live/stream-620797_lsd.m3u8?auth_key=1785696839-0-0-29645b13b94be55e75cf8e43ce6c2cff",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1785696119-0-0-bec5824a0ace73fc227efb18cc320d98",
+          "url": "https://pull.niues.live/live/stream-620797_lhd.m3u8?auth_key=1785696839-0-0-94002b937d4e9a5b0969cd4c53d4d614",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://hls.lauthaitv.cc/live/silkeborg-copenhagen-den/index.m3u8",
-          "type": "direct"
+          "url": "http://193.47.62.194/hls/BJJJA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
         },
         {
           "name": "Server 4",
-          "url": "https://flv.lauthaitv.cc/live/silkeborg-copenhagen-den.flv",
-          "type": "direct"
+          "url": "https://live2.jxa76.com/live/sd-6Mwe5HawzJ1Hg2zKwh.m3u8?txSecret=4a8515783528844021051e16416a87f2&txTime=19FC4850ABD",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
         },
         {
           "name": "Server 5",
-          "url": "http://193.47.62.194/hls/BAAAQAAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
+          "url": "https://pull.niues.live/live/stream-607552_lsd.m3u8?auth_key=1785696839-0-0-171449df3f62691905e8e32ce828c99f",
+          "type": "direct"
         },
         {
           "name": "Server 6",
-          "url": "https://live2.jxa76.com/live/sd-6MwdpnsLRfkWjYQXGX.m3u8?txSecret=78e4bb662c5d7614e8cffb3d702ca9ba&txTime=19FC47BA068",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
+          "url": "https://pull.niues.live/live/stream-607552_lhd.m3u8?auth_key=1785696839-0-0-1f69a05a52b7135a2bc234add945f46c",
+          "type": "direct"
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-560690_lsd.m3u8?txSecret=06abfa64b4914e8095e6a52ca3503f1f&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-620649_lsd.m3u8?txSecret=1c5aa09b04d36b54300d6aff099d4bb1&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-560690_lhd.m3u8?txSecret=97f3f2db14dd4e3dbe6253d83f87fa66&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-620649_lhd.m3u8?txSecret=c4593430abef4302e21866abb64c8bc0&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 9",
+          "url": "https://pull.niur.live/live/stream-511367_lsd.m3u8?txSecret=7b123f45ae3f34801544c9c3b3dd10ab&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 10",
+          "url": "https://pull.niur.live/live/stream-511367_lhd.m3u8?txSecret=55f8c1f2faabb7e16559b2431b7f0ca1&txTime=6a6fd897",
           "type": "direct"
         }
       ]
@@ -83,12 +93,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-531989_lsd.m3u8?auth_key=1785696119-0-0-a694a8a98b51bacb5352b8ca8a1349bf",
+          "url": "https://pull.niues.live/live/stream-531989_lsd.m3u8?auth_key=1785696839-0-0-e98353732c501de147fee9e72f7650e6",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-531989_lhd.m3u8?auth_key=1785696119-0-0-4717171646958b92a920043a6092e1f8",
+          "url": "https://pull.niues.live/live/stream-531989_lhd.m3u8?auth_key=1785696839-0-0-1fdd5d9f359f457a7398c3ce469de12d",
           "type": "direct"
         },
         {
@@ -121,52 +131,52 @@
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-589848_lsd.m3u8?txSecret=c4c003e7de850e9ff8bc0886b6e5bd82&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-527383_lsd.m3u8?auth_key=1785696839-0-0-19ee3265f17fcba88d2af0467dfe246c",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-589848_lhd.m3u8?txSecret=53338a7886b4a41e3232a3ae8a35032f&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-527383_lhd.m3u8?auth_key=1785696839-0-0-6a7547e76b0256564dd78d9d9d13ce67",
           "type": "direct"
         },
         {
           "name": "Server 9",
-          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=c0585c92c2508b4fbcecb2e0a6b4e1ce&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=ddea40fc5a3e9f5241ec99f78ca964a2&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=c195e0d61c3da8480fb5a0b5b58cd4b0&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=d69602b7e76b581f30dcf0725e100c45&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 11",
-          "url": "https://pull.niues.live/live/stream-527383_lsd.m3u8?auth_key=1785696119-0-0-1b61445692463558ca9f17725031c175",
+          "url": "https://pull.niur.live/live/stream-589848_lsd.m3u8?txSecret=441f0faca9ec137dae0297d2e40e800f&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 12",
-          "url": "https://pull.niues.live/live/stream-527383_lhd.m3u8?auth_key=1785696119-0-0-1cadede7d445367263a280db4b96e5b4",
+          "url": "https://pull.niur.live/live/stream-589848_lhd.m3u8?txSecret=7ab5c102a396e5db1a373c9780c6c800&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 13",
-          "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1785696119-0-0-0403c8be280f6a9b1fc379562ebd40e2",
+          "url": "https://pull.niur.live/live/stream-9912117_lsd.m3u8?txSecret=175dbaaa9df4f82711c365f5d4430245&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 14",
-          "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1785696119-0-0-0f89e863602177f2e3df756bdfb80377",
+          "url": "https://pull.niur.live/live/stream-9912117_lhd.m3u8?txSecret=2a64cc1e966e654e8ec0795b69ae4499&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 15",
-          "url": "https://pull.niur.live/live/stream-9912117_lsd.m3u8?txSecret=6deeeb3ff6a6eff7e7ed75f2a5b2a653&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-595335_lsd.m3u8?auth_key=1785696839-0-0-3a1f9977fb0d7f33d33129d248994ee7",
           "type": "direct"
         },
         {
           "name": "Server 16",
-          "url": "https://pull.niur.live/live/stream-9912117_lhd.m3u8?txSecret=a5d1b9057c8ce4f7a43ba5de3658c28f&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-595335_lhd.m3u8?auth_key=1785696839-0-0-4b7bf3d98b980f66f72b407acfe531b7",
           "type": "direct"
         }
       ]
@@ -185,12 +195,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-620084_lsd.m3u8?auth_key=1785696119-0-0-35f974f41f7705b74c022d24405143d4",
+          "url": "https://pull.niues.live/live/stream-620084_lsd.m3u8?auth_key=1785696839-0-0-317a5c133cf613b9cb831e2f12488d81",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-620084_lhd.m3u8?auth_key=1785696119-0-0-88c530baeea7b45bbfa550a6f1df6a1e",
+          "url": "https://pull.niues.live/live/stream-620084_lhd.m3u8?auth_key=1785696839-0-0-7d3ef09a963fd8674f69a8c0c7a21130",
           "type": "direct"
         },
         {
@@ -204,12 +214,12 @@
         },
         {
           "name": "Server 4",
-          "url": "https://pull.niues.live/live/stream-620661_lsd.m3u8?auth_key=1785696119-0-0-7534d90a79ff5761d66333d4e6b67978",
+          "url": "https://pull.niues.live/live/stream-620661_lsd.m3u8?auth_key=1785696839-0-0-a99864a00c7e31be36df87ca57d6fa8d",
           "type": "direct"
         },
         {
           "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-620661_lhd.m3u8?auth_key=1785696119-0-0-aa3f9cfff248181abf9cb62dfd04826c",
+          "url": "https://pull.niues.live/live/stream-620661_lhd.m3u8?auth_key=1785696839-0-0-c9da4b980c9082adc50c7c6c441f836a",
           "type": "direct"
         }
       ]
@@ -217,37 +227,38 @@
     {
       "match_time": 1785686400,
       "match_status": "live",
-      "home_team_name": "Wrexham",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/wrexham-e92642.webp",
+      "home_team_name": "Silkeborg",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/silkeborg-39bcf9.png",
       "homeTeamScore": "0",
-      "away_team_name": "Sunderland",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/sunderland-254bd9.webp",
+      "away_team_name": "FC Copenhagen",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/fc-copenhagen-ddbde7.png",
       "awayTeamScore": "0",
-      "league_name": "Friendly Match",
+      "league_name": "Denmark Superliga",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-607552_lsd.m3u8?auth_key=1785696119-0-0-ca158223be73c2707bbfc8e4ef009339",
+          "url": "https://pull.niues.live/live/stream-603914_lsd.m3u8?auth_key=1785696839-0-0-cd8a91d26cd33b80566ce9da8bca8d98",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-607552_lhd.m3u8?auth_key=1785696119-0-0-87bfeb1d27bbe98b75b17ea6ad927a8b",
+          "url": "https://pull.niues.live/live/stream-603914_lhd.m3u8?auth_key=1785696839-0-0-24f4ed19c9ef74a1117c443b09dc03bf",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "http://193.47.62.194/hls/BJJJA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
+          "url": "https://hls.lauthaitv.cc/live/silkeborg-copenhagen-den/index.m3u8",
+          "type": "direct"
         },
         {
           "name": "Server 4",
-          "url": "https://live2.jxa76.com/live/sd-6Mwe5HawzJ1Hg2zKwh.m3u8?txSecret=4a8515783528844021051e16416a87f2&txTime=19FC4850ABD",
+          "url": "https://flv.lauthaitv.cc/live/silkeborg-copenhagen-den.flv",
+          "type": "direct"
+        },
+        {
+          "name": "Server 5",
+          "url": "http://193.47.62.194/hls/BAAAQAAA.m3u8",
           "type": "referer",
           "header": {
             "referer": "http://www.fawanews.sc/",
@@ -255,228 +266,23 @@
           }
         },
         {
-          "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-620797_lsd.m3u8?auth_key=1785696119-0-0-d3aee390fc050bf83dfab5896123db67",
-          "type": "direct"
-        },
-        {
           "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-620797_lhd.m3u8?auth_key=1785696119-0-0-12d011b160aebdcae4d8060dd349d2a7",
-          "type": "direct"
+          "url": "https://live2.jxa76.com/live/sd-6MwdpnsLRfkWjYQXGX.m3u8?txSecret=78e4bb662c5d7614e8cffb3d702ca9ba&txTime=19FC47BA068",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-511367_lsd.m3u8?txSecret=50397118dafb472f3bc3a4fbace44c08&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-560690_lsd.m3u8?txSecret=a6fa7e8241ad0c4b6200ab767a878e57&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-511367_lhd.m3u8?txSecret=38d571531e74e12821be0447ff9f95e3&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-560690_lhd.m3u8?txSecret=e455f624c4f77e7b2f9da13934e58034&txTime=6a6fd897",
           "type": "direct"
-        },
-        {
-          "name": "Server 9",
-          "url": "https://pull.niur.live/live/stream-620649_lsd.m3u8?txSecret=dcbac11d4e62cb9d5f4516a395da70d3&txTime=6a6fd5c7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-620649_lhd.m3u8?txSecret=a1fe7198b841f2772be79a1f61a0b925&txTime=6a6fd5c7",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": "1785689100",
-      "match_status": "live",
-      "home_team_name": "Hegelmann",
-      "home_team_logo": "",
-      "homeTeamScore": "0",
-      "away_team_name": "Transinvest",
-      "away_team_logo": "",
-      "awayTeamScore": "0",
-      "league_name": "Lithuania Toplyga",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "http://193.47.62.190/hls/TTTTAAAAAAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
-        }
-      ]
-    },
-    {
-      "match_time": "1785690000",
-      "match_status": "live",
-      "home_team_name": "CEO Sarchi",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/9639d574208a27635f39e7cbeb43d617.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Cofutpa",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/a14244d8320e4e5add6edd0f137a763c.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá hạng 2 Costa Rica",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/dbe24a50315f2a9166aa3b157eaad395.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6MwarbR1bVHfg3Km2C.m3u8?txSecret=422c6b422e5a117505ebb35601cff416&txTime=6A702A2C",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": "1785690000",
-      "match_status": "live",
-      "home_team_name": "Napredak",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/7d35c67da2b80a3092e25e784ce21762.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Graficar Beograd",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/cbb6ad45aa0de955fe139e57eb64cc7e.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải hạng nhất quốc gia Serbia",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/eeff411759fcef3be14861e55069675c.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6MwdqBh3e6fkAXRfbz.m3u8?txSecret=89773983571b94ebb1a61fc8474ef712&txTime=6A702A2C",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": "1785690000",
-      "match_status": "live",
-      "home_team_name": "Netanya",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/d042ca4d70f0358b81d5da7e96375bd4.png",
-      "homeTeamScore": "1",
-      "away_team_name": "Hapoel Ramat Gan",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5c82ccd51af2ccbd6b71680fa90ad408.jpg",
-      "awayTeamScore": "1",
-      "league_name": "Siêu Cúp Toto Israel",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/43435f06767df25225b8cd00864e47de.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6Mwdq1s782AjkKTbwr.m3u8?txSecret=a86400ca409833bfc50db58e6b9e88fc&txTime=6A702A2C",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": 1785690000,
-      "match_status": "live",
-      "home_team_name": "Rapid Wien",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/rapid-wien-5736ff.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Rheindorf Altach",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/rheindorf-altach-42cb73.webp",
-      "awayTeamScore": "0",
-      "league_name": "Austrian Bundesliga",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1785696119-0-0-aa9777bcad283026d47b6d69127fe852",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1785696119-0-0-fb0e9ec3dccbc48b7fb5d90b44f77df8",
-          "type": "direct"
-        },
-        {
-          "name": "Server 3",
-          "url": "https://cds78y11d.org/live/sd-6MweaAPYbjY3ZHa4y2.m3u8?txSecret=88fb71c4e022fcd472992badd1ac34ff&txTime=6A702A2C",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://pull.niur.live/live/stream-501412_lsd.m3u8?txSecret=33b1eae243bdcfa1401b3218f7cdf0ed&txTime=6a6fd5c7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
-          "url": "https://pull.niur.live/live/stream-501412_lhd.m3u8?txSecret=26227400b4dac068648afca8cd951a28&txTime=6a6fd5c7",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": 1785690000,
-      "match_status": "live",
-      "home_team_name": "Komarno",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/89fe091b9d35d31a31f16c4b233ddd6e.jpg",
-      "homeTeamScore": "0",
-      "away_team_name": "Spartak Trnava",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/spartak-trnava-daf98a.png",
-      "awayTeamScore": "1",
-      "league_name": "Giải vô địch quốc gia Slovakia",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/2a421f806209afd3a771d23a117ef0ec.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6MwdqMPc8QTmowQHZE.m3u8?txSecret=cf95c770f3b65e63fcf98d2d121a0f63&txTime=6A702A2C",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "http://193.47.62.190/hls/FMMMAAAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
-        }
-      ]
-    },
-    {
-      "match_time": "1785690000",
-      "match_status": "live",
-      "home_team_name": "Ghana Nữ",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/75800f73fa80f935216b8cfbedf77bfa.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Cameroon Nữ",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/e2ce14e81dba66dbff9cbc35ecfdb704.png",
-      "awayTeamScore": "1",
-      "league_name": "Cúp Các Quốc Gia Châu Phi Nữ",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/190bb2788f4db31368420eb08a5efe70.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6Mwb6orNv4oJFv7upG.m3u8?txSecret=267a109d89b7b0e529f3ab30b837919d&txTime=6A702A2C",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": 1785690000,
-      "match_status": "live",
-      "home_team_name": "Urartu",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/814cbcaf4f70499660e021e30be5036c.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Pyunik Yerevan",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/73bbf9f60325dd616ffed763f958f36d.png",
-      "awayTeamScore": "1",
-      "league_name": "Armenia Premier League",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/dc8217bf1c8219d1265fe704f1dd460b.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6MweLB7WckNM83waUL.m3u8?txSecret=870579ab487de54b424676a031ce7a8c&txTime=6A702A2C",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "http://193.47.62.190/hls/FMMMAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
         }
       ]
     },
@@ -494,22 +300,56 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niur.live/live/stream-558264_lsd.m3u8?txSecret=6628e1e0138fc21a2c2bdf6bb17f87c1&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-356042_lsd.m3u8?txSecret=fb2066b7e998ddafda5d8c9c00e6a44d&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niur.live/live/stream-558264_lhd.m3u8?txSecret=b27ee7c1049d248510b2fc64305bab99&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-356042_lhd.m3u8?txSecret=4db7fd2c8744bec7e1c38d4865863184&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://pull.niur.live/live/stream-356042_lsd.m3u8?txSecret=dee49f3f0d95ceeba60abac5808b76c7&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-558264_lsd.m3u8?txSecret=9c1f2f02bc82689eccdfa2fb4c8fc9f9&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 4",
-          "url": "https://pull.niur.live/live/stream-356042_lhd.m3u8?txSecret=064c4f0ad317bab6b657c02e9f467c03&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-558264_lhd.m3u8?txSecret=c1f13a47632c7a06338d55c30e8b463b&txTime=6a6fd897",
+          "type": "direct"
+        }
+      ]
+    },
+    {
+      "match_time": "1785690000",
+      "match_status": "live",
+      "home_team_name": "Rapid Wien",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/rapid-wien-5736ff.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Rheindorf Altach",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/rheindorf-altach-42cb73.webp",
+      "awayTeamScore": "0",
+      "league_name": "AUT D1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://pull.niues.live/live/stream-400722_lsd.m3u8?auth_key=1785696839-0-0-50de44531e1ef9a1755dc23f41bd9bbd",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niues.live/live/stream-400722_lhd.m3u8?auth_key=1785696839-0-0-272addfc6b2c75a885c16ac6e05257e6",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "https://pull.niur.live/live/stream-501412_lsd.m3u8?txSecret=ec9660450de3de9c0718d85e5e883567&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
+          "url": "https://pull.niur.live/live/stream-501412_lhd.m3u8?txSecret=ac97e882705ae7ab85570c5032e1f24d&txTime=6a6fd897",
           "type": "direct"
         }
       ]
@@ -620,12 +460,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-597929_lsd.m3u8?auth_key=1785696119-0-0-d9e2628be2e588bc1e4d0a23058434f7",
+          "url": "https://pull.niues.live/live/stream-304148_lsd.m3u8?auth_key=1785696839-0-0-3a2952ccc22fa527d8a40c9e5f84a037",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-597929_lhd.m3u8?auth_key=1785696119-0-0-f8d22cd2ae3df676a391564e01e31aac",
+          "url": "https://pull.niues.live/live/stream-304148_lhd.m3u8?auth_key=1785696839-0-0-0949dd87679bc120d3b3fedaa6b1b5a1",
           "type": "direct"
         },
         {
@@ -640,12 +480,12 @@
         },
         {
           "name": "Server 5",
-          "url": "https://cds78y11d.org/live/hd-en-6MvZ6ESURUj6LqtQqJ.m3u8?txSecret=b69d539d6429bb7d4b3087c91551ff37&txTime=6A702A2C",
+          "url": "https://cds78y11d.org/live/hd-en-6MvZ6ESURUj6LqtQqJ.m3u8?txSecret=07cd30c9a7decd87174c9dfab72282a3&txTime=6A702CFC",
           "type": "direct"
         },
         {
           "name": "Server 6",
-          "url": "https://cds78y11d.org/live/sd-6MvZ6ESURUj6LqtQqJ.m3u8?txSecret=f3bd28f65004979806e632fd1e9a094c&txTime=6A702A2C",
+          "url": "https://cds78y11d.org/live/sd-6MvZ6ESURUj6LqtQqJ.m3u8?txSecret=2a9f1b0bc0a97baf91fb59fe0ceab966&txTime=6A702CFC",
           "type": "direct"
         },
         {
@@ -668,52 +508,52 @@
         },
         {
           "name": "Server 9",
-          "url": "https://pull.niues.live/live/stream-494201_lsd.m3u8?auth_key=1785696119-0-0-f6a43c235e49d27f7297617d89b91d30",
+          "url": "https://pull.niues.live/live/stream-9912015_lsd.m3u8?auth_key=1785696839-0-0-0a8c89e460a4e92cab1d55417d913780",
           "type": "direct"
         },
         {
           "name": "Server 10",
-          "url": "https://pull.niues.live/live/stream-494201_lhd.m3u8?auth_key=1785696119-0-0-30d87d511db36210031f60e15be35c85",
+          "url": "https://pull.niues.live/live/stream-9912015_lhd.m3u8?auth_key=1785696839-0-0-3175852fe26261490850b4fdf822e42c",
           "type": "direct"
         },
         {
           "name": "Server 11",
-          "url": "https://pull.niues.live/live/stream-304148_lsd.m3u8?auth_key=1785696119-0-0-5a5c2b061922d4fb0b7de53046147016",
+          "url": "https://pull.niues.live/live/stream-494201_lsd.m3u8?auth_key=1785696839-0-0-2936a0f1531644dd0a2d3fc7de947914",
           "type": "direct"
         },
         {
           "name": "Server 12",
-          "url": "https://pull.niues.live/live/stream-304148_lhd.m3u8?auth_key=1785696119-0-0-04a799ad79876d1e99eb625aa2a36a17",
+          "url": "https://pull.niues.live/live/stream-494201_lhd.m3u8?auth_key=1785696839-0-0-00b4624b4b23107574d9148d2fbb1e2c",
           "type": "direct"
         },
         {
           "name": "Server 13",
-          "url": "https://pull.niues.live/live/stream-9912015_lsd.m3u8?auth_key=1785696119-0-0-4b5eaff0291b0daf184d9697d5f389de",
+          "url": "https://pull.niur.live/live/stream-321443_lsd.m3u8?txSecret=19bf6af638a3c6fb6549055d04d70884&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 14",
-          "url": "https://pull.niues.live/live/stream-9912015_lhd.m3u8?auth_key=1785696119-0-0-989f13865bae925cec3abde8fc49e9ad",
+          "url": "https://pull.niur.live/live/stream-321443_lhd.m3u8?txSecret=a6d4bdd34dcda1cfc248e9c73e8b5a30&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 15",
-          "url": "https://pull.niur.live/live/stream-414317_lsd.m3u8?txSecret=45275dac558b71641ba89e719edbba40&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-414317_lsd.m3u8?txSecret=12d09e1ce14ac7c691b4433d577127d7&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 16",
-          "url": "https://pull.niur.live/live/stream-414317_lhd.m3u8?txSecret=fad1b661f42ec16fd1accf9cf32b197b&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-414317_lhd.m3u8?txSecret=1a4c4ffe2e343ecbe4a2c838f2605020&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 17",
-          "url": "https://pull.niur.live/live/stream-321443_lsd.m3u8?txSecret=3a06d2dc5afeb3b181fbe701801ad90e&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-597929_lsd.m3u8?auth_key=1785696839-0-0-faf0b9784529fded8598b4153e51a3ba",
           "type": "direct"
         },
         {
           "name": "Server 18",
-          "url": "https://pull.niur.live/live/stream-321443_lhd.m3u8?txSecret=9fb584d71ad2edb34a08543215f273f8&txTime=6a6fd5c7",
+          "url": "https://pull.niues.live/live/stream-597929_lhd.m3u8?auth_key=1785696839-0-0-9866020a61ebda9936396567de44dd2a",
           "type": "direct"
         }
       ]
@@ -744,34 +584,6 @@
     {
       "match_time": 1785691800,
       "match_status": "live",
-      "home_team_name": "Dep. Riestra",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/b9eb3a2ccc44b65d7bd365ad417ddb04.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Barracas Central",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/barracas-central-d903be.webp",
-      "awayTeamScore": "0",
-      "league_name": "Giải Bóng đá Vô địch Quốc gia Argentina",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-argentina-liga-profesional-05fa72.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6MwdLb5XNSD92euA9a.m3u8?txSecret=c752a7f218dfbc1ddcfd2fc61846f99f&txTime=6A702A2C",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "http://193.47.62.193/hls/GLLLAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
-        }
-      ]
-    },
-    {
-      "match_time": 1785691800,
-      "match_status": "live",
       "home_team_name": "Aldosivi Mar del Plata",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/aldosivi-mar-del-plata-21c05b.webp",
       "homeTeamScore": "0",
@@ -783,27 +595,17 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-536185_lsd.m3u8?auth_key=1785628764-0-0-7464106fd149836f8500188f5c31389c",
+          "url": "https://pull.niues.live/live/stream-622602_lsd.m3u8?auth_key=1785696839-0-0-9b272775411cd1ce54196444f74145dc",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-536185_lhd.m3u8?auth_key=1785628764-0-0-6e239c406f22310c67f4ca0e35db257f",
+          "url": "https://pull.niues.live/live/stream-622602_lhd.m3u8?auth_key=1785696839-0-0-4d67530ac92f7250230865199e18211e",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://cds78y11d.org/live/sd-6MwdLb5XP1BM5rHuT2.m3u8?txSecret=3692c79a857b5924ec320ef9311867f4&txTime=6A702A2C",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://pull.niues.live/live/stream-622602_lsd.m3u8?auth_key=1785696119-0-0-27f25ae70a745a7b4d463d98fac2bb33",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
-          "url": "https://pull.niues.live/live/stream-622602_lhd.m3u8?auth_key=1785696119-0-0-41068e183b16e2996c6900276cbcc8a2",
+          "url": "https://cds78y11d.org/live/sd-6MwdLb5XP1BM5rHuT2.m3u8?txSecret=744335a0697bdc6d859e4679a979578a&txTime=6A702CFC",
           "type": "direct"
         }
       ]
@@ -811,18 +613,33 @@
     {
       "match_time": "1785691800",
       "match_status": "live",
-      "home_team_name": "Sandecja Nowy S",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/bf4d90c223f6832c4ec3098de2f7fb44.png",
+      "home_team_name": "Deportivo Riestra",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-riestra-cf1253.webp",
       "homeTeamScore": "0",
-      "away_team_name": "Chojniczanka",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/e8562e3f468a3ac1c609bf7b1380de99.png",
+      "away_team_name": "Barracas Central",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/barracas-central-d903be.webp",
       "awayTeamScore": "0",
-      "league_name": "Giải hạng 3 Ba Lan",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a0371cae016f535937b347bcea8f3432.png",
+      "league_name": "ARG D1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6Mwb79N8GcX6zDTUN8.m3u8?txSecret=d1a72c311f79303c45fe0c9b86fa7c27&txTime=6A702A2C",
+          "url": "https://pull.niur.live/live/stream-610518_lsd.m3u8?txSecret=e914b237b09b26ce9c9837cefc198943&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niur.live/live/stream-610518_lhd.m3u8?txSecret=5439b175fb015208c579fe6fbd2d1f51&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "https://pull.niur.live/live/stream-618546_lsd.m3u8?txSecret=83e1a42722e6b15005d0d129637a52f3&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
+          "url": "https://pull.niur.live/live/stream-618546_lhd.m3u8?txSecret=b5e1ba82f42135c9519489619629db4d&txTime=6a6fd897",
           "type": "direct"
         }
       ]
@@ -841,12 +658,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-582342_lsd.m3u8?auth_key=1785696119-0-0-957d711a9342029d2996c45e1e886c8d",
+          "url": "https://pull.niues.live/live/stream-582342_lsd.m3u8?auth_key=1785696839-0-0-73e3f82657b9885946769e50d925b1c8",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-582342_lhd.m3u8?auth_key=1785696119-0-0-f49775c9ce3ed9da53129f6454c8c864",
+          "url": "https://pull.niues.live/live/stream-582342_lhd.m3u8?auth_key=1785696839-0-0-9103998f717ba8f795a04a28aba93e4f",
           "type": "direct"
         },
         {
@@ -861,7 +678,7 @@
         },
         {
           "name": "Server 5",
-          "url": "https://cds78y11d.org/live/sd-6MweaLBFf5bm4BbQhi.m3u8?txSecret=48aa0516bf54085ac30a752d84cc3cae&txTime=6A702A2C",
+          "url": "https://cds78y11d.org/live/sd-6MweaLBFf5bm4BbQhi.m3u8?txSecret=9868fdfaacd056b484a64382f6226d95&txTime=6A702CFC",
           "type": "direct"
         },
         {
@@ -875,13 +692,41 @@
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=9b9a58ff68a57c94cd23916ac987ddc0&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-602153_lsd.m3u8?txSecret=faf658d45654249fe743a78303929f8d&txTime=6a6fd897",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=f7dd4777f493a7194e6f01173c40b642&txTime=6a6fd5c7",
+          "url": "https://pull.niur.live/live/stream-602153_lhd.m3u8?txSecret=58a2110713e13a2ad53addafd9ad58a8&txTime=6a6fd897",
           "type": "direct"
+        }
+      ]
+    },
+    {
+      "match_time": 1785691800,
+      "match_status": "live",
+      "home_team_name": "Dep. Riestra",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/b9eb3a2ccc44b65d7bd365ad417ddb04.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Barracas Central",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/barracas-central-d903be.webp",
+      "awayTeamScore": "0",
+      "league_name": "Giải Bóng đá Vô địch Quốc gia Argentina",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-argentina-liga-profesional-05fa72.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://cds78y11d.org/live/sd-6MwdLb5XNSD92euA9a.m3u8?txSecret=6a9ec55a19bc74dd767f079a956659b0&txTime=6A702CFC",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "http://193.47.62.193/hls/GLLLAA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
         }
       ]
     },
@@ -899,7 +744,7 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://cds78y11d.org/live/sd-6Mwea7A1pgD1ZB15Tr.m3u8?txSecret=0d5479df1c8e8b5037ca61c14a0dfba3&txTime=6A702A2C",
+          "url": "https://cds78y11d.org/live/sd-6Mwea7A1pgD1ZB15Tr.m3u8?txSecret=fdcc677256a80dd0ddc7c60775ad2622&txTime=6A702CFC",
           "type": "direct"
         }
       ]
@@ -907,23 +752,19 @@
     {
       "match_time": "1785691800",
       "match_status": "live",
-      "home_team_name": "Varazdin",
-      "home_team_logo": "",
+      "home_team_name": "Sandecja Nowy S",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/bf4d90c223f6832c4ec3098de2f7fb44.png",
       "homeTeamScore": "0",
-      "away_team_name": "Hajduk Split",
-      "away_team_logo": "",
+      "away_team_name": "Chojniczanka",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/e8562e3f468a3ac1c609bf7b1380de99.png",
       "awayTeamScore": "0",
-      "league_name": "Croatia 1 HNL",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "league_name": "Giải hạng 3 Ba Lan",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a0371cae016f535937b347bcea8f3432.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "http://193.47.62.194/hls/BJJJAAAA.m3u8",
-          "type": "referer",
-          "header": {
-            "referer": "http://www.fawanews.sc/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
-          }
+          "url": "https://cds78y11d.org/live/sd-6Mwb79N8GcX6zDTUN8.m3u8?txSecret=38cc9214d78332315595e9ae355c2c49&txTime=6A702CFC",
+          "type": "direct"
         }
       ]
     },
@@ -953,34 +794,23 @@
     {
       "match_time": "1785691800",
       "match_status": "live",
-      "home_team_name": "Deportivo Riestra",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-riestra-cf1253.webp",
+      "home_team_name": "Varazdin",
+      "home_team_logo": "",
       "homeTeamScore": "0",
-      "away_team_name": "Barracas Central",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/barracas-central-d903be.webp",
+      "away_team_name": "Hajduk Split",
+      "away_team_logo": "",
       "awayTeamScore": "0",
-      "league_name": "ARG D1",
+      "league_name": "Croatia 1 HNL",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niur.live/live/stream-618546_lsd.m3u8?txSecret=feac5809da82f03038d6f2fdf27e53d2&txTime=6a6fd5c7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "https://pull.niur.live/live/stream-618546_lhd.m3u8?txSecret=8e095717d4e7a48dffa3749c1cfad0f3&txTime=6a6fd5c7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 3",
-          "url": "https://pull.niur.live/live/stream-610518_lsd.m3u8?txSecret=f3cfde20796bb297a7155e0c5bf031dd&txTime=6a6fd5c7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://pull.niur.live/live/stream-610518_lhd.m3u8?txSecret=114b51be6ee74037035f449ce8f6acb0&txTime=6a6fd5c7",
-          "type": "direct"
+          "url": "http://193.47.62.194/hls/BJJJAAAA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
         }
       ]
     },
@@ -1009,7 +839,7 @@
     },
     {
       "match_time": "1785692700",
-      "match_status": "vs",
+      "match_status": "live",
       "home_team_name": "Nejmeh SC",
       "home_team_logo": "https://static.wex1sora.com/thesports/football/team/d07d05c050874c9777e871cbfc7d6414.png",
       "homeTeamScore": "0",
@@ -1018,7 +848,13 @@
       "awayTeamScore": "0",
       "league_name": "Giải Bóng đá Ngoại hạng Lebanon",
       "league_logo": "https://static.wex1sora.com/thesports/football/competition/e02bafe2eecacc9e23c435c0160efa51.png",
-      "servers": []
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://cds78y11d.org/live/sd-6Mwarm933zbHWx3MjJ.m3u8?txSecret=e7734f341b5277df9300301b1047862c&txTime=6A702CFC",
+          "type": "direct"
+        }
+      ]
     },
     {
       "match_time": "1785692700",
@@ -1045,7 +881,7 @@
     },
     {
       "match_time": 1785693600,
-      "match_status": "vs",
+      "match_status": "live",
       "home_team_name": "Galatasaray",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/galatasaray-c67281.png",
       "homeTeamScore": "0",
@@ -1054,71 +890,60 @@
       "awayTeamScore": "0",
       "league_name": "Giao hữu các CLB quốc tế",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://pull.niues.live/live/stream-607552_lsd.m3u8?auth_key=1785696839-0-0-171449df3f62691905e8e32ce828c99f",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niues.live/live/stream-607552_lhd.m3u8?auth_key=1785696839-0-0-1f69a05a52b7135a2bc234add945f46c",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "https://pull.niur.live/live/stream-617313_lsd.m3u8?txSecret=103b400c0c1b687a8961190edbb90c3a&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
+          "url": "https://pull.niur.live/live/stream-617313_lhd.m3u8?txSecret=68c2c8454af98f4067ee05f2be582e0e&txTime=6a6fd897",
+          "type": "direct"
+        },
+        {
+          "name": "Server 5",
+          "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1785696839-0-0-3ef9e32e303bb8d2c0a21a8b77358ecb",
+          "type": "direct"
+        },
+        {
+          "name": "Server 6",
+          "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1785696839-0-0-987fa8bace577e8f7493f2cd9228693f",
+          "type": "direct"
+        },
+        {
+          "name": "Server 7",
+          "url": "https://pull.niues.live/live/stream-273736_lsd.m3u8?auth_key=1785696839-0-0-8153e61c6cfbd4dfaa854c6f44d180ea",
+          "type": "direct"
+        },
+        {
+          "name": "Server 8",
+          "url": "https://pull.niues.live/live/stream-273736_lhd.m3u8?auth_key=1785696839-0-0-b081a6ff207987fc298565ccdd91aaf6",
+          "type": "direct"
+        }
+      ]
     },
     {
       "match_time": "1785693600",
       "match_status": "vs",
-      "home_team_name": "San Telmo",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/san-telmo-f2cacc.webp",
+      "home_team_name": "Ciudad Bolivar",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/f492954b9275202a9f85e8f5a76599ef.png",
       "homeTeamScore": "0",
-      "away_team_name": "San Miguel",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/167d36c2bdb0fb5d887bc909aa26a88a.png",
+      "away_team_name": "CA Mitre",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/38841431983b80b4d77567b257db194f.png",
       "awayTeamScore": "0",
       "league_name": "Giải bóng đá Hạng nhì Argentina",
       "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "phụ nữ Banfield",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/3c5534418479341c52ee668eef8af1e1.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Đoàn nữ Santa Fe",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/ea678bab362e19d8e5b38030e6298e1d.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Nữ Argentina",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/1203bef4844bcf313898ffbd2a79353b.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Bentin Tacna Heroica",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/5849c2175057edf3dd148f6d2d22c4c7.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Ayacucho",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/79068a7b729e0d240ff8b5fd988eb0c6.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Liga 2 Peru",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/75bbf31af355a954779cbc94838e9dbc.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Almirante Brown",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/3a44e46e965a2a6d8ec5883bfde23ac6.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Racing Cordoba",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/de8b35be2ad3af138f74e9b8cb01d22c.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Hạng nhì Argentina",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "U.N.A.M.- Pumas Nữ",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/920c76f9a745c87b6d43aaeb8483a960.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Club Leon Nữ",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/800183891d5c018ba4bff9e039b06eee.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá nữ cao cấp Mexico",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a6350b03022c4e5344c808657c3282bb.png",
       "servers": []
     },
     {
@@ -1137,24 +962,11 @@
     {
       "match_time": "1785693600",
       "match_status": "vs",
-      "home_team_name": "UNSAAC (W)",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/aa552bffa95dcf47611c20200e96bcd9.png",
+      "home_team_name": "Almirante Brown",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/3a44e46e965a2a6d8ec5883bfde23ac6.png",
       "homeTeamScore": "0",
-      "away_team_name": "Killas W",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/1a8cd48b461bdb882dfeeeaa0776ff66.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải Bóng đá Nữ Peru",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/2c3caa513884eacd2e4fb74aef49b485.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Ciudad Bolivar",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/f492954b9275202a9f85e8f5a76599ef.png",
-      "homeTeamScore": "0",
-      "away_team_name": "CA Mitre",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/38841431983b80b4d77567b257db194f.png",
+      "away_team_name": "Racing Cordoba",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/de8b35be2ad3af138f74e9b8cb01d22c.png",
       "awayTeamScore": "0",
       "league_name": "Giải bóng đá Hạng nhì Argentina",
       "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
@@ -1163,122 +975,77 @@
     {
       "match_time": "1785693600",
       "match_status": "vs",
-      "home_team_name": "San Martin Burzaco",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/066943b4b06ac2ebd369d4a3a4b9854e.png",
+      "home_team_name": "San Telmo",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/san-telmo-f2cacc.webp",
       "homeTeamScore": "0",
-      "away_team_name": "Deportivo Merlo",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-merlo-d2b751.jpg",
+      "away_team_name": "San Miguel",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/167d36c2bdb0fb5d887bc909aa26a88a.png",
       "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Hạng nhì Argentina Tebolidun",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/215a49d60a8e27c53fde3764d35a5e6d.png",
-      "servers": []
-    },
-    {
-      "match_time": 1785693600,
-      "match_status": "vs",
-      "home_team_name": "Zemun",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/zemun-7ee3ae.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Radnicki Nis",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/radnicki-nis-80ab63.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Serbia",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f44ac8f0aaac57bc25888ee6916c1741.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Villa San Carlos",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/villa-san-carlos-8ba813.jpg",
-      "homeTeamScore": "0",
-      "away_team_name": "Dock Sud",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/eb27b95f48803f4f3d7aa9b40b24853b.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Hạng nhì Argentina Tebolidun",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/215a49d60a8e27c53fde3764d35a5e6d.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Juventus-AC (Đội trẻ)",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/22930eeeb4f37c73c2c8901d6beb9aa8.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Santos U20",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/674171a5ca8e8fd3a9784bec35afb185.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Campeonato Paulista U20 Brazil",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/8f359c335d62fb21821e514f5b17c65e.png",
-      "servers": []
-    },
-    {
-      "match_time": 1785693600,
-      "match_status": "vs",
-      "home_team_name": "Bohemians",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/bohemians-ed70e0.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Galway",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/c1c11396b56924708e6f5d48fd2277e7.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải vô địch quốc gia Ireland",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-ire-premier-division-96e5bb.png",
-      "servers": []
-    },
-    {
-      "match_time": 1785693600,
-      "match_status": "vs",
-      "home_team_name": "Pardubice",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/pardubice-1a440c.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Jablonec",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5ad108996fc7f22e8c12cddbc33e1ca7.png",
-      "awayTeamScore": "0",
-      "league_name": "Czech Chance Liga",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a1b57fb832cc79925c333ec64962cab1.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Maua SP Thanh Niên",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/1093e7c4d32dba953ecbd97cb9697846.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Palmeira U20",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/81f811ef8c45c440e77db5a5241421c3.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Campeonato Paulista U20 Brazil",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/8f359c335d62fb21821e514f5b17c65e.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785693600",
-      "match_status": "vs",
-      "home_team_name": "Independiente del Valle",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/independiente-del-valle-5035fa.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Dep. Cuenca",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/af5d08bcd181c66a5ff7724086d6c933.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải vô địch quốc gia Ecuador",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/0e046e806bd54b6ea05db95101f07401.png",
+      "league_name": "Giải bóng đá Hạng nhì Argentina",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
       "servers": []
     },
     {
       "match_time": "1785693600",
       "match_status": "live",
-      "home_team_name": "Netanya",
-      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/d042ca4d70f0358b81d5da7e96375bd4.png",
+      "home_team_name": "Urartu",
+      "home_team_logo": "",
       "homeTeamScore": "0",
-      "away_team_name": "Hap Ramat Gan",
+      "away_team_name": "Pyunik Yerevan",
       "away_team_logo": "",
       "awayTeamScore": "0",
-      "league_name": "Israel Toto Cup",
+      "league_name": "Armenia Premier League",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "http://193.47.62.190/hls/FMMM.m3u8",
+          "url": "http://193.47.62.190/hls/FMMMAA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        }
+      ]
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "live",
+      "home_team_name": "SK Rapid",
+      "home_team_logo": "",
+      "homeTeamScore": "0",
+      "away_team_name": "Altach",
+      "away_team_logo": "",
+      "awayTeamScore": "0",
+      "league_name": "Austria Bundesliga",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "http://193.47.62.190/hls/FMMMA.m3u8",
+          "type": "referer",
+          "header": {
+            "referer": "http://www.fawanews.sc/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
+          }
+        }
+      ]
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "live",
+      "home_team_name": "Komarno",
+      "home_team_logo": "",
+      "homeTeamScore": "0",
+      "away_team_name": "Trnava",
+      "away_team_logo": "",
+      "awayTeamScore": "0",
+      "league_name": "Slovakia Nike liga",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "http://193.47.62.190/hls/FMMMAAAA.m3u8",
           "type": "referer",
           "header": {
             "referer": "http://www.fawanews.sc/",
@@ -1313,18 +1080,18 @@
     {
       "match_time": "1785693600",
       "match_status": "live",
-      "home_team_name": "SK Rapid",
+      "home_team_name": "Netanya",
       "home_team_logo": "",
       "homeTeamScore": "0",
-      "away_team_name": "Altach",
+      "away_team_name": "Hap Ramat Gan",
       "away_team_logo": "",
       "awayTeamScore": "0",
-      "league_name": "Austria Bundesliga",
+      "league_name": "Israel Toto Cup",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "http://193.47.62.190/hls/FMMMA.m3u8",
+          "url": "http://193.47.62.190/hls/FMMM.m3u8",
           "type": "referer",
           "header": {
             "referer": "http://www.fawanews.sc/",
@@ -1332,6 +1099,162 @@
           }
         }
       ]
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "phụ nữ Banfield",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/3c5534418479341c52ee668eef8af1e1.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Đoàn nữ Santa Fe",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/ea678bab362e19d8e5b38030e6298e1d.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Nữ Argentina",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/1203bef4844bcf313898ffbd2a79353b.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "Bentin Tacna Heroica",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/5849c2175057edf3dd148f6d2d22c4c7.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Ayacucho",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/79068a7b729e0d240ff8b5fd988eb0c6.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Liga 2 Peru",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/75bbf31af355a954779cbc94838e9dbc.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "Villa San Carlos",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/villa-san-carlos-8ba813.jpg",
+      "homeTeamScore": "0",
+      "away_team_name": "Dock Sud",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/eb27b95f48803f4f3d7aa9b40b24853b.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Hạng nhì Argentina Tebolidun",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/215a49d60a8e27c53fde3764d35a5e6d.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "UNSAAC (W)",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/aa552bffa95dcf47611c20200e96bcd9.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Killas W",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/1a8cd48b461bdb882dfeeeaa0776ff66.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải Bóng đá Nữ Peru",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/2c3caa513884eacd2e4fb74aef49b485.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "U.N.A.M.- Pumas Nữ",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/920c76f9a745c87b6d43aaeb8483a960.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Club Leon Nữ",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/800183891d5c018ba4bff9e039b06eee.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá nữ cao cấp Mexico",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a6350b03022c4e5344c808657c3282bb.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785693600,
+      "match_status": "vs",
+      "home_team_name": "Pardubice",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/pardubice-1a440c.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Jablonec",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5ad108996fc7f22e8c12cddbc33e1ca7.png",
+      "awayTeamScore": "0",
+      "league_name": "Czech Chance Liga",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/a1b57fb832cc79925c333ec64962cab1.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785693600,
+      "match_status": "vs",
+      "home_team_name": "Zemun",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/zemun-7ee3ae.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Radnicki Nis",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/radnicki-nis-80ab63.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Serbia",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f44ac8f0aaac57bc25888ee6916c1741.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "Independiente del Valle",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/independiente-del-valle-5035fa.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Dep. Cuenca",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/af5d08bcd181c66a5ff7724086d6c933.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải vô địch quốc gia Ecuador",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/0e046e806bd54b6ea05db95101f07401.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "Juventus-AC (Đội trẻ)",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/22930eeeb4f37c73c2c8901d6beb9aa8.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Santos U20",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/674171a5ca8e8fd3a9784bec35afb185.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Campeonato Paulista U20 Brazil",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/8f359c335d62fb21821e514f5b17c65e.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "Maua SP Thanh Niên",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/1093e7c4d32dba953ecbd97cb9697846.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Palmeira U20",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/81f811ef8c45c440e77db5a5241421c3.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Campeonato Paulista U20 Brazil",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/8f359c335d62fb21821e514f5b17c65e.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785693600,
+      "match_status": "vs",
+      "home_team_name": "Bohemians",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/bohemians-ed70e0.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Galway",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/c1c11396b56924708e6f5d48fd2277e7.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải vô địch quốc gia Ireland",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-ire-premier-division-96e5bb.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785693600",
+      "match_status": "vs",
+      "home_team_name": "San Martin Burzaco",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/066943b4b06ac2ebd369d4a3a4b9854e.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Deportivo Merlo",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-merlo-d2b751.jpg",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Hạng nhì Argentina Tebolidun",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/215a49d60a8e27c53fde3764d35a5e6d.png",
+      "servers": []
     },
     {
       "match_time": 1785694500,
@@ -1349,19 +1272,6 @@
     {
       "match_time": 1785694500,
       "match_status": "vs",
-      "home_team_name": "CSKA Sofia",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/cska-sofia-233e84.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Dunav Ruse",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5c1b71658722f554a095a3687b548717.png",
-      "awayTeamScore": "0",
-      "league_name": "Giải vô địch quốc gia Bulgaria",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-bul-first-league-e849b6.png",
-      "servers": []
-    },
-    {
-      "match_time": 1785694500,
-      "match_status": "vs",
       "home_team_name": "AD Tarma",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/ad-tarma-f7aed2.png",
       "homeTeamScore": "0",
@@ -1370,6 +1280,19 @@
       "awayTeamScore": "0",
       "league_name": "Giải Vô Địch Quốc Gia Peru",
       "league_logo": "https://static.wex1sora.com/thesports/football/competition/c34077b7ac3592e339bd375e72fe441b.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785694500,
+      "match_status": "vs",
+      "home_team_name": "CSKA Sofia",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/cska-sofia-233e84.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Dunav Ruse",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5c1b71658722f554a095a3687b548717.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải vô địch quốc gia Bulgaria",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-bul-first-league-e849b6.png",
       "servers": []
     },
     {
@@ -1401,40 +1324,14 @@
     {
       "match_time": "1785695400",
       "match_status": "vs",
-      "home_team_name": "Temperley",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/temperley-f69b7f.png",
+      "home_team_name": "FC Rapid 1923",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-rapid-1923-d4e30a.png",
       "homeTeamScore": "0",
-      "away_team_name": "Gimnasia y Tiro",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/1dcae0ff1f13a4eacf57b5095080fea1.png",
+      "away_team_name": "CFR Cluj",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/cfr-cluj-0381a5.png",
       "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Hạng nhì Argentina",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
-      "servers": []
-    },
-    {
-      "match_time": "1785695400",
-      "match_status": "vs",
-      "home_team_name": "Deportivo Maipu",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-maipu-6e83fe.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Atletico Atlanta",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/atletico-atlanta-ed8730.jpg",
-      "awayTeamScore": "0",
-      "league_name": "Giải bóng đá Hạng nhì Argentina",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
-      "servers": []
-    },
-    {
-      "match_time": 1785695400,
-      "match_status": "vs",
-      "home_team_name": "Rapid Bucuresti",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/rapid-bucuresti-038bfb.png",
-      "homeTeamScore": "0",
-      "away_team_name": "CFR",
-      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/6f927eb040bdd5c972a9343fd9c8b873.png",
-      "awayTeamScore": "0",
-      "league_name": "Romanian Super Liga",
-      "league_logo": "https://static.wex1sora.com/thesports/football/competition/3888349404e5d5d09f977b30df0ee151.png",
+      "league_name": "ROM D1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
     {
@@ -1482,6 +1379,97 @@
           }
         }
       ]
+    },
+    {
+      "match_time": "1785695400",
+      "match_status": "vs",
+      "home_team_name": "Temperley",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/temperley-f69b7f.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Gimnasia y Tiro",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/1dcae0ff1f13a4eacf57b5095080fea1.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Hạng nhì Argentina",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785695400,
+      "match_status": "vs",
+      "home_team_name": "Rapid Bucuresti",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/rapid-bucuresti-038bfb.png",
+      "homeTeamScore": "0",
+      "away_team_name": "CFR",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/6f927eb040bdd5c972a9343fd9c8b873.png",
+      "awayTeamScore": "0",
+      "league_name": "Romanian Super Liga",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/3888349404e5d5d09f977b30df0ee151.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785695400",
+      "match_status": "vs",
+      "home_team_name": "Deportivo Maipu",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/deportivo-maipu-6e83fe.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Atletico Atlanta",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/atletico-atlanta-ed8730.jpg",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá Hạng nhì Argentina",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/f1d0b88fbf66a26ed8777ba39a13b24a.png",
+      "servers": []
+    },
+    {
+      "match_time": 1785696300,
+      "match_status": "vs",
+      "home_team_name": "Ascoli",
+      "home_team_logo": "https://static.wex1sora.com/thesports/football/team/99eb094c4965c9489832f2969e758024.png",
+      "homeTeamScore": "0",
+      "away_team_name": "S.S. Lazio",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5a2ff46efa33abc6b2908eb6279dfbf8.png",
+      "awayTeamScore": "0",
+      "league_name": "Giao hữu các CLB quốc tế",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-friendlies-clubs-b8f894.jpg",
+      "servers": []
+    },
+    {
+      "match_time": 1785697200,
+      "match_status": "vs",
+      "home_team_name": "Palmeiras",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/palmeiras-438aaf.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Fortaleza",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/fortaleza-bdca02.png",
+      "awayTeamScore": "0",
+      "league_name": "Copa Betano do Brasil",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-copa-betano-do-brasil-430bd2.jpg",
+      "servers": []
+    },
+    {
+      "match_time": "1785697200",
+      "match_status": "vs",
+      "home_team_name": "Rijeka",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/rijeka-a7b0b8.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Rudes",
+      "away_team_logo": "https://static.wex1sora.com/thesports/football/team/5c84cb6e7c5225c625cb3735e4328ba7.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá vô địch quốc gia Croatia",
+      "league_logo": "https://static.wex1sora.com/thesports/football/competition/b9bfe8624aff65b2eee29962961d457c.png",
+      "servers": []
+    },
+    {
+      "match_time": "1785697200",
+      "match_status": "vs",
+      "home_team_name": "Galatasaray",
+      "home_team_logo": "",
+      "homeTeamScore": "0",
+      "away_team_name": "Rennes",
+      "away_team_logo": "",
+      "awayTeamScore": "0",
+      "league_name": "Friendly Match",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
     }
   ]
 }
