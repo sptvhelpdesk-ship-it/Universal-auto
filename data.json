@@ -3,25 +3,45 @@
   "AUTHOR": "iVan_Flux",
   "CONTACT (OWNER)": "https://t.me/iVan_flux",
   "TELEGRAM CHANNEL": "https://t.me/api_hub_by_ivan",
-  "Last update time": "06:31:24 PM 13-11-2026",
+  "Last update time": "06:45:54 PM 13-11-2026",
   "Live": "06",
   "Upcoming": "54",
   "events": [
     {
-      "match_time": 1794569400,
+      "match_time": 1794571200,
       "match_status": "live",
-      "home_team_name": "VfL Bochum",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/vfl-bochum-a54eca.png",
-      "homeTeamScore": "4",
-      "away_team_name": "SC Verl",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/sc-verl-0e69c9.webp",
-      "awayTeamScore": "1",
-      "league_name": "International Club Friendly",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-club-friendly-84bb81.png",
+      "home_team_name": "Singapore",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/singapore-d3197f.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Paraguay",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/paraguay-3bafbf.png",
+      "awayTeamScore": "0",
+      "league_name": "Four Nations Tournament (In Singapore)",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.fmp.live/sla/1-6af4981ea903b20f181f1771.m3u8?auth_key=1794596222-0-0-d918b2134211a65bdc415b7bc2f3e420",
+          "url": "https://pull.niues.live/live/stream-9912009_lsd.m3u8?auth_key=1794578888-0-0-b8c247702d421a9dd1ffbf24e6e879a9",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niues.live/live/stream-9912009_lhd.m3u8?auth_key=1794578888-0-0-20a3d488740a7be861a792b8f5daacd5",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "https://hls.lauthaitv.cc/live/sin-par-intfr/index.m3u8",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
+          "url": "https://flv.lauthaitv.cc/live/sin-par-intfr.flv",
+          "type": "direct"
+        },
+        {
+          "name": "Server 5",
+          "url": "https://pull.fmp.live/sla/1-6ad63784e607ff5ae4f2816d.m3u8?auth_key=1794596941-0-0-9ceb977df12ae61368214bbc7188da67",
           "type": "referer",
           "header": {
             "referer": "https://fmp.live/",
@@ -29,13 +49,63 @@
           }
         },
         {
-          "name": "Server 2",
-          "url": "https://play.lacrima2000.com/live/29d60ffe2723d123.m3u8?wsSecret=1BD602F16D04B4D40976389E3265ADF1&wsTime=1794574794",
+          "name": "Server 6",
+          "url": "https://play.lacrima2000.com/live/5c3f64b81957dbb8.m3u8?wsSecret=276D07F42D1F7D9C14F73D5474734408&wsTime=1794575515",
           "type": "referer",
           "header": {
             "referer": "https://www.goaldaddyth.com/",
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
           }
+        },
+        {
+          "name": "Server 7",
+          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=bb6e457fb03cc154d4307f879ed22096&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 8",
+          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=5d2206c3c53b4194c07aaf2fbad5c769&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 9",
+          "url": "https://pull.niur.live/live/stream-9912136_lsd.m3u8?txSecret=a377e6aa4fd11e1c5bd0995e729272cd&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 10",
+          "url": "https://pull.niur.live/live/stream-9912136_lhd.m3u8?txSecret=7d0df95ed9e012da92c8b49f14d189eb&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 11",
+          "url": "https://pull.niur.live/live/stream-9912140_lsd.m3u8?txSecret=2610a4d5dc3456e0828403d7a53068f9&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 12",
+          "url": "https://pull.niur.live/live/stream-9912140_lhd.m3u8?txSecret=30412687a075ae893b527722cabb85de&txTime=6af76018",
+          "type": "direct"
+        },
+        {
+          "name": "Server 13",
+          "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1794578888-0-0-559300e2ff5fd969352bd28e9a961b1e",
+          "type": "direct"
+        },
+        {
+          "name": "Server 14",
+          "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1794578888-0-0-fb9ae4daea80140e7fe46197e3c35eff",
+          "type": "direct"
+        },
+        {
+          "name": "Server 15",
+          "url": "https://pull.niues.live/live/stream-9912143_lsd.m3u8?auth_key=1794578888-0-0-bb41f4e4a6f70ba62082cb2101aec553",
+          "type": "direct"
+        },
+        {
+          "name": "Server 16",
+          "url": "https://pull.niues.live/live/stream-9912143_lhd.m3u8?auth_key=1794578888-0-0-000ce4c727011cba59f9bdd313af8012",
+          "type": "direct"
         }
       ]
     },
@@ -53,114 +123,12 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://play.lacrima2000.com/live/3ba8f17767f0db84.m3u8?wsSecret=3131E71BFE5610863351B03EFA1C93B9&wsTime=1794574794",
+          "url": "https://play.lacrima2000.com/live/3ba8f17767f0db84.m3u8?wsSecret=24EEC30F6D7421E5B2CC65804D308288&wsTime=1794575515",
           "type": "referer",
           "header": {
             "referer": "https://www.goaldaddyth.com/",
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
           }
-        }
-      ]
-    },
-    {
-      "match_time": 1794571200,
-      "match_status": "live",
-      "home_team_name": "Singapore",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/singapore-d3197f.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Paraguay",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/paraguay-3bafbf.png",
-      "awayTeamScore": "0",
-      "league_name": "Four Nations Tournament (In Singapore)",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-9912009_lsd.m3u8?auth_key=1794578168-0-0-10d98a86bf809135a104d73b72ed4503",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-9912009_lhd.m3u8?auth_key=1794578168-0-0-868784d320e25260bbec14b53bef20f4",
-          "type": "direct"
-        },
-        {
-          "name": "Server 3",
-          "url": "https://hls.lauthaitv.cc/live/sin-par-intfr/index.m3u8",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://flv.lauthaitv.cc/live/sin-par-intfr.flv",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
-          "url": "https://pull.fmp.live/sla/1-6ad63784e607ff5ae4f2816d.m3u8?auth_key=1794596222-0-0-f9a084c09f5e238e01bcf76374c5f2d4",
-          "type": "referer",
-          "header": {
-            "referer": "https://fmp.live/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
-          }
-        },
-        {
-          "name": "Server 6",
-          "url": "https://play.lacrima2000.com/live/5c3f64b81957dbb8.m3u8?wsSecret=61DD58C0A8796B25670F0BF57ECB9CA5&wsTime=1794574794",
-          "type": "referer",
-          "header": {
-            "referer": "https://www.goaldaddyth.com/",
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
-          }
-        },
-        {
-          "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-9912136_lsd.m3u8?txSecret=14b4cdb527182fdd589775032dc6e369&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-9912136_lhd.m3u8?txSecret=b562f9f145c4b846b44e0b22ae9b4693&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 9",
-          "url": "https://pull.niur.live/live/stream-459401_lsd.m3u8?txSecret=f5b4def665862d10039633200d5c14f2&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-459401_lhd.m3u8?txSecret=e37fc449e17f602bc6c3b95be046cdfe&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 11",
-          "url": "https://pull.niur.live/live/stream-9912140_lsd.m3u8?txSecret=a6ced14448b5d35e984e476da1421bba&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 12",
-          "url": "https://pull.niur.live/live/stream-9912140_lhd.m3u8?txSecret=751b41eb43d1769a56de48734a7b94e2&txTime=6af75d48",
-          "type": "direct"
-        },
-        {
-          "name": "Server 13",
-          "url": "https://pull.niues.live/live/stream-235232_lsd.m3u8?auth_key=1794578168-0-0-321f0540682fe1f45f03903071f29c9d",
-          "type": "direct"
-        },
-        {
-          "name": "Server 14",
-          "url": "https://pull.niues.live/live/stream-235232_lhd.m3u8?auth_key=1794578168-0-0-2d41685ebc939680f0a370423790d2b0",
-          "type": "direct"
-        },
-        {
-          "name": "Server 15",
-          "url": "https://pull.niues.live/live/stream-9912143_lsd.m3u8?auth_key=1794578168-0-0-1648511ade2831d73623ebb60e1c5c9e",
-          "type": "direct"
-        },
-        {
-          "name": "Server 16",
-          "url": "https://pull.niues.live/live/stream-9912143_lhd.m3u8?auth_key=1794578168-0-0-de4e6aacbe800c46411d90788c4f734c",
-          "type": "direct"
         }
       ]
     },
@@ -178,22 +146,22 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-9912130_lsd.m3u8?auth_key=1794578228-0-0-062d236bebf3f53d413d608e50457738",
+          "url": "https://pull.niues.live/live/stream-9912130_lsd.m3u8?auth_key=1794578948-0-0-701c6178961e1c6d9842173e5421f3e4",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-9912130_lhd.m3u8?auth_key=1794578228-0-0-29605e56f6d54bb791dd90aed6fcfd69",
+          "url": "https://pull.niues.live/live/stream-9912130_lhd.m3u8?auth_key=1794578948-0-0-fa263f98307dfc620fbc74aad8b1ab9e",
           "type": "direct"
         },
         {
           "name": "Server 3",
-          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTqyZoSqNpUc.m3u8?txSecret=7571c36b6866f938c3f1369c4d1de047&txTime=6AF7B296",
+          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTqyZoSqNpUc.m3u8?txSecret=72b42f81c07d155c98e12821fac0b3be&txTime=6AF7B565",
           "type": "direct"
         },
         {
           "name": "Server 4",
-          "url": "https://pull.fmp.live/sla/1-6ad4e60ae15cf29d8322174d.m3u8?auth_key=1794596162-0-0-7ab695f3a7f3358554bbde02f9163dbf",
+          "url": "https://pull.fmp.live/sla/1-6ad4e60ae15cf29d8322174d.m3u8?auth_key=1794596941-0-0-54dcd7d5fab5075798f27f8c4bd15ecc",
           "type": "referer",
           "header": {
             "referer": "https://fmp.live/",
@@ -202,32 +170,147 @@
         },
         {
           "name": "Server 5",
-          "url": "https://pull.niur.live/live/stream-534055_lsd.m3u8?txSecret=7d3aef49b45cbbfd67e94abd2e3a0e6e&txTime=6af75d84",
+          "url": "https://pull.niur.live/live/stream-534055_lsd.m3u8?txSecret=cfb237e48318e769db5fcce38806dbe0&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 6",
-          "url": "https://pull.niur.live/live/stream-534055_lhd.m3u8?txSecret=d59d65515b88168a3dc3ea469cd85598&txTime=6af75d84",
+          "url": "https://pull.niur.live/live/stream-534055_lhd.m3u8?txSecret=50658deda3c3021dac6d55b471f19be6&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niues.live/live/stream-621843_lsd.m3u8?auth_key=1794578228-0-0-751b9a03b1a3eaae1156e0848113d5ca",
+          "url": "https://pull.niur.live/live/stream-602019_lsd.m3u8?txSecret=1985d731bf56f6bba353139d987129d1&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niues.live/live/stream-621843_lhd.m3u8?auth_key=1794578228-0-0-968d54692c8007806a231084f41d453a",
+          "url": "https://pull.niur.live/live/stream-602019_lhd.m3u8?txSecret=2f39e4004f09f2d1507307682aa3f168&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 9",
-          "url": "https://pull.niur.live/live/stream-602019_lsd.m3u8?txSecret=81482e9ca80d9ce1405c7b3a6d2f9eca&txTime=6af75d84",
+          "url": "https://pull.niues.live/live/stream-621843_lsd.m3u8?auth_key=1794578948-0-0-32a18f5922f7082775fe980530d91ae1",
           "type": "direct"
         },
         {
           "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-602019_lhd.m3u8?txSecret=5fc93624d657ae876440d0a4d70d5c83&txTime=6af75d84",
+          "url": "https://pull.niues.live/live/stream-621843_lhd.m3u8?auth_key=1794578948-0-0-0618d0882e8e0d1f2c3b3bb22aa3e6d9",
+          "type": "direct"
+        }
+      ]
+    },
+    {
+      "match_time": 1794574800,
+      "match_status": "live",
+      "home_team_name": "Shillong Lajong FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/shillong-lajong-fc-97cb8b.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Sreenidi Deccan FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/sreenidi-deccan-fc-7c8b55.png",
+      "awayTeamScore": "0",
+      "league_name": "Giải bóng đá hạng nhất Ấn Độ",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-india-football-league-526cd3.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://live.cds78y11d.org/live/sd-6Mxk43A27StSYhkP4g.m3u8?txSecret=deccfcd3757960b79b1db16fb76ae8fc&txTime=6AF7B565",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.fmp.live/sla/1-6ad63784e607ff5ae4f28174.m3u8?auth_key=1794596941-0-0-9237adf29df733f3e467109b1c7abd63",
+          "type": "referer",
+          "header": {
+            "referer": "https://fmp.live/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 3",
+          "url": "https://play.lacrima2000.com/live/e913860819ef3bb6.m3u8?wsSecret=0CB4737F105157F30A1694A7046B2D9A&wsTime=1794575515",
+          "type": "referer",
+          "header": {
+            "referer": "https://www.goaldaddyth.com/",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+          }
+        }
+      ]
+    },
+    {
+      "match_time": 1794574800,
+      "match_status": "live",
+      "home_team_name": "Zambia",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/zambia-dfa43a.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Burundi",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/burundi-385433.webp",
+      "awayTeamScore": "0",
+      "league_name": "CAF Africa Cup of Nations",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": [
+        {
+          "name": "Server 1",
+          "url": "https://pull.niues.live/live/stream-372746_lsd.m3u8?auth_key=1794578948-0-0-aa98c2a1b1bf79aec74e3fe55720ad4c",
+          "type": "direct"
+        },
+        {
+          "name": "Server 2",
+          "url": "https://pull.niues.live/live/stream-372746_lhd.m3u8?auth_key=1794578948-0-0-9c3768f10b22522fff6e901310894ed5",
+          "type": "direct"
+        },
+        {
+          "name": "Server 3",
+          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTgGtne1tDD6.m3u8?txSecret=9b9f914e741624d4059907ad8f0117e0&txTime=6AF7B565",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
+          "url": "https://hls.lauthaitv.cc/live/zambia-burundi-cafafcon/index.m3u8",
+          "type": "direct"
+        },
+        {
+          "name": "Server 5",
+          "url": "https://flv.lauthaitv.cc/live/zambia-burundi-cafafcon.flv",
+          "type": "direct"
+        },
+        {
+          "name": "Server 6",
+          "url": "https://pull.fmp.live/sla/1-6ad4e60ae15cf29d83221746.m3u8?auth_key=1794596941-0-0-c27035d389a631e3f1d6c91929b39571",
+          "type": "referer",
+          "header": {
+            "referer": "https://fmp.live/",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+          }
+        },
+        {
+          "name": "Server 7",
+          "url": "https://pull.niur.live/live/stream-485739_lsd.m3u8?txSecret=386d98ceb8489c6e11c6022b0a19395f&txTime=6af76054",
+          "type": "direct"
+        },
+        {
+          "name": "Server 8",
+          "url": "https://pull.niur.live/live/stream-485739_lhd.m3u8?txSecret=d3a1389dcd80ae5bf14b0f25f4bc6158&txTime=6af76054",
+          "type": "direct"
+        },
+        {
+          "name": "Server 9",
+          "url": "https://pull.niur.live/live/stream-491873_lsd.m3u8?txSecret=45d50db9878a6e82edf96ae34824e09a&txTime=6af76054",
+          "type": "direct"
+        },
+        {
+          "name": "Server 10",
+          "url": "https://pull.niur.live/live/stream-491873_lhd.m3u8?txSecret=3220817a2fd83cb543110563929ebc70&txTime=6af76054",
+          "type": "direct"
+        },
+        {
+          "name": "Server 11",
+          "url": "https://pull.niur.live/live/stream-9912139_lsd.m3u8?txSecret=b21ef16705e59a1fd107142a11905adb&txTime=6af76054",
+          "type": "direct"
+        },
+        {
+          "name": "Server 12",
+          "url": "https://pull.niur.live/live/stream-9912139_lhd.m3u8?txSecret=31167d0c37cab2db7d812296fc4efcc6&txTime=6af76054",
           "type": "direct"
         }
       ]
@@ -246,151 +329,60 @@
       "servers": [
         {
           "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-9912128_lsd.m3u8?auth_key=1794578228-0-0-cdefa54d31837ba7d96fa12e15ce104f",
+          "url": "https://pull.niues.live/live/stream-9912135_lsd.m3u8?auth_key=1794578948-0-0-5f4a4379a1b93686b88d00cb1aa46f6b",
           "type": "direct"
         },
         {
           "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-9912128_lhd.m3u8?auth_key=1794578228-0-0-e863342a6cc785fe8be08b239315a844",
+          "url": "https://pull.niues.live/live/stream-9912135_lhd.m3u8?auth_key=1794578948-0-0-449c3de9e7e7f0bd1cd93bc0999e60a0",
           "type": "direct"
         },
         {
           "name": "Server 3",
+          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTrCkgfiLKPz.m3u8?txSecret=70d7a7e679cf0a0b047827889f225773&txTime=6AF7B565",
+          "type": "direct"
+        },
+        {
+          "name": "Server 4",
           "url": "https://hls.lauthaitv.cc/live/como-congo-cafafcon/index.m3u8",
           "type": "direct"
         },
         {
-          "name": "Server 4",
+          "name": "Server 5",
           "url": "https://flv.lauthaitv.cc/live/como-congo-cafafcon.flv",
           "type": "direct"
         },
         {
-          "name": "Server 5",
-          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTrCkgfiLKPz.m3u8?txSecret=8a5e4fd85f6692468d8c0587e994d6cd&txTime=6AF7B296",
-          "type": "direct"
-        },
-        {
           "name": "Server 6",
-          "url": "https://pull.niues.live/live/stream-619561_lsd.m3u8?auth_key=1794578228-0-0-52fc2486442b99ae70e9a13f82d1593d",
+          "url": "https://pull.niues.live/live/stream-9912128_lsd.m3u8?auth_key=1794578948-0-0-128fd0dcbbf599e9fd3bd16fd20fb356",
           "type": "direct"
         },
         {
           "name": "Server 7",
-          "url": "https://pull.niues.live/live/stream-619561_lhd.m3u8?auth_key=1794578228-0-0-f4eb37890294ced0eabf7bc962c77780",
+          "url": "https://pull.niues.live/live/stream-9912128_lhd.m3u8?auth_key=1794578948-0-0-34d721a9569813d37af6dcbf2f972c23",
           "type": "direct"
         },
         {
           "name": "Server 8",
-          "url": "https://pull.niues.live/live/stream-9912135_lsd.m3u8?auth_key=1794578228-0-0-1ef80f3ee8f0743ddfd3bb0c9d0178a3",
+          "url": "https://pull.niur.live/live/stream-501412_lsd.m3u8?txSecret=bda1c257657a4c328e597d018bc044e7&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 9",
-          "url": "https://pull.niues.live/live/stream-9912135_lhd.m3u8?auth_key=1794578228-0-0-67762e9166bc355a4f661ae78e8f56eb",
+          "url": "https://pull.niur.live/live/stream-501412_lhd.m3u8?txSecret=afdf5baa9e384148d0fddaa14d3d0a16&txTime=6af76054",
           "type": "direct"
         },
         {
           "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-501412_lsd.m3u8?txSecret=c15605f9d776d927d0d5ede13db4f9c5&txTime=6af75d84",
+          "url": "https://pull.niues.live/live/stream-619561_lsd.m3u8?auth_key=1794578948-0-0-e240dbf3046eec37a931b0552bd901c3",
           "type": "direct"
         },
         {
           "name": "Server 11",
-          "url": "https://pull.niur.live/live/stream-501412_lhd.m3u8?txSecret=35b02f22601ab9a03073a78a87a5f400&txTime=6af75d84",
+          "url": "https://pull.niues.live/live/stream-619561_lhd.m3u8?auth_key=1794578948-0-0-e6fc5efd4d03f22e8c0891127c07e27b",
           "type": "direct"
         }
       ]
-    },
-    {
-      "match_time": 1794574800,
-      "match_status": "live",
-      "home_team_name": "Zambia",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/zambia-dfa43a.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Burundi",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/burundi-385433.webp",
-      "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": [
-        {
-          "name": "Server 1",
-          "url": "https://pull.niues.live/live/stream-372746_lsd.m3u8?auth_key=1794578228-0-0-d490dcf61972b14d7884249e6d3660b7",
-          "type": "direct"
-        },
-        {
-          "name": "Server 2",
-          "url": "https://pull.niues.live/live/stream-372746_lhd.m3u8?auth_key=1794578228-0-0-19bf647867fae06eb162d3785a8fe95b",
-          "type": "direct"
-        },
-        {
-          "name": "Server 3",
-          "url": "https://hls.lauthaitv.cc/live/zambia-burundi-cafafcon/index.m3u8",
-          "type": "direct"
-        },
-        {
-          "name": "Server 4",
-          "url": "https://flv.lauthaitv.cc/live/zambia-burundi-cafafcon.flv",
-          "type": "direct"
-        },
-        {
-          "name": "Server 5",
-          "url": "https://live.cds78y11d.org/live/sd-6MxjZAMTgGtne1tDD6.m3u8?txSecret=27a99d41b4df6b88433076d0b88c8659&txTime=6AF7B296",
-          "type": "direct"
-        },
-        {
-          "name": "Server 6",
-          "url": "https://pull.fmp.live/sla/1-6ad4e60ae15cf29d83221746.m3u8?auth_key=1794596162-0-0-ed6d83f801afef4325a868e1d9889066",
-          "type": "referer",
-          "header": {
-            "referer": "https://fmp.live/",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
-          }
-        },
-        {
-          "name": "Server 7",
-          "url": "https://pull.niur.live/live/stream-9912139_lsd.m3u8?txSecret=7043596eb2b8c65a18f080eeab7d3dc1&txTime=6af75d84",
-          "type": "direct"
-        },
-        {
-          "name": "Server 8",
-          "url": "https://pull.niur.live/live/stream-9912139_lhd.m3u8?txSecret=7a2fd6afe82d5d16644a46f5f3e343f0&txTime=6af75d84",
-          "type": "direct"
-        },
-        {
-          "name": "Server 9",
-          "url": "https://pull.niur.live/live/stream-491873_lsd.m3u8?txSecret=e94a00bad21c7d3d8f7eac1ef694994a&txTime=6af75d84",
-          "type": "direct"
-        },
-        {
-          "name": "Server 10",
-          "url": "https://pull.niur.live/live/stream-491873_lhd.m3u8?txSecret=f375212cd8e7b0918d917f44853efcdd&txTime=6af75d84",
-          "type": "direct"
-        },
-        {
-          "name": "Server 11",
-          "url": "https://pull.niur.live/live/stream-485739_lsd.m3u8?txSecret=e4aa48952186d0ca966d9d7c6d3ca9dd&txTime=6af75d84",
-          "type": "direct"
-        },
-        {
-          "name": "Server 12",
-          "url": "https://pull.niur.live/live/stream-485739_lhd.m3u8?txSecret=ca71f80c0dcea66b0c094fa4ed1d819c&txTime=6af75d84",
-          "type": "direct"
-        }
-      ]
-    },
-    {
-      "match_time": "1794575700",
-      "match_status": "vs",
-      "home_team_name": "Wajj",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/wajj-9cb31b.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Al Qwarah",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-qwarah-a99f4e.webp",
-      "awayTeamScore": "0",
-      "league_name": "Saudi Arabia Division 2",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
     },
     {
       "match_time": "1794576300",
@@ -408,11 +400,11 @@
     {
       "match_time": "1794576600",
       "match_status": "vs",
-      "home_team_name": "JBM FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/jbm-fc-9c7b24.png",
+      "home_team_name": "Young Pirates FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/young-pirates-fc-c5c013.png",
       "homeTeamScore": "0",
-      "away_team_name": "Free Agents",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/free-agents-461d0e.png",
+      "away_team_name": "Dube Continental FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/dube-continental-fc-0a7fac.png",
       "awayTeamScore": "0",
       "league_name": "SAND2",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -434,19 +426,6 @@
     {
       "match_time": "1794576600",
       "match_status": "vs",
-      "home_team_name": "Sohar SC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/sohar-sc-fb29cf.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Al-Msnaa",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-msnaa-b6f98c.png",
-      "awayTeamScore": "0",
-      "league_name": "Oman Federation Cup",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794576600",
-      "match_status": "vs",
       "home_team_name": "AS Fortuna Mfou",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/as-fortuna-mfou-68807b.png",
       "homeTeamScore": "0",
@@ -460,13 +439,26 @@
     {
       "match_time": "1794576600",
       "match_status": "vs",
-      "home_team_name": "Young Pirates FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/young-pirates-fc-c5c013.png",
+      "home_team_name": "JBM FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/jbm-fc-9c7b24.png",
       "homeTeamScore": "0",
-      "away_team_name": "Dube Continental FC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/dube-continental-fc-0a7fac.png",
+      "away_team_name": "Free Agents",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/free-agents-461d0e.png",
       "awayTeamScore": "0",
       "league_name": "SAND2",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794576600",
+      "match_status": "vs",
+      "home_team_name": "Sohar SC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/sohar-sc-fb29cf.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Al-Msnaa",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-msnaa-b6f98c.png",
+      "awayTeamScore": "0",
+      "league_name": "Oman Federation Cup",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
@@ -497,45 +489,6 @@
       "servers": []
     },
     {
-      "match_time": 1794580200,
-      "match_status": "vs",
-      "home_team_name": "Saudi Arabia",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/saudi-arabia-5318ef.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Korea Republic",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/korea-republic-bdcaf8.png",
-      "awayTeamScore": "0",
-      "league_name": "International Friendly",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
-      "servers": []
-    },
-    {
-      "match_time": 1794580200,
-      "match_status": "vs",
-      "home_team_name": "Nicaragua (W) U19",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Cuba (W) U19",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
-      "awayTeamScore": "0",
-      "league_name": "International Friendly",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
-      "servers": []
-    },
-    {
-      "match_time": 1794580200,
-      "match_status": "vs",
-      "home_team_name": "Belize (W) U19",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Honduras (W) U19",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
-      "awayTeamScore": "0",
-      "league_name": "International Friendly",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
-      "servers": []
-    },
-    {
       "match_time": "1794580200",
       "match_status": "vs",
       "home_team_name": "Dundee United",
@@ -551,50 +504,11 @@
     {
       "match_time": "1794580200",
       "match_status": "vs",
-      "home_team_name": "Attram De Visser",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/attram-de-visser-2b5768.png",
+      "home_team_name": "Dunipace FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/dunipace-fc-8e4ce4.png",
       "homeTeamScore": "0",
-      "away_team_name": "Golden Warriors",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/golden-warriors-cef9c4.png",
-      "awayTeamScore": "0",
-      "league_name": "Ghana Division 1",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794580200",
-      "match_status": "vs",
-      "home_team_name": "Sahl Horan SC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/sahl-horan-sc-a02a26.png",
-      "homeTeamScore": "0",
-      "away_team_name": "AL-Sareeh",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-sareeh-dbde56.png",
-      "awayTeamScore": "0",
-      "league_name": "Jordan League Division 1",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794580200",
-      "match_status": "vs",
-      "home_team_name": "Etehad Alreef",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/etehad-alreef-1c1d19.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Um Alhassam",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/um-alhassam-aa1c37.png",
-      "awayTeamScore": "0",
-      "league_name": "Bahrain Division 2",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794580200",
-      "match_status": "vs",
-      "home_team_name": "Musselburgh Athletic",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/musselburgh-athletic-ad948a.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Cowdenbeath",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/cowdenbeath-dcb210.png",
+      "away_team_name": "Hill of Beath FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/hill-of-beath-fc-096082.png",
       "awayTeamScore": "0",
       "league_name": "Scottish Lowland Football League",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -616,13 +530,52 @@
     {
       "match_time": "1794580200",
       "match_status": "vs",
-      "home_team_name": "Al Hashemeya",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/al-hashemeya-54004a.png",
+      "home_team_name": "Musselburgh Athletic",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/musselburgh-athletic-ad948a.png",
       "homeTeamScore": "0",
-      "away_team_name": "Sama Al Sarhan",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/sama-al-sarhan-9b0d00.png",
+      "away_team_name": "Cowdenbeath",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/cowdenbeath-dcb210.png",
+      "awayTeamScore": "0",
+      "league_name": "Scottish Lowland Football League",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794580200",
+      "match_status": "vs",
+      "home_team_name": "Jerash Club",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/jerash-club-8ce413.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Ittihad Al-Ramtha SC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/ittihad-al-ramtha-sc-c5176d.png",
       "awayTeamScore": "0",
       "league_name": "Jordan League Division 1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794580200",
+      "match_status": "vs",
+      "home_team_name": "Northern City",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/northern-city-7222bc.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Tamale City",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/tamale-city-f35ed7.png",
+      "awayTeamScore": "0",
+      "league_name": "Ghana Division 1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794580200",
+      "match_status": "vs",
+      "home_team_name": "Etehad Alreef",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/etehad-alreef-1c1d19.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Um Alhassam",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/um-alhassam-aa1c37.png",
+      "awayTeamScore": "0",
+      "league_name": "Bahrain Division 2",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
@@ -655,11 +608,24 @@
     {
       "match_time": "1794580200",
       "match_status": "vs",
-      "home_team_name": "Northern City",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/northern-city-7222bc.png",
+      "home_team_name": "Sahl Horan SC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/sahl-horan-sc-a02a26.png",
       "homeTeamScore": "0",
-      "away_team_name": "Tamale City",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/tamale-city-f35ed7.png",
+      "away_team_name": "AL-Sareeh",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-sareeh-dbde56.png",
+      "awayTeamScore": "0",
+      "league_name": "Jordan League Division 1",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794580200",
+      "match_status": "vs",
+      "home_team_name": "Attram De Visser",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/attram-de-visser-2b5768.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Golden Warriors",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/golden-warriors-cef9c4.png",
       "awayTeamScore": "0",
       "league_name": "Ghana Division 1",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -668,24 +634,11 @@
     {
       "match_time": "1794580200",
       "match_status": "vs",
-      "home_team_name": "Formartine United",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/formartine-united-040c1f.png",
+      "home_team_name": "Al Hashemeya",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/al-hashemeya-54004a.png",
       "homeTeamScore": "0",
-      "away_team_name": "Buckie Thistle FC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/buckie-thistle-fc-ec4d0f.png",
-      "awayTeamScore": "0",
-      "league_name": "Scottish Highland Football League",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794580200",
-      "match_status": "vs",
-      "home_team_name": "Jerash Club",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/jerash-club-8ce413.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Ittihad Al-Ramtha SC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/ittihad-al-ramtha-sc-c5176d.png",
+      "away_team_name": "Sama Al Sarhan",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/sama-al-sarhan-9b0d00.png",
       "awayTeamScore": "0",
       "league_name": "Jordan League Division 1",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
@@ -707,14 +660,53 @@
     {
       "match_time": "1794580200",
       "match_status": "vs",
-      "home_team_name": "Dunipace FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/dunipace-fc-8e4ce4.png",
+      "home_team_name": "Formartine United",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/formartine-united-040c1f.png",
       "homeTeamScore": "0",
-      "away_team_name": "Hill of Beath FC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/hill-of-beath-fc-096082.png",
+      "away_team_name": "Buckie Thistle FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/buckie-thistle-fc-ec4d0f.png",
       "awayTeamScore": "0",
-      "league_name": "Scottish Lowland Football League",
+      "league_name": "Scottish Highland Football League",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794580200,
+      "match_status": "vs",
+      "home_team_name": "Belize (W) U19",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Honduras (W) U19",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
+      "awayTeamScore": "0",
+      "league_name": "International Friendly",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
+      "servers": []
+    },
+    {
+      "match_time": 1794580200,
+      "match_status": "vs",
+      "home_team_name": "Nicaragua (W) U19",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Cuba (W) U19",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/gjerdrum-u19-ca01ad.png",
+      "awayTeamScore": "0",
+      "league_name": "International Friendly",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
+      "servers": []
+    },
+    {
+      "match_time": 1794580200,
+      "match_status": "vs",
+      "home_team_name": "Saudi Arabia",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/saudi-arabia-5318ef.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Korea Republic",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/korea-republic-bdcaf8.png",
+      "awayTeamScore": "0",
+      "league_name": "International Friendly",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-international-friendly-10608e.webp",
       "servers": []
     },
     {
@@ -746,6 +738,162 @@
     {
       "match_time": "1794583800",
       "match_status": "vs",
+      "home_team_name": "CH Futbol Club",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/ch-futbol-club-31392f.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Club Union Central",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/club-union-central-692387.png",
+      "awayTeamScore": "0",
+      "league_name": "Mexican TDP League",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Halcones Zuniga SC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/halcones-zuniga-sc-7f40b3.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Aztecas AMF Soccer",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/aztecas-amf-soccer-397a48.png",
+      "awayTeamScore": "0",
+      "league_name": "Mexican TDP League",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Wits University",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/wits-university-abf882.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Jomo Cosmos",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/jomo-cosmos-b44ac8.png",
+      "awayTeamScore": "0",
+      "league_name": "SAND2",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Baynounah SC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/baynounah-sc-9c7855.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Forte Virtus",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/forte-virtus-3fb4cc.png",
+      "awayTeamScore": "0",
+      "league_name": "United Arab Emirates President Cup",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "FK Dubocica",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/fk-dubocica-216766.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Proleter 023",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/proleter-023-0c3d37.webp",
+      "awayTeamScore": "0",
+      "league_name": "Serbian Mozzart Bet Prva Liga",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Gardnersville FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/gardnersville-fc-163277.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Downtown FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/downtown-fc-5465c4.png",
+      "awayTeamScore": "0",
+      "league_name": "Liberian second Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Freeport",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/freeport-b22259.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Wologisi FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/wologisi-fc-659be2.png",
+      "awayTeamScore": "0",
+      "league_name": "Liberian second Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Shaita FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/shaita-fc-14b8d9.png",
+      "homeTeamScore": "0",
+      "away_team_name": "NPA Anchors",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/npa-anchors-4e37c4.png",
+      "awayTeamScore": "0",
+      "league_name": "Liberian second Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "Cote d'Ivoire U23",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/cote-divoire-u23-655235.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Morocco U20",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/morocco-u20-99eea4.webp",
+      "awayTeamScore": "0",
+      "league_name": "International Friendly",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "TUT Students",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/tut-students-e170d5.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Leruma United",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/leruma-united-7004b8.png",
+      "awayTeamScore": "0",
+      "league_name": "SAND2",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "BEA Mountain FC",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/bea-mountain-fc-c45adf.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Paynesville",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/paynesville-6a6c70.png",
+      "awayTeamScore": "0",
+      "league_name": "Liberian second Division",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
+      "home_team_name": "FC Szeged II",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-szeged-ii-dac6e5.png",
+      "homeTeamScore": "0",
+      "away_team_name": "FC Dabas",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/fc-dabas-2da37e.png",
+      "awayTeamScore": "0",
+      "league_name": "Hungary Nemzeti Bajnoksug III",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": "1794583800",
+      "match_status": "vs",
       "home_team_name": "Egypt U17",
       "home_team_logo": "https://cdn.1xapi.com/images/teams/egypt-u17-7c0d81.png",
       "homeTeamScore": "0",
@@ -770,162 +918,6 @@
       "servers": []
     },
     {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Baynounah SC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/baynounah-sc-9c7855.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Forte Virtus",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/forte-virtus-3fb4cc.png",
-      "awayTeamScore": "0",
-      "league_name": "United Arab Emirates President Cup",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Wits University",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/wits-university-abf882.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Jomo Cosmos",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/jomo-cosmos-b44ac8.png",
-      "awayTeamScore": "0",
-      "league_name": "SAND2",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Gardnersville FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/gardnersville-fc-163277.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Downtown FC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/downtown-fc-5465c4.png",
-      "awayTeamScore": "0",
-      "league_name": "Liberian second Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Halcones Zuniga SC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/halcones-zuniga-sc-7f40b3.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Aztecas AMF Soccer",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/aztecas-amf-soccer-397a48.png",
-      "awayTeamScore": "0",
-      "league_name": "Mexican TDP League",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "BEA Mountain FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/bea-mountain-fc-c45adf.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Paynesville",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/paynesville-6a6c70.png",
-      "awayTeamScore": "0",
-      "league_name": "Liberian second Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Shaita FC",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/shaita-fc-14b8d9.png",
-      "homeTeamScore": "0",
-      "away_team_name": "NPA Anchors",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/npa-anchors-4e37c4.png",
-      "awayTeamScore": "0",
-      "league_name": "Liberian second Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "FK Dubocica",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/fk-dubocica-216766.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Proleter 023",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/proleter-023-0c3d37.webp",
-      "awayTeamScore": "0",
-      "league_name": "Serbian Mozzart Bet Prva Liga",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Freeport",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/freeport-b22259.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Wologisi FC",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/wologisi-fc-659be2.png",
-      "awayTeamScore": "0",
-      "league_name": "Liberian second Division",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "TUT Students",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/tut-students-e170d5.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Leruma United",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/leruma-united-7004b8.png",
-      "awayTeamScore": "0",
-      "league_name": "SAND2",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "CH Futbol Club",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/ch-futbol-club-31392f.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Club Union Central",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/club-union-central-692387.png",
-      "awayTeamScore": "0",
-      "league_name": "Mexican TDP League",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "FC Szeged II",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/fc-szeged-ii-dac6e5.png",
-      "homeTeamScore": "0",
-      "away_team_name": "FC Dabas",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/fc-dabas-2da37e.png",
-      "awayTeamScore": "0",
-      "league_name": "Hungary Nemzeti Bajnoksug III",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": "1794583800",
-      "match_status": "vs",
-      "home_team_name": "Cote d'Ivoire U23",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/cote-divoire-u23-655235.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Morocco U20",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/morocco-u20-99eea4.webp",
-      "awayTeamScore": "0",
-      "league_name": "International Friendly",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
       "match_time": "1794584700",
       "match_status": "vs",
       "home_team_name": "Star Sport Academy",
@@ -939,93 +931,41 @@
       "servers": []
     },
     {
-      "match_time": 1794585600,
+      "match_time": "1794585600",
       "match_status": "vs",
-      "home_team_name": "Nigeria",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/nigeria-f17411.png",
+      "home_team_name": "Dravinja",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/dravinja-916907.png",
       "homeTeamScore": "0",
-      "away_team_name": "Tanzania",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/tanzania-ed0787.webp",
+      "away_team_name": "NK Krka",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/nk-krka-bd32a5.jpg",
       "awayTeamScore": "0",
-      "league_name": "Africa Cup Of Nations Qualifiers",
-      "league_logo": "https://cdn.1xapi.com/images/teams/league-africa-cup-of-nations-qualifiers-64a9b2.png",
-      "servers": []
-    },
-    {
-      "match_time": 1794585600,
-      "match_status": "vs",
-      "home_team_name": "Gabon",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/gabon-ee2144.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Lesotho",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/lesotho-34c9c5.webp",
-      "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
+      "league_name": "Slovenia 2.Liga",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
     {
-      "match_time": 1794585600,
+      "match_time": "1794585600",
       "match_status": "vs",
-      "home_team_name": "Cabo Verde",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/cabo-verde-346874.webp",
+      "home_team_name": "Al-Hala",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/al-hala-df47d6.png",
       "homeTeamScore": "0",
-      "away_team_name": "Liberia",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/liberia-2f738a.png",
+      "away_team_name": "Al-Budaiya",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-budaiya-ce51de.png",
       "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
+      "league_name": "Bahrain Division 2",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
     {
-      "match_time": 1794585600,
+      "match_time": "1794585600",
       "match_status": "vs",
-      "home_team_name": "Tunisia",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/tunisia-6b07fd.png",
+      "home_team_name": "Triglav Gorenjska",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/triglav-gorenjska-e4b0c7.png",
       "homeTeamScore": "0",
-      "away_team_name": "Libya",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/libya-13551e.webp",
+      "away_team_name": "NK Bilje",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/nk-bilje-81e3c0.png",
       "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": 1794585600,
-      "match_status": "vs",
-      "home_team_name": "Burkina Faso",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/burkina-faso-eca2bb.png",
-      "homeTeamScore": "0",
-      "away_team_name": "Mauritania",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/mauritania-a49692.webp",
-      "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": 1794585600,
-      "match_status": "vs",
-      "home_team_name": "Turkiye U21",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/turkiye-u21-3341e0.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Czechia Republic U21",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/czechia-republic-u21-04b54f.webp",
-      "awayTeamScore": "0",
-      "league_name": "UEFA European U21 Championship qualification",
-      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
-      "servers": []
-    },
-    {
-      "match_time": 1794585600,
-      "match_status": "vs",
-      "home_team_name": "South Africa",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/south-africa-c81406.webp",
-      "homeTeamScore": "0",
-      "away_team_name": "Kenya",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/kenya-577e90.webp",
-      "awayTeamScore": "0",
-      "league_name": "CAF Africa Cup of Nations",
+      "league_name": "Slovenia 2.Liga",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
@@ -1058,26 +998,91 @@
     {
       "match_time": "1794585600",
       "match_status": "vs",
-      "home_team_name": "Dravinja",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/dravinja-916907.png",
+      "home_team_name": "CD Novillos Neza",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/cd-novillos-neza-1db028.png",
       "homeTeamScore": "0",
-      "away_team_name": "NK Krka",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/nk-krka-bd32a5.jpg",
+      "away_team_name": "CD Halcones de Rayon",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/cd-halcones-de-rayon-1cfb40.png",
       "awayTeamScore": "0",
-      "league_name": "Slovenia 2.Liga",
+      "league_name": "Mexican TDP League",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     },
     {
       "match_time": "1794585600",
       "match_status": "vs",
-      "home_team_name": "Al-Hala",
-      "home_team_logo": "https://cdn.1xapi.com/images/teams/al-hala-df47d6.png",
+      "home_team_name": "Colegio Once Mexico",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/colegio-once-mexico-acb673.png",
       "homeTeamScore": "0",
-      "away_team_name": "Al-Budaiya",
-      "away_team_logo": "https://cdn.1xapi.com/images/teams/al-budaiya-ce51de.png",
+      "away_team_name": "Guardianes de Oriente FC",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/guardianes-de-oriente-fc-751e9b.png",
       "awayTeamScore": "0",
-      "league_name": "Bahrain Division 2",
+      "league_name": "Mexican TDP League",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794585600,
+      "match_status": "vs",
+      "home_team_name": "Nigeria",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/nigeria-f17411.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Tanzania",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/tanzania-ed0787.webp",
+      "awayTeamScore": "0",
+      "league_name": "Africa Cup Of Nations Qualifiers",
+      "league_logo": "https://cdn.1xapi.com/images/teams/league-africa-cup-of-nations-qualifiers-64a9b2.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794585600,
+      "match_status": "vs",
+      "home_team_name": "Tunisia",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/tunisia-6b07fd.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Libya",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/libya-13551e.webp",
+      "awayTeamScore": "0",
+      "league_name": "CAF Africa Cup of Nations",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794585600,
+      "match_status": "vs",
+      "home_team_name": "South Africa",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/south-africa-c81406.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Kenya",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/kenya-577e90.webp",
+      "awayTeamScore": "0",
+      "league_name": "CAF Africa Cup of Nations",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794585600,
+      "match_status": "vs",
+      "home_team_name": "Gabon",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/gabon-ee2144.png",
+      "homeTeamScore": "0",
+      "away_team_name": "Lesotho",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/lesotho-34c9c5.webp",
+      "awayTeamScore": "0",
+      "league_name": "CAF Africa Cup of Nations",
+      "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
+      "servers": []
+    },
+    {
+      "match_time": 1794585600,
+      "match_status": "vs",
+      "home_team_name": "Turkiye U21",
+      "home_team_logo": "https://cdn.1xapi.com/images/teams/turkiye-u21-3341e0.webp",
+      "homeTeamScore": "0",
+      "away_team_name": "Czechia Republic U21",
+      "away_team_logo": "https://cdn.1xapi.com/images/teams/czechia-republic-u21-04b54f.webp",
+      "awayTeamScore": "0",
+      "league_name": "UEFA European U21 Championship qualification",
       "league_logo": "https://cdn.1xapi.com/images/teams/nologoo.png",
       "servers": []
     }
